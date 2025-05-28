@@ -19,7 +19,7 @@ export default function Button({
   return (
     <AntdButton
       htmlType={type}
-      className={clsx("w-full text-base py-4", className)}
+      className={clsx("w-full !text-base !py-4", className)}
       type="primary"
       loading={loading}
       onClick={onClick}

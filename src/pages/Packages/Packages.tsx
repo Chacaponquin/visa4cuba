@@ -1,12 +1,11 @@
 "use client";
 
-import React from "react";
+import Form from "../../modules/app/modules/form/components/Form/Form";
+import FormSection from "../../modules/app/modules/form/components/FormSection/FormSection";
+import Button from "../../modules/app/modules/ui/components/Button/Button";
+import DatePicker from "../../modules/app/modules/ui/components/DatePicker/DatePicker";
+import Input from "../../modules/app/modules/ui/components/Input/Input";
 import usePackages from "./hooks/usePackages";
-import Input from "@modules/app/modules/ui/components/Input/Input";
-import DatePicker from "@modules/app/modules/ui/components/DatePicker/DatePicker";
-import Form from "@modules/app/modules/form/components/Form/Form";
-import Button from "@modules/app/modules/ui/components/Button/Button";
-import FormSection from "@modules/app/modules/form/components/FormSection/FormSection";
 import clsx from "clsx";
 
 export default function Packages() {
@@ -28,11 +27,7 @@ export default function Packages() {
   return (
     <div className="flex justify-center w-full h-screen items-center px-5 py-3">
       <div className="flex flex-col rounded-xl w-full max-w-[500px] items-center sm:px-8 px-6 py-6 border border-gray-200 shadow-md">
-        <h1
-          className={clsx(
-            "font-medium text-2xl sm:text-3xl text-center sm:mb-6 mb-5"
-          )}
-        >
+        <h1 className={clsx("text-2xl sm:text-3xl text-center sm:mb-6 mb-5")}>
           Crear paquete
         </h1>
 
