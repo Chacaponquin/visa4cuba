@@ -1,3 +1,3 @@
 export default function Navbar() {
-  return <div>Navbar</div>;
+  return <nav className="w-full flex py-5"></nav>;
 }

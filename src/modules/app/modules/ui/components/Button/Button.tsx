@@ -1,5 +1,5 @@
-import { Button as AntdButton } from "antd";
 import clsx from "clsx";
+import type { UiSize } from "../../domain/size";
 
 interface Props {
   children: React.ReactNode;
@@ -7,24 +7,36 @@ interface Props {
   loading?: boolean;
   type?: "submit" | "button";
   className?: string;
+  color?: "primary" | "light";
+  size?: UiSize;
 }
 
 export default function Button({
   children,
   onClick,
-  loading,
   className,
   type = "button",
+  color = "primary",
+  size = "base",
 }: Props) {
+  const CLASS = clsx(
+    "font-medium text-sm text-center",
+    {
+      "bg-blue-500 hover:bg-blue-600 text-white": color === "primary",
+      "bg-white hover:bg-gray-100 text-black border border-card":
+        color === "light",
+    },
+
+    { "py-2 px-4": size === "base", "py-1 px-3": size === "sm" },
+
+    { "rounded-lg": size === "base", "rounded-md": size === "sm" },
+
+    className
+  );
+
   return (
-    <AntdButton
-      htmlType={type}
-      className={clsx("w-full !text-base !py-4", className)}
-      type="primary"
-      loading={loading}
-      onClick={onClick}
-    >
+    <button type={type} onClick={onClick} className={CLASS}>
       {children}
-    </AntdButton>
+    </button>
   );
 }

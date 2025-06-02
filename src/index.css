@@ -1,10 +1,58 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: "Poppins";
-  src: url("./assets/fonts/poppins/Poppins-VariableFont_wght.otf");
+  font-family: "Poppins Regular";
+  src: url("./assets/fonts/poppins/Poppins-Regular.ttf");
 }
 
-* {
-  font-family: "Poppins", sans-serif !important;
+@font-face {
+  font-family: "Poppins Medium";
+  src: url("./assets/fonts/poppins/Poppins-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Poppins Semibold";
+  src: url("./assets/fonts/poppins/Poppins-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "Poppins Bold";
+  src: url("./assets/fonts/poppins/Poppins-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Poppins Extrabold";
+  src: url("./assets/fonts/poppins/Poppins-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: "Poppins Italic";
+  src: url("./assets/fonts/poppins/Poppins-Italic.ttf");
+}
+
+@theme {
+  --color-card: var(--color-gray-200);
+
+  --font-body: "Poppins Regular";
+  --font-regular: "Poppins Regular";
+  --font-medium: "Poppins Medium";
+  --font-semibold: "Poppins Semibold";
+  --font-bold: "Poppins Bold";
+}
+
+input,
+textarea,
+td,
+span,
+div {
+  font-family: var(--font-body);
+}
+
+strong {
+  font-family: var(--font-semibold);
+  font-weight: normal;
+}
+
+button {
+  cursor: pointer;
 }

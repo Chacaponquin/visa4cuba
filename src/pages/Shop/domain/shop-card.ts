@@ -4,6 +4,6 @@ export interface ShopCard {
   title: string;
   price: number;
   description: string;
-  icon: React.FC<IconProps>;
+  icon: (props: IconProps) => React.ReactNode;
   includes: string[];
 }
