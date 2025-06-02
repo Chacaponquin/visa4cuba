@@ -38,6 +38,9 @@
   --font-medium: "Poppins Medium";
   --font-semibold: "Poppins Semibold";
   --font-bold: "Poppins Bold";
+
+  --color-primary: #000f9f;
+  --color-secondary: #e31d93;
 }
 
 input,

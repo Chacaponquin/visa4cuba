@@ -15,14 +15,14 @@ export default function ShopCard({ card }: Props) {
   return (
     <article className="rounded-lg flex flex-col border border-card shadow-md px-4 py-2.5">
       <header className="w-full flex items-center gap-x-3.5 mb-3">
-        <i className="stroke-blue-700 rounded-lg bg-blue-100 px-2.5 py-2">
+        <i className="stroke-primary rounded-lg bg-primary/10 px-2.5 py-2">
           {card.icon({ size: 24 })}
         </i>
 
         <div className="flex flex-col">
           <h2 className="font-medium text-base">{card.title}</h2>
 
-          <span className="text-xl !font-semibold text-green-600">
+          <span className="text-xl !font-semibold text-secondary">
             {PriceTextBuilder.execute(card.price)}
           </span>
         </div>
