@@ -4,6 +4,12 @@ export interface ShopCard {
   title: string;
   price: number;
   description: string;
-  icon: (props: IconProps) => React.ReactNode;
+
   includes: string[];
+}
+
+export interface ShopCardSection {
+  cards: ShopCard[];
+  title: string;
+  icon: (props: IconProps) => React.ReactNode;
 }

@@ -28,7 +28,7 @@ export default function ShopCartItemCard({
   return (
     <li className="bg-white rounded-lg w-full flex sm:flex-row flex-col items-center justify-between shadow-md px-4 py-3 gap-x-5 gap-y-3 border border-card">
       <div className="flex sm:w-max w-full items-center gap-x-3">
-        <i className="px-3.5 py-2 rounded-md bg-blue-100 stroke-blue-700">
+        <i className="px-3.5 py-2 rounded-md bg-primary/10 stroke-primary">
           {icon({ size: 25 })}
         </i>
 
@@ -46,7 +46,7 @@ export default function ShopCartItemCard({
           value={count}
         />
 
-        <span className="!font-semibold text-base text-green-600">
+        <span className="!font-semibold text-base text-secondary">
           {PriceTextBuilder.execute(subtotal)}
         </span>
 

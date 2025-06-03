@@ -14,7 +14,7 @@ interface Props {
 export default function ResultSummary({ prosecution, subtotal, total }: Props) {
   return (
     <div className="w-full lg:max-w-[370px] rounded-lg flex flex-col bg-white shadow-md">
-      <header className="px-5 py-3 rounded-t-lg !font-semibold text-lg bg-blue-600 text-white">
+      <header className="px-5 py-3 rounded-t-lg !font-semibold text-lg bg-primary text-white">
         Resumen
       </header>
 

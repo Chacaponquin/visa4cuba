@@ -22,7 +22,7 @@ export default function SummaryValue({ label, value, bold }: Props) {
       <span
         className={clsx({
           "font-medium text-base": !bold,
-          "!font-semibold text-2xl text-blue-600": bold,
+          "!font-semibold text-2xl text-secondary": bold,
         })}
       >
         {PriceTextBuilder.execute(value)}

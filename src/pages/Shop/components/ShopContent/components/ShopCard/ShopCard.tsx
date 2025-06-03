@@ -1,3 +1,4 @@
+import type { IconProps } from "../../../../../../modules/app/modules/icon/domain/props";
 import Button from "../../../../../../modules/app/modules/ui/components/Button/Button";
 import Counter from "../../../../../../modules/shared/components/Counter/Counter";
 import { PriceTextBuilder } from "../../../../../../modules/shared/domain/helpers/price-text-builder";
@@ -7,16 +8,17 @@ import useShopCard from "./hooks/useShopCard";
 
 interface Props {
   card: IShopCard;
+  icon: (props: IconProps) => React.ReactNode;
 }
 
-export default function ShopCard({ card }: Props) {
+export default function ShopCard({ card, icon }: Props) {
   const { count, handleDecrease, handleIncrease } = useShopCard();
 
   return (
-    <article className="rounded-lg flex flex-col border border-card shadow-md px-4 py-2.5">
+    <article className="rounded-lg flex flex-col border border-card shadow-md px-5 py-3">
       <header className="w-full flex items-center gap-x-3.5 mb-3">
         <i className="stroke-primary rounded-lg bg-primary/10 px-2.5 py-2">
-          {card.icon({ size: 24 })}
+          {icon({ size: 24 })}
         </i>
 
         <div className="flex flex-col">

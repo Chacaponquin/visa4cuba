@@ -12,7 +12,7 @@ export default function SectionCard({ link, title, selected }: Props) {
     <Link to={link}>
       <div
         className={clsx(
-          "uppercase text-base px-3 rounded-md py-1 font-medium",
+          "uppercase text-base px-3 rounded-md py-1 !font-medium",
           {
             "bg-primary/10 text-primary": selected,
           }

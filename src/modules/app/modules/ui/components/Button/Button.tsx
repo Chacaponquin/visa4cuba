@@ -21,8 +21,9 @@ export default function Button({
 }: Props) {
   const CLASS = clsx(
     "font-medium text-sm text-center",
+
     {
-      "bg-blue-500 hover:bg-blue-600 text-white": color === "primary",
+      "bg-primary-700 hover:bg-primary text-white": color === "primary",
       "bg-white hover:bg-gray-100 text-black border border-card":
         color === "light",
     },

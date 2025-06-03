@@ -1,3 +1,4 @@
+import Card from "../../../../../modules/app/modules/icon/components/Card";
 import Safe from "../../../../../modules/app/modules/icon/components/Safe";
 import type { ShopHeaderCard } from "../domain/shop-header-card";
 
@@ -5,10 +6,10 @@ export default function useShopHeader() {
   const sections: ShopHeaderCard[] = [
     {
       title: "Tarjeta turística",
-      icon: Safe,
+      icon: Card,
       color: "primary",
       description:
-        "Si viajas desde cualquier otro país necesitarás una Tarjeta Verde de Turista",
+        "Si viajas desde cualquier país necesitarás una Tarjeta Verde de Turista",
     },
     {
       title: "Seguro médico de viaje",

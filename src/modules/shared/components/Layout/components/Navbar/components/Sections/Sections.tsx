@@ -10,7 +10,7 @@ export default function Sections({ sections }: Props) {
   const location = useLocation();
 
   return (
-    <div className="flex items-center gap-x-2">
+    <div className="lg:flex hidden items-center gap-x-2">
       {sections.map((s, index) => (
         <SectionCard
           key={index}
