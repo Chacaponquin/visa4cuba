@@ -2,16 +2,16 @@ import clsx from "clsx";
 import { Link } from "react-router";
 
 interface Props {
-  selected: boolean;
   title: string;
   link: string;
+  selected: boolean;
 }
 
-export default function SectionCard({ link, title, selected }: Props) {
+export default function AsideSection({ link, selected, title }: Props) {
   return (
     <Link to={link}>
       <div
-        className={clsx("uppercase text-base px-3 rounded-md py-1", {
+        className={clsx("rounded-lg px-3.5 py-2 uppercase font-medium", {
           "bg-primary/10 text-primary": selected,
         })}
       >
