@@ -10,7 +10,7 @@ interface Props {
 export default function Navbar({ onOpenAside }: Props) {
   return (
     <nav className="w-full flex py-5 justify-center mb-10 px-5">
-      <div className="flex w-full items-center justify-between max-w-[1100px]">
+      <div className="flex w-full items-center justify-between max-w-layout">
         <Logo />
 
         <Sections sections={NAVBAR_SECTIONS} />

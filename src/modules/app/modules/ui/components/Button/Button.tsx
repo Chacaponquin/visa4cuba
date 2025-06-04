@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import type { UiSize } from "../../domain/size";
+import type { IconProps } from "../../../icon/domain/props";
 
 interface Props {
   children: React.ReactNode;
@@ -9,6 +10,7 @@ interface Props {
   className?: string;
   color?: "primary" | "light";
   size?: UiSize;
+  icon?: (props: IconProps) => React.ReactNode;
 }
 
 export default function Button({
@@ -18,13 +20,15 @@ export default function Button({
   type = "button",
   color = "primary",
   size = "base",
+  icon,
 }: Props) {
   const CLASS = clsx(
-    "font-medium text-sm text-center",
+    "text-sm text-center",
+    "flex items-center justify-center gap-x-2",
 
     {
       "bg-primary-700 hover:bg-primary text-white": color === "primary",
-      "bg-white hover:bg-gray-100 text-black border border-card":
+      "bg-white hover:bg-gray-100 text-black border border-card stroke-black":
         color === "light",
     },
 
@@ -37,7 +41,9 @@ export default function Button({
 
   return (
     <button type={type} onClick={onClick} className={CLASS}>
-      {children}
+      {icon && <i className="">{icon({ size: 18 })}</i>}
+
+      <p className="font-medium">{children}</p>
     </button>
   );
 }

@@ -7,7 +7,7 @@ export default function Shop() {
   return (
     <Layout>
       <main className="w-full flex flex-col items-center px-5">
-        <div className="w-full flex flex-col max-w-[1100px] items-center">
+        <div className="w-full flex flex-col max-w-layout items-center">
           <ShopHeader />
           <ShopContent />
           <ShopResult />

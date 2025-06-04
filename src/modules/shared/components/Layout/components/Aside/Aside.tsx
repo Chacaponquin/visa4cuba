@@ -13,7 +13,7 @@ export default function Aside({ onClose }: Props) {
 
   return (
     <div
-      className="fixed flex w-full h-screen justify-end items-center bg-black/50 z-50 pl-4"
+      className="lg:hidden fixed flex w-full h-screen justify-end items-center bg-black/50 z-50 pl-4"
       onClick={onClose}
     >
       <aside

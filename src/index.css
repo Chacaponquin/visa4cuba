@@ -48,6 +48,8 @@
 @theme {
   --color-card: var(--color-gray-300);
 
+  --spacing-layout: 1200px;
+
   --font-body: "Poppins Regular";
   --font-regular: "Poppins Regular";
   --font-medium: "Poppins Medium";
