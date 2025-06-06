@@ -11,6 +11,7 @@ interface Props {
   color?: "primary" | "light";
   size?: UiSize;
   icon?: (props: IconProps) => React.ReactNode;
+  full?: boolean;
 }
 
 export default function Button({
@@ -21,9 +22,12 @@ export default function Button({
   color = "primary",
   size = "base",
   icon,
+  full = false,
 }: Props) {
   const CLASS = clsx(
-    "text-sm text-center",
+    { "w-full": full, "w-max": !full },
+
+    "text-center",
     "flex items-center justify-center gap-x-2",
 
     {
@@ -32,9 +36,18 @@ export default function Button({
         color === "light",
     },
 
-    { "py-2 px-4": size === "base", "py-1 px-3": size === "sm" },
+    {
+      "py-2 px-4": size === "base",
+      "py-2.5 px-5": size === "lg",
+      "py-1 px-3": size === "sm",
+    },
 
-    { "rounded-lg": size === "base", "rounded-md": size === "sm" },
+    {
+      "rounded-lg": size === "base" || size === "lg",
+      "rounded-md": size === "sm",
+    },
+
+    { "text-sm": size === "base", "text-base": size === "lg" },
 
     className
   );

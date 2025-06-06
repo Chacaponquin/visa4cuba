@@ -1,1 +1,1 @@
-export type UiSize = "base" | "sm";
+export type UiSize = "base" | "sm" | "lg";

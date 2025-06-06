@@ -1,9 +1,11 @@
+import { Link } from "react-router";
 import Safe from "../../../../../../modules/app/modules/icon/components/Safe";
 import Time from "../../../../../../modules/app/modules/icon/components/Time";
 import Button from "../../../../../../modules/app/modules/ui/components/Button/Button";
 import Separator from "../../../../../../modules/app/modules/ui/components/Separator/Separator";
 import AdventageValue from "./components/AdventageValue/AdventageValue";
 import SummaryValue from "./components/SummaryValue/SummaryValue";
+import { APP_ROUTES } from "../../../../../../modules/app/domain/constants/app-routes";
 
 interface Props {
   subtotal: number;
@@ -30,7 +32,10 @@ export default function ResultSummary({ prosecution, subtotal, total }: Props) {
         </div>
 
         <div className="w-full flex flex-col mt-8 gap-y-2 mb-4">
-          <Button>Proceder al pago</Button>
+          <Link to={APP_ROUTES.BUY}>
+            <Button>Proceder al pago</Button>
+          </Link>
+
           <Button color="light">Continuar comprando</Button>
         </div>
 

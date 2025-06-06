@@ -48,6 +48,10 @@
 @theme {
   --color-card: var(--color-gray-300);
 
+  --radius-input: var(--radius-md);
+
+  --shadow-input: 0 0 4px rgba(0, 15, 159, 0.75);
+
   --spacing-layout: 1200px;
 
   --font-body: "Poppins Regular";
