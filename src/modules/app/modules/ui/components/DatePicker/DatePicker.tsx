@@ -11,7 +11,9 @@ export default function DatePicker({ onChange, value }: Props) {
     <AntdDatePicker
       className="w-full"
       allowClear={false}
-      value={dayjs(value)}
+      classNames={{ root: "text-sm" }}
+      value={value ? dayjs(value) : null}
+      placeholder="Selecciona una fecha"
       minDate={dayjs()}
       onChange={(e) => onChange(e.toDate())}
     />

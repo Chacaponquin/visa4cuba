@@ -1,4 +1,5 @@
 import Layout from "../../modules/shared/components/Layout/Layout";
+import PassegersForm from "./components/PassegersForm/PassegersForm";
 import Steps from "./components/Steps/Steps";
 import UserForm from "./components/UserForm/UserForm";
 import { BUY_STEP } from "./domain/buy-steps";
@@ -18,6 +19,18 @@ export default function Buy() {
     setPhone,
     handlePass,
     handleSelectSection,
+    passegers,
+    handleChangeLastname,
+    handleChangeName,
+    handleChangeArriveDate,
+    handleChangeBirthdate,
+    handleChangeLeaveDate,
+    handleChangePassport,
+    birthdate,
+    setBirthdate,
+    country,
+    setCountry,
+    handleChangeCountry,
   } = useBuy();
 
   return (
@@ -32,6 +45,8 @@ export default function Buy() {
 
           {selected.type === BUY_STEP.USER && (
             <UserForm
+              country={{ onChange: setCountry, value: country }}
+              birthdate={{ value: birthdate, onChange: setBirthdate }}
               description={selected.description}
               title={selected.title}
               onSubmit={() => handlePass(BUY_STEP.USER)}
@@ -39,6 +54,22 @@ export default function Buy() {
               name={{ value: name, onChange: setName }}
               phone={{ value: phone, onChange: setPhone }}
               lastname={{ value: lastname, onChange: setLastname }}
+            />
+          )}
+
+          {selected.type === BUY_STEP.DETAILS && (
+            <PassegersForm
+              onChangeCountry={handleChangeCountry}
+              onChangeName={handleChangeName}
+              description={selected.description}
+              passegers={passegers}
+              onSubmit={() => handlePass(BUY_STEP.DETAILS)}
+              onChangeArriveDate={handleChangeArriveDate}
+              onChangeBirhtdate={handleChangeBirthdate}
+              onChangeLeaveDate={handleChangeLeaveDate}
+              onChangePassport={handleChangePassport}
+              onChangeLastname={handleChangeLastname}
+              title={selected.title}
             />
           )}
         </div>

@@ -18,13 +18,17 @@ export default function StepCard({
 }: Props) {
   return (
     <article
-      onClick={onClick}
-      className={clsx("flex items-start w-full gap-x-4", {
-        "opacity-60": !selected,
-      })}
+      onClick={passed ? onClick : undefined}
+      className={clsx(
+        "flex items-start w-full gap-x-4 transition-all duration-200",
+        {
+          "opacity-60": !selected,
+          "hover:opacity-100 cursor-pointer": passed,
+        }
+      )}
     >
       <i
-        className={clsx("", {
+        className={clsx({
           "stroke-gray-700": !passed,
           "stroke-secondary": passed,
         })}

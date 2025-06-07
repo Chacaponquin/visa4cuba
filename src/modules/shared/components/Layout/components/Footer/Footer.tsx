@@ -4,8 +4,8 @@ import SuscribeSection from "./components/SuscribeSection/SuscribeSection";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-primary-950 flex flex-col items-center">
-      <div className="w-full max-w-layout flex flex-col py-10 px-5">
+    <footer className="w-full bg-primary-950 flex flex-col items-center px-5">
+      <div className="w-full max-w-layout flex flex-col py-10">
         <img
           src={APP_IMAGES.FOOTER_LOGO.src}
           alt={APP_IMAGES.FOOTER_LOGO.alt}

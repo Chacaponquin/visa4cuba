@@ -33,10 +33,12 @@ export default function ResultSummary({ prosecution, subtotal, total }: Props) {
 
         <div className="w-full flex flex-col mt-8 gap-y-2 mb-4">
           <Link to={APP_ROUTES.BUY}>
-            <Button>Proceder al pago</Button>
+            <Button full>Proceder al pago</Button>
           </Link>
 
-          <Button color="light">Continuar comprando</Button>
+          <Button color="light" full>
+            Continuar comprando
+          </Button>
         </div>
 
         <Separator className="" />

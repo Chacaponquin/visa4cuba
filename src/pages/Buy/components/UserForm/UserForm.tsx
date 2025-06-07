@@ -2,7 +2,10 @@ import Form from "../../../../modules/app/modules/form/components/Form/Form";
 import FormSection from "../../../../modules/app/modules/form/components/FormSection/FormSection";
 import User from "../../../../modules/app/modules/icon/components/User";
 import Button from "../../../../modules/app/modules/ui/components/Button/Button";
+import DatePicker from "../../../../modules/app/modules/ui/components/DatePicker/DatePicker";
 import Input from "../../../../modules/app/modules/ui/components/Input/Input";
+import Select from "../../../../modules/app/modules/ui/components/Select/Select";
+import { COUNTRIES } from "../../../../modules/shared/domain/entities/country";
 import BuyForm from "../../shared/components/BuyForm/BuyForm";
 
 interface Props {
@@ -13,6 +16,8 @@ interface Props {
   lastname: { value: string; onChange(v: string): void };
   email: { value: string; onChange(v: string): void };
   phone: { value: string; onChange(v: string): void };
+  birthdate: { value: Date | null; onChange(v: Date): void };
+  country: { value: string | null; onChange(v: string): void };
 }
 
 export default function UserForm({
@@ -23,6 +28,8 @@ export default function UserForm({
   phone,
   description,
   title,
+  birthdate,
+  country,
 }: Props) {
   function handleSubmit() {
     onSubmit();
@@ -49,6 +56,20 @@ export default function UserForm({
 
         <FormSection label="Teléfono" required>
           <Input value={phone.value} onChange={phone.onChange} />
+        </FormSection>
+
+        <FormSection label="Nacionalidad" required>
+          <Select
+            options={COUNTRIES}
+            label={(o) => o.name}
+            onChange={country.onChange}
+            ovalue={(o) => o.name}
+            value={country.value}
+          />
+        </FormSection>
+
+        <FormSection label="Fecha de nacimiento" required>
+          <DatePicker onChange={birthdate.onChange} value={birthdate.value} />
         </FormSection>
 
         <Button type="submit" className="mt-5" full size="lg">
