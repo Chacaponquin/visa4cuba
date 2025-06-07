@@ -16,8 +16,8 @@ export default function Input({ value, placeholder, onChange }: Props) {
     "hover:shadow-input hover:border-primary",
     "focus:shadow-input focus:border-primary",
     "outline-none",
-    "bg-transparent",
-    "text-sm"
+    "text-sm",
+    "bg-white"
   );
 
   return (

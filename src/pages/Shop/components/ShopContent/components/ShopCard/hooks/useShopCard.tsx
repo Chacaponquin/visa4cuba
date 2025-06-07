@@ -1,6 +1,14 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import type { ShopOption } from "../../../../../../../modules/shop/domain/entities/shop-option";
+import { ShopContext } from "../../../../../../../modules/shop/context/ShopContext";
 
-export default function useShopCard() {
+interface Props {
+  option: ShopOption;
+}
+
+export default function useShopCard({ option }: Props) {
+  const { handleAddItem } = useContext(ShopContext);
+
   const [count, setCount] = useState(1);
 
   function handleDecrease() {
@@ -11,5 +19,9 @@ export default function useShopCard() {
     setCount((prev) => prev + 1);
   }
 
-  return { count, handleDecrease, handleIncrease };
+  function handleAdd() {
+    handleAddItem(option, count);
+  }
+
+  return { count, handleDecrease, handleIncrease, handleAdd };
 }

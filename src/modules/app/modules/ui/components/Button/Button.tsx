@@ -47,7 +47,7 @@ export default function Button({
       "rounded-md": size === "sm",
     },
 
-    { "text-sm": size === "base", "text-base": size === "lg" },
+    { "text-sm": size === "base" || size === "sm", "text-base": size === "lg" },
 
     className
   );

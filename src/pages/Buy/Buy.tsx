@@ -1,4 +1,5 @@
 import Layout from "../../modules/shared/components/Layout/Layout";
+import BuyResult from "./components/BuyResult/BuyResult";
 import PassegersForm from "./components/PassegersForm/PassegersForm";
 import Steps from "./components/Steps/Steps";
 import UserForm from "./components/UserForm/UserForm";
@@ -69,6 +70,13 @@ export default function Buy() {
               onChangeLeaveDate={handleChangeLeaveDate}
               onChangePassport={handleChangePassport}
               onChangeLastname={handleChangeLastname}
+              title={selected.title}
+            />
+          )}
+
+          {selected.type === BUY_STEP.PAYMENT && (
+            <BuyResult
+              description={selected.description}
               title={selected.title}
             />
           )}

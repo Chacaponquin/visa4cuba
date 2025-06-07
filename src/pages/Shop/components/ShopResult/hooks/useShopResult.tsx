@@ -1,34 +1,21 @@
-import World from "../../../../../modules/app/modules/icon/components/World";
-import { Id } from "../../../../../modules/shared/domain/value-object/id";
-import type { ShopCartItem } from "../../../domain/shop-cart-item";
+import { useContext } from "react";
+import { ShopContext } from "../../../../../modules/shop/context/ShopContext";
 
 export default function useShopResult() {
-  const items: ShopCartItem[] = [
-    {
-      count: 1,
-      description: "Para viajes de turismo y recreación",
-      icon: World,
-      subtotal: 100,
-      title: "Visa de turista",
-      id: Id.generate(),
-    },
-    {
-      count: 1,
-      description: "Para viajes de turismo y recreación",
-      icon: World,
-      subtotal: 100,
-      title: "Visa de turista",
-      id: Id.generate(),
-    },
-  ];
+  const { cart, handleDeleteItem, handleIncreaseItem, handleDecreaseItem } =
+    useContext(ShopContext);
 
   function handleDelete(id: string) {
-    console.log(id);
+    handleDeleteItem(id);
   }
 
-  function handleIncrease() {}
+  function handleIncrease(id: string) {
+    handleIncreaseItem(id);
+  }
 
-  function handleDecrease() {}
+  function handleDecrease(id: string) {
+    handleDecreaseItem(id);
+  }
 
-  return { items, handleDelete, handleDecrease, handleIncrease };
+  return { items: cart, handleDelete, handleDecrease, handleIncrease, cart };
 }

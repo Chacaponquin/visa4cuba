@@ -18,7 +18,7 @@ export default function IconButton({
     <button
       type="button"
       className={clsx(
-        "p-1.5 rounded-md border border-card",
+        "p-1 rounded-md border border-card",
         {
           "stroke-gray-800": color === "default",
           "stroke-red-500": color === "red",
@@ -28,7 +28,7 @@ export default function IconButton({
       onClick={onClick}
       disabled={disabled}
     >
-      {icon({ size: 17 })}
+      {icon({ size: 15 })}
     </button>
   );
 }

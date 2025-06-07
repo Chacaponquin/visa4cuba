@@ -1,13 +1,13 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { BUY_STEP, type BuyStep } from "../domain/buy-steps";
 import User from "../../../modules/app/modules/icon/components/User";
 import type { SectionPassegerForm } from "../domain/passeger-form";
-import Safe from "../../../modules/app/modules/icon/components/Safe";
 import { createDefaultPassegerForm } from "../domain/create-default-passeger-form";
-import { Id } from "../../../modules/shared/domain/value-object/id";
-import World from "../../../modules/app/modules/icon/components/World";
+import { ShopContext } from "../../../modules/shop/context/ShopContext";
 
 export default function useBuy() {
+  const { cart } = useContext(ShopContext);
+
   const [steps, setSteps] = useState<BuyStep[]>([
     {
       title: "Datos de envío",
@@ -44,16 +44,16 @@ export default function useBuy() {
   const [birthdate, setBirthdate] = useState<Date | null>(null);
   const [country, setCountry] = useState<string | null>(null);
 
-  const [passegers, setPassegers] = useState<SectionPassegerForm[]>([
-    {
-      section: { title: "Seguro de viaje", icon: Safe, id: Id.generate() },
-      passegers: [createDefaultPassegerForm(), createDefaultPassegerForm()],
-    },
-    {
-      section: { title: "Visa Turística", icon: World, id: Id.generate() },
-      passegers: [createDefaultPassegerForm(), createDefaultPassegerForm()],
-    },
-  ]);
+  const [passegers, setPassegers] = useState<SectionPassegerForm[]>(
+    cart.map((c) => {
+      return {
+        section: c.option,
+        passegers: Array.from({ length: c.count }).map(() =>
+          createDefaultPassegerForm()
+        ),
+      };
+    })
+  );
 
   useEffect(() => {
     const found = steps.find((s) => s.passed === false);

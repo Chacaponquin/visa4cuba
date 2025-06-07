@@ -1,11 +1,7 @@
-import type { IconProps } from "../../../modules/app/modules/icon/domain/props";
+import type { ShopOption } from "../../../modules/shop/domain/entities/shop-option";
 
 export interface SectionPassegerForm {
-  section: {
-    title: string;
-    icon: (props: IconProps) => React.ReactNode;
-    id: string;
-  };
+  section: ShopOption;
   passegers: PassegerForm[];
 }
 

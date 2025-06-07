@@ -1,3 +1,4 @@
+import useToast from "../../../../modules/app/hooks/useToast";
 import Form from "../../../../modules/app/modules/form/components/Form/Form";
 import FormSection from "../../../../modules/app/modules/form/components/FormSection/FormSection";
 import User from "../../../../modules/app/modules/icon/components/User";
@@ -6,6 +7,7 @@ import DatePicker from "../../../../modules/app/modules/ui/components/DatePicker
 import Input from "../../../../modules/app/modules/ui/components/Input/Input";
 import Select from "../../../../modules/app/modules/ui/components/Select/Select";
 import { COUNTRIES } from "../../../../modules/shared/domain/entities/country";
+import { ShopUserValidator } from "../../../../modules/shop/domain/validator/shop-user/shop-user-validator";
 import BuyForm from "../../shared/components/BuyForm/BuyForm";
 
 interface Props {
@@ -31,8 +33,12 @@ export default function UserForm({
   birthdate,
   country,
 }: Props) {
+  const { errors } = useToast();
+
   function handleSubmit() {
-    onSubmit();
+    const validator = new ShopUserValidator();
+
+    validator.execute({ success: onSubmit, error: errors });
   }
 
   return (

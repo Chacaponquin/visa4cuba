@@ -29,7 +29,7 @@ export default function Aside({ onClose }: Props) {
             <AsideSection
               key={index}
               link={s.link}
-              selected={location.pathname === s.link}
+              selected={location.pathname.startsWith(s.link)}
               title={s.title}
             />
           ))}

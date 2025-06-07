@@ -1,10 +1,14 @@
+import { CalculateCartItemTotal } from "../../../../modules/shop/domain/helpers/calculate-cart-item-total";
+import { CalculateCartSend } from "../../../../modules/shop/domain/helpers/calculate-cart-send";
+import { CalculateCartSubTotal } from "../../../../modules/shop/domain/helpers/calculate-cart-subtotal";
+import { CalculateCartTotal } from "../../../../modules/shop/domain/helpers/calculate-cart-total";
 import ShopSection from "../../shared/components/ShopSection/ShopSection";
 import ResultSummary from "./components/ResultSummary/ResultSummary";
 import ShopCartItemCard from "./components/ShopCartItemCard/ShopCartItemCard";
 import useShopResult from "./hooks/useShopResult";
 
 export default function ShopResult() {
-  const { items, handleDelete, handleDecrease, handleIncrease } =
+  const { items, handleDelete, handleDecrease, handleIncrease, cart } =
     useShopResult();
 
   return (
@@ -17,19 +21,23 @@ export default function ShopResult() {
           {items.map((c) => (
             <ShopCartItemCard
               count={c.count}
-              subtotal={c.subtotal}
-              onDecrease={handleDecrease}
-              onIncrease={handleIncrease}
-              key={c.id}
-              icon={c.icon}
-              description={c.description}
-              onDelete={() => handleDelete(c.id)}
-              title={c.title}
+              subtotal={CalculateCartItemTotal.execute(c)}
+              onDecrease={() => handleDecrease(c.option.id)}
+              onIncrease={() => handleIncrease(c.option.id)}
+              key={c.option.id}
+              icon={c.option.icon}
+              description={c.option.description}
+              onDelete={() => handleDelete(c.option.id)}
+              title={c.option.title}
             />
           ))}
         </div>
 
-        <ResultSummary prosecution={5} subtotal={100} total={138} />
+        <ResultSummary
+          prosecution={CalculateCartSend.execute(cart)}
+          subtotal={CalculateCartSubTotal.execute(cart)}
+          total={CalculateCartTotal.execute(cart)}
+        />
       </div>
     </ShopSection>
   );

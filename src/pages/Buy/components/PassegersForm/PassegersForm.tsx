@@ -1,6 +1,8 @@
+import useToast from "../../../../modules/app/hooks/useToast";
 import Form from "../../../../modules/app/modules/form/components/Form/Form";
 import Airplane from "../../../../modules/app/modules/icon/components/Airplane";
 import Button from "../../../../modules/app/modules/ui/components/Button/Button";
+import { ShopPassegersValidator } from "../../../../modules/shop/domain/validator/passegers/shop-passegers-validator";
 import type { SectionPassegerForm } from "../../domain/passeger-form";
 import BuyForm from "../../shared/components/BuyForm/BuyForm";
 import SectionForm from "./components/SectionForm/SectionForm";
@@ -32,9 +34,17 @@ export default function PassegersForm({
   onSubmit,
   onChangeCountry,
 }: Props) {
+  const { errors } = useToast();
+
+  function handleSubmit() {
+    const validator = new ShopPassegersValidator();
+
+    validator.execute({ error: errors, success: onSubmit });
+  }
+
   return (
     <BuyForm title={title} description={description} icon={Airplane}>
-      <Form onSubmit={onSubmit}>
+      <Form onSubmit={handleSubmit}>
         {passegers.map((s) => (
           <SectionForm
             onChangeCountry={(i, v) => onChangeCountry(s.section.id, i, v)}
