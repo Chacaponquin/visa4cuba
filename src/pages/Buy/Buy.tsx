@@ -37,7 +37,7 @@ export default function Buy() {
   return (
     <Layout>
       <main className="w-full flex flex-col items-center px-5 pb-16">
-        <div className="w-full flex max-w-layout items-start gap-x-10 justify-between">
+        <div className="w-full flex lg:flex-row flex-col max-w-layout lg:items-start items-center gap-x-10 gap-y-7 justify-between">
           <Steps
             steps={steps}
             onChangeStep={handleSelectSection}

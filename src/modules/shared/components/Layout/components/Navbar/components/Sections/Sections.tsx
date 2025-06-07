@@ -15,7 +15,7 @@ export default function Sections({ sections }: Props) {
         <SectionCard
           key={index}
           link={s.link}
-          selected={location.pathname === s.link}
+          selected={location.pathname.startsWith(s.link)}
           title={s.title}
         />
       ))}

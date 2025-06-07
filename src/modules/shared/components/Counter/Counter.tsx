@@ -11,7 +11,7 @@ interface Props {
 export default function Counter({ value, onDecrease, onIncrease }: Props) {
   return (
     <div className="flex items-center gap-x-3">
-      <ActionButton disabled={value === 0} icon={Minus} onClick={onDecrease} />
+      <ActionButton disabled={value === 1} icon={Minus} onClick={onDecrease} />
 
       <span className="text-gray-800 text-sm font-medium">{value}</span>
 

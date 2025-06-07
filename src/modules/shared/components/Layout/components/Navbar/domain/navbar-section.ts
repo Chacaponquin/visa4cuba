@@ -6,9 +6,9 @@ export interface NavbarSection {
 }
 
 export const NAVBAR_SECTIONS = [
-  { link: "", title: "Home" },
-  { link: "", title: "Visas" },
-  { link: "", title: "Seguros" },
+  { link: APP_ROUTES.HOME, title: "Home" },
+  { link: APP_ROUTES.VISA, title: "Visas" },
+  { link: APP_ROUTES.INSURANCE, title: "Seguros" },
   { link: APP_ROUTES.SHOP, title: "Shop" },
-  { link: "", title: "Sobre nosotros" },
+  { link: APP_ROUTES.ABOUT_US, title: "Sobre nosotros" },
 ];
