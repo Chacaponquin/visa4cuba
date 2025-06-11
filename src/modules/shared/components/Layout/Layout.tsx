@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar/Navbar";
 import useLayout from "./hooks/useLayout";
 
 interface Props {
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 export default function Layout({ children }: Props) {
