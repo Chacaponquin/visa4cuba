@@ -3,7 +3,7 @@ import Header from "./components/Header/Header";
 import Mission from "./components/Mission/Mission";
 import Services from "./components/Services/Services";
 import Why from "./components/Why/Why";
-import Steps from "./Steps/Steps";
+import Steps from "./components/Steps/Steps";
 
 export default function AboutUs() {
   return (

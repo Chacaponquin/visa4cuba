@@ -8,7 +8,7 @@ export default function Services() {
       title="Experiencias únicas en Cuba"
       description="Ofrecemos una amplia gama de servicios diseñados para hacer de tu viaje a Cuba una experiencia inolvidable y auténtica."
     >
-      <div className="flex items-start gap-x-12 justify-center">
+      <div className="flex md:flex-row flex-col items-start gap-x-12 gap-y-7 justify-center">
         {SERVICE_CARDS.map((s, index) => (
           <Card key={index} service={s} />
         ))}

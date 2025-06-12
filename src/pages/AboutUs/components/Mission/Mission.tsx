@@ -6,7 +6,7 @@ import { RESULTS } from "./domain/mission-result";
 export default function Mission() {
   return (
     <AboutContainer>
-      <div className="flex w-full justify-between gap-x-10">
+      <div className="flex lg:flex-row flex-col-reverse lg:items-start items-center w-full justify-between gap-x-10 gap-y-10">
         <section className="flex flex-col w-full">
           <h1 className="font-title-bold text-4xl mb-3">Nuestra misión</h1>
 

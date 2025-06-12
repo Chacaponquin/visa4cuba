@@ -6,7 +6,7 @@ import ShopResult from "./components/ShopResult/ShopResult";
 export default function Shop() {
   return (
     <Layout>
-      <main className="w-full flex flex-col items-center px-5">
+      <main className="w-full flex flex-col items-center px-5 mt-20">
         <div className="w-full flex flex-col max-w-layout items-center">
           <ShopHeader />
           <ShopContent />
