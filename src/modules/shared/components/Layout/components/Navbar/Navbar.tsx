@@ -9,7 +9,7 @@ interface Props {
 
 export default function Navbar({ onOpenAside }: Props) {
   return (
-    <nav className="w-full flex py-5 justify-center px-5 border-b border-b-card">
+    <nav className="w-full flex py-3 justify-center px-5 border-b border-b-card">
       <div className="flex w-full items-center justify-between max-w-layout">
         <Logo />
 

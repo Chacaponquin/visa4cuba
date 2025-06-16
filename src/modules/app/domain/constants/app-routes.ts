@@ -3,6 +3,6 @@ export const APP_ROUTES = {
   BUY: "/shop/buy",
   HOME: "/home",
   INSURANCE: "/insurence",
-  VISA: "/visa",
+  VISA: "/visas",
   ABOUT_US: "/about-us",
 };

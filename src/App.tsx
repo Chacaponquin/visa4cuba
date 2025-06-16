@@ -5,6 +5,8 @@ import Buy from "./pages/Buy/Buy";
 import { ShopProvider } from "./modules/shop/context/ShopContext";
 import { ToastContainer } from "react-toastify";
 import AboutUs from "./pages/AboutUs/AboutUs";
+import Visas from "./pages/Visas/Visas";
+import Insurence from "./pages/Insurence/Insurence";
 
 export default function App() {
   return (
@@ -17,6 +19,8 @@ export default function App() {
           <Route path={APP_ROUTES.SHOP} element={<Shop />} />
           <Route path={APP_ROUTES.BUY} element={<Buy />} />
           <Route path={APP_ROUTES.ABOUT_US} element={<AboutUs />} />
+          <Route path={APP_ROUTES.VISA} element={<Visas />} />
+          <Route path={APP_ROUTES.INSURANCE} element={<Insurence />} />
         </Routes>
       </ShopProvider>
     </BrowserRouter>
