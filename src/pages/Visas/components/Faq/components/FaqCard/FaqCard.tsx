@@ -14,10 +14,16 @@ export default function FaqCard({ icon, title, children }: Props) {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="border border-card rounded-card flex flex-col px-6 py-3 mb-3 w-full max-w-[760px]">
+    <div
+      className={clsx(
+        "border-[1.5px] border-card rounded-card flex flex-col px-6 py-3 mb-3 w-full max-w-[760px] transition-all duration-200",
+        { "border-primary shadow-input": open }
+      )}
+    >
       <div
         className={clsx(
-          "flex justify-between items-center gap-x-8 cursor-pointer"
+          "flex justify-between items-center gap-x-8 cursor-pointer",
+          { "mb-1.5": open }
         )}
         onClick={() => setOpen((prev) => !prev)}
       >
@@ -36,7 +42,7 @@ export default function FaqCard({ icon, title, children }: Props) {
         </i>
       </div>
 
-      {open && children}
+      <div className="pl-14">{open && children}</div>
     </div>
   );
 }

@@ -2,13 +2,19 @@ interface Props {
   children?: React.ReactNode;
   title: string;
   description: string;
+  image: string;
 }
 
-export default function LayoutHeader({ children, description, title }: Props) {
+export default function LayoutHeader({
+  children,
+  description,
+  title,
+  image,
+}: Props) {
   return (
     <header
       style={{
-        background: `linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/cuba-2.jpg') center/cover`,
+        background: `linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('${image}') center/cover`,
       }}
       className="flex w-full flex-col items-center justify-center py-44 text-center px-5"
     >

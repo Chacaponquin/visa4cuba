@@ -15,14 +15,14 @@ export default function ArrowButton({ children, className }: Props) {
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       className={clsx(
-        "rounded-full text-xl px-8 py-3.5 bg-white text-gray-700 flex items-center gap-x-3 mt-10 transition-all duration-200 hover:brightness-150 hover:bg-gray-50",
+        "rounded-full text-xl px-8 py-3.5 bg-secondary text-white flex items-center gap-x-3 mt-10 transition-all duration-200 hover:brightness-150",
         className
       )}
     >
       <span>{children}</span>
 
       <i
-        className={clsx("stroke-gray-700 transition-all duration-200", {
+        className={clsx("stroke-white transition-all duration-200", {
           "translate-x-2": hover,
         })}
       >

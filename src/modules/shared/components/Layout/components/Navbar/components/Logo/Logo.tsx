@@ -6,7 +6,7 @@ export default function Logo() {
       <img
         src={APP_IMAGES.LOGO.src}
         alt={APP_IMAGES.LOGO.alt}
-        className="md:w-[170px] w-[130px] object-contain"
+        className="md:w-[160px] w-[130px] object-contain"
       />
     </div>
   );
