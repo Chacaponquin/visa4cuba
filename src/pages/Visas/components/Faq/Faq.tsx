@@ -7,8 +7,8 @@ import Sad from "../../../../modules/app/modules/icon/components/Sad";
 import Time from "../../../../modules/app/modules/icon/components/Time";
 import World from "../../../../modules/app/modules/icon/components/World";
 import P from "../../../../modules/app/modules/ui/components/P/P";
+import FaqCard from "../../../../modules/shared/components/FaqCard/FaqCard";
 import LayoutSection from "../../../../modules/shared/components/Layout/components/LayoutSection/LayoutSection";
-import FaqCard from "./components/FaqCard/FaqCard";
 
 export default function Faq() {
   return (
