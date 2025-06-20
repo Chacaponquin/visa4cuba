@@ -16,11 +16,11 @@ export default function ImageInfoCard({
   return (
     <div
       className={clsx(
-        "flex flex-col-reverse lg:items-start items-center w-full justify-between gap-x-10 gap-y-10 mb-20",
+        "flex flex-col-reverse lg:items-start items-center w-full justify-between gap-x-10 gap-y-16 mb-20",
         { "lg:flex-row-reverse": reverse, "lg:flex-row": !reverse }
       )}
     >
-      <section className="flex flex-col w-full">
+      <section className="flex flex-col w-full lg:pt-5">
         <h1 className="font-title-bold text-4xl mb-3">{title}</h1>
 
         {children}

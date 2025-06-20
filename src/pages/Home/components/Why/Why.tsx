@@ -1,10 +1,10 @@
-import AboutSection from "../../shared/components/AboutSection/AboutSection";
+import LayoutSection from "../../../../modules/shared/components/Layout/components/LayoutSection/LayoutSection";
 import Card from "./components/Card/Card";
 import { WHY_CARDS } from "./domain/why-card";
 
 export default function Why() {
   return (
-    <AboutSection
+    <LayoutSection
       title="¿Por qué elegir Visa4Cuba?"
       description="Somos más que una agencia de viajes, somos tus compañeros de aventura"
     >
@@ -13,6 +13,6 @@ export default function Why() {
           <Card key={i} card={w} />
         ))}
       </div>
-    </AboutSection>
+    </LayoutSection>
   );
 }

@@ -1,10 +1,10 @@
-import AboutSection from "../../shared/components/AboutSection/AboutSection";
+import LayoutSection from "../../../../modules/shared/components/Layout/components/LayoutSection/LayoutSection";
 import StepCard from "./components/StepCard/StepCard";
 import { STEPS } from "./domain/step";
 
 export default function Steps() {
   return (
-    <AboutSection
+    <LayoutSection
       title="Obtén tu Visa en 4 Pasos"
       description="Nuestro proceso optimizado hace que obtener tu visa sea rápido y sin complicaciones"
     >
@@ -13,6 +13,6 @@ export default function Steps() {
           <StepCard key={index} props={s} step={index + 1} />
         ))}
       </div>
-    </AboutSection>
+    </LayoutSection>
   );
 }

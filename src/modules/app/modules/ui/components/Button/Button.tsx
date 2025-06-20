@@ -3,12 +3,12 @@ import type { UiSize } from "../../domain/size";
 import type { IconProps } from "../../../icon/domain/props";
 
 interface Props {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   onClick?: () => void;
   loading?: boolean;
   type?: "submit" | "button";
   className?: string;
-  color?: "primary" | "light";
+  color?: "primary" | "light" | "secondary";
   size?: UiSize;
   icon?: (props: IconProps) => React.ReactNode;
   full?: boolean;
@@ -32,6 +32,7 @@ export default function Button({
 
     {
       "bg-primary-700 hover:bg-primary text-white": color === "primary",
+      "bg-secondary hover:bg-secondary text-white": color === "secondary",
       "bg-white hover:bg-gray-100 text-black border border-card stroke-black":
         color === "light",
     },
