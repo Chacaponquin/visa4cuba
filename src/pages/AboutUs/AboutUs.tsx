@@ -1,7 +1,8 @@
 import Layout from "../../modules/shared/components/Layout/Layout";
+import Services from "../../modules/shared/components/Services/Services";
+import Contact from "./components/Contact/Contact";
 import Header from "./components/Header/Header";
 import Mission from "./components/Mission/Mission";
-import Services from "./components/Services/Services";
 
 export default function AboutUs() {
   return (
@@ -9,6 +10,7 @@ export default function AboutUs() {
       <Header />
       <Services />
       <Mission />
+      <Contact />
     </Layout>
   );
 }

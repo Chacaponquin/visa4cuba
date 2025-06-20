@@ -1,6 +1,7 @@
 import { APP_IMAGES } from "../../modules/app/domain/constants/app-images";
 import LayoutHeader from "../../modules/shared/components/Layout/components/LayoutHeader/LayoutHeader";
 import Layout from "../../modules/shared/components/Layout/Layout";
+import Services from "../../modules/shared/components/Services/Services";
 import Faq from "./components/Faq/Faq";
 import Information from "./components/Information/Information";
 import Steps from "./components/Steps/Steps";
@@ -15,6 +16,7 @@ export default function Home() {
         title="Visas y Seguros para Cuba de forma rápida con"
       />
 
+      <Services />
       <Steps />
       <Information />
       <Faq />

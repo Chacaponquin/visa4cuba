@@ -1,14 +1,16 @@
+import clsx from "clsx";
 import React from "react";
 
 interface Props {
   onSubmit(): void;
-  children: React.ReactNode;
+  className?: string;
+  children?: React.ReactNode;
 }
 
-export default function Form({ onSubmit, children }: Props) {
+export default function Form({ onSubmit, children, className }: Props) {
   return (
     <form
-      className="flex flex-col w-full"
+      className={clsx("flex flex-col w-full", className)}
       onSubmit={(e) => {
         e.preventDefault();
         onSubmit();

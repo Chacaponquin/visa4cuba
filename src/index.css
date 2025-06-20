@@ -64,20 +64,32 @@
   --font-title-medium: "Grotesk Medium";
   --font-title-bold: "Grotesk Bold";
 
-  --color-primary-50: #f0f4ff;
-  --color-primary-100: #e4ebff;
-  --color-primary-200: #ccdaff;
-  --color-primary-300: #a4baff;
-  --color-primary-400: #708bff;
-  --color-primary-500: #3752ff;
-  --color-primary-600: #0f22ff;
-  --color-primary-700: #0018ff;
-  --color-primary-800: #0017da;
-  --color-primary-900: #000f9f;
-  --color-primary-950: #00137a;
+  --color-primary-50: #ecfbff;
+  --color-primary-100: #d4f4ff;
+  --color-primary-200: #b2eeff;
+  --color-primary-300: #7de7ff;
+  --color-primary-400: #40d5ff;
+  --color-primary-500: #14b7ff;
+  --color-primary-600: #0098ff;
+  --color-primary-700: #0080ff;
+  --color-primary-800: #0066cc;
+  --color-primary-900: #0857a0;
+  --color-primary-950: #0a3561;
 
-  --color-primary: #000f9f;
-  --color-secondary: #e31d93;
+  --color-secondary-50: #fef3f2;
+  --color-secondary-100: #fde5e3;
+  --color-secondary-200: #fcd0cc;
+  --color-secondary-300: #f9b0a8;
+  --color-secondary-400: #f38276;
+  --color-secondary-500: #e74c3c;
+  --color-secondary-600: #d53d2d;
+  --color-secondary-700: #b33022;
+  --color-secondary-800: #942b20;
+  --color-secondary-900: #7b2921;
+  --color-secondary-950: #43110c;
+
+  --color-primary: #0066cc;
+  --color-secondary: #e74c3c;
 }
 
 input,

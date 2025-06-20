@@ -1,5 +1,5 @@
 interface Props {
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 export default function FormSectionColumn({ children }: Props) {

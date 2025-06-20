@@ -28,7 +28,7 @@ export const SERVICE_CARDS: ServiceCard[] = [
     icon: Safe,
     title: "Seguros de Viaje",
     description:
-      "Protege tu viaje con nuestros seguros especializados para Cuba. Cobertura médica y de equipaje incluida.",
+      "Protege tu viaje con nuestros seguros especializados para Cuba. Cobertura médica y de equipaje incluida en el servicio.",
     includes: [
       "Cobertura médica completa",
       "Protección de equipaje",

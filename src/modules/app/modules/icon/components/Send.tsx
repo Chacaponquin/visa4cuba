@@ -1,6 +1,6 @@
 import type { IconProps } from "../domain/props";
 
-export default function Download({ size }: IconProps) {
+export default function Send({ size }: IconProps) {
   return (
     <svg
       width={size}
@@ -10,21 +10,13 @@ export default function Download({ size }: IconProps) {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M6 24.0083V42H42V24"
+        d="M43 5L29.7 43L22.1 25.9L5 18.3L43 5Z"
         stroke="inherit"
         strokeWidth="3"
-        strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
-        d="M33 23L24 32L15 23"
-        stroke="inherit"
-        strokeWidth="3"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M23.9917 6V32"
+        d="M43.0001 5L22.1001 25.9"
         stroke="inherit"
         strokeWidth="3"
         strokeLinecap="round"

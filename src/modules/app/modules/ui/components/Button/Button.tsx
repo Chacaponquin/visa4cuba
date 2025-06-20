@@ -31,8 +31,9 @@ export default function Button({
     "flex items-center justify-center gap-x-2",
 
     {
-      "bg-primary-700 hover:bg-primary text-white": color === "primary",
-      "bg-secondary hover:bg-secondary text-white": color === "secondary",
+      "bg-primary-500 hover:bg-primary-600 text-white": color === "primary",
+      "bg-secondary-500 hover:bg-secondary-600 text-white":
+        color === "secondary",
       "bg-white hover:bg-gray-100 text-black border border-card stroke-black":
         color === "light",
     },

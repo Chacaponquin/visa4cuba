@@ -1,10 +1,10 @@
-import AboutSection from "../../shared/components/AboutSection/AboutSection";
+import LayoutSection from "../../../../modules/shared/components/Layout/components/LayoutSection/LayoutSection";
 import Card from "./components/Card/Card";
 import { SERVICE_CARDS } from "./domain/service-card";
 
 export default function Services() {
   return (
-    <AboutSection
+    <LayoutSection
       title="Experiencias únicas en Cuba"
       description="Ofrecemos una amplia gama de servicios diseñados para hacer de tu viaje a Cuba una experiencia inolvidable y auténtica."
     >
@@ -13,6 +13,6 @@ export default function Services() {
           <Card key={index} service={s} />
         ))}
       </div>
-    </AboutSection>
+    </LayoutSection>
   );
 }
