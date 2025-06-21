@@ -22,6 +22,7 @@ export default function ContactForm() {
     setPhone,
     message,
     setMessage,
+    loading,
   } = useContactForm();
 
   return (
@@ -73,7 +74,7 @@ export default function ContactForm() {
           />
         </FormSection>
 
-        <Button type="submit" size="lg" icon={Send} full>
+        <Button loading={loading} type="submit" size="lg" icon={Send} full>
           Enviar mensaje
         </Button>
       </Form>

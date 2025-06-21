@@ -19,7 +19,7 @@ export default function Footer() {
       </div>
 
       <div className="w-full text-center py-3 px-5 text-white bg-primary-950">
-        © YourCuba. Todos los derechos reservados.
+        © Visa4Cuba. Todos los derechos reservados.
       </div>
     </footer>
   );

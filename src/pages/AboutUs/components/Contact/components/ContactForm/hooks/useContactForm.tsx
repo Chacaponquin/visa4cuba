@@ -1,6 +1,10 @@
 import { useState } from "react";
+import useToast from "../../../../../../../modules/app/hooks/useToast";
+import { UserContactValidator } from "../../../../../../../modules/user/domain/validator/user-contact/user-contact-validator";
 
 export default function useContactForm() {
+  const { errors } = useToast();
+
   const [loading, setLoading] = useState(false);
 
   const [name, setName] = useState("");
@@ -10,7 +14,20 @@ export default function useContactForm() {
   const [message, setMessage] = useState("");
 
   function handleSubmit() {
-    setLoading(true);
+    const validator = new UserContactValidator({
+      email: email,
+      lastname: lastname,
+      message: message,
+      name: name,
+      phone: phone,
+    });
+
+    validator.execute({
+      error: errors,
+      success() {
+        setLoading(true);
+      },
+    });
   }
 
   return {
