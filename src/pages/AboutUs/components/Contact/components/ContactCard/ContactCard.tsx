@@ -8,9 +8,9 @@ interface Props {
 
 export default function ContactCard({ icon, title, children }: Props) {
   return (
-    <article className="px-6 w-full py-3.5 rounded-card bg-white border-card border-[1.5px] mb-5">
+    <article className="px-6 w-full py-3.5 rounded-card bg-white border-card border-[1.5px] md:mb-5 mb-3">
       <header className="flex items-center gap-x-3 mb-3">
-        <i className="stroke-secondary">{icon({ size: 25 })}</i>
+        <i className="stroke-secondary">{icon({ size: 23 })}</i>
 
         <h3 className="font-title-medium text-lg">{title}</h3>
       </header>

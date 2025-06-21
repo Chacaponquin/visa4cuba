@@ -14,8 +14,8 @@ export default function Contact() {
       title="Contáctanos"
       description="Estamos aquí para ayudarte con tus seguros y visas para Cuba. Nuestro equipo de expertos está listo para brindarte la mejor asesoría."
     >
-      <div className="flex items-start w-full gap-x-10 gap-y-6">
-        <section className="grid grid-cols-1 w-full max-w-[400px]">
+      <div className="flex lg:flex-row lg:items-start flex-col w-full gap-x-10 gap-y-4">
+        <section className="grid lg:grid-cols-1 md:grid-cols-2 grid-cols-1 gap-x-6 w-full lg:max-w-[400px]">
           <ContactCard icon={Phone} title="Teléfono">
             <p className="font-semibold">{APP_INFO.PHONE}</p>
             <span className="text-gray-600 text-sm">
