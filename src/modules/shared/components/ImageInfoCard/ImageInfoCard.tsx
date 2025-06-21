@@ -16,7 +16,7 @@ export default function ImageInfoCard({
   return (
     <div
       className={clsx(
-        "flex flex-col-reverse lg:items-start items-center w-full justify-between gap-x-10 gap-y-16 mb-20",
+        "flex flex-col-reverse lg:items-start items-center w-full justify-between gap-x-10 gap-y-12 mb-20",
         { "lg:flex-row-reverse": reverse, "lg:flex-row": !reverse }
       )}
     >
@@ -36,7 +36,10 @@ export default function ImageInfoCard({
         <div
           className={clsx(
             "bg-secondary rounded-lg w-full absolute h-full -z-10",
-            { "-left-5 top-5": reverse, "-right-5 top-5": !reverse }
+            {
+              "md:-left-5 mf:top-5 -left-3 top-3": reverse,
+              "md:-right-5 md:top-5 top-3 -right-3": !reverse,
+            }
           )}
         ></div>
       </section>
