@@ -21,14 +21,14 @@ export default function How() {
         title="Visa online para Cuba por solo 35 euros en 48 horas"
       >
         <P>
-          VISA4CUBA te permite de comprar fácilmente su visado para Cuba online,
+          Visa4Cuba te permite de comprar fácilmente su visado para Cuba online,
           con la garantía de recibirla directamente en tu hogar en 48 horas. Por
           lo tanto, no tendrá que hacer colas en ninguna oficina ni en el
           aeropuerto (¡y además gastando mucho más dinero!), por lo que tendrá
           su visado para llegar a Cuba online en poco tiempo y en pocos clics, a
           un precio competitivo. En muchos sitios, el costo de la tarjeta para
           Cuba puede llegar a los 70 euros, teniendo que enviar varios
-          documentos para obtenerla: VISA4CUBA te garantiza recibir tu visado
+          documentos para obtenerla: Visa4Cuba te garantiza recibir tu visado
           online para Cuba por solo 35 euros con envío directo en tu lugar,
           proporcionando solo algunos simples datos.
         </P>
@@ -43,7 +43,7 @@ export default function How() {
           Solo confías en sitios web seguros: comprando el visado turístico en
           sitios web que no son certificados, podrías recibir documentos falsos
           y no reconocidos por las autoridades cubanas, con el riesgo de no ser
-          admitido en Cuba al llegar. Con VISA4CUBA tu visado online para Cuba
+          admitido en Cuba al llegar. Con Visa4Cuba tu visado online para Cuba
           está 100% garantizada
         </P>
       </InfoCard>

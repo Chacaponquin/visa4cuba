@@ -1,7 +1,20 @@
+import clsx from "clsx";
+import type { UiSize } from "../../../../domain/size";
+
 interface Props {
   children?: React.ReactNode;
+  size?: UiSize;
 }
 
-export default function P({ children }: Props) {
-  return <p className="mb-2 leading-7 text-base text-gray-700">{children}</p>;
+export default function P({ children, size = "base" }: Props) {
+  return (
+    <p
+      className={clsx("mb-2 leading-7 text-gray-700", {
+        "text-sm": size === "sm",
+        "text-base": size === "base",
+      })}
+    >
+      {children}
+    </p>
+  );
 }

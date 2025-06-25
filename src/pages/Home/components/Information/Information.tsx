@@ -23,13 +23,6 @@ export default function Information() {
           también.
         </P>
 
-        <P>
-          Es importante tener en cuenta que si viajas desde los Estados Unidos
-          tendrás que utilizar un visado rosa (obligatorio a partir del 12 de
-          enero de 2017 para turistas de todas las nacionalidades que llegan a
-          Cuba directamente desde los Estados Unidos).
-        </P>
-
         <Link to={APP_ROUTES.VISA}>
           <Button color="secondary" size="lg" className="mt-5">
             Saber más sobre visas a Cuba
@@ -40,7 +33,7 @@ export default function Information() {
       <ImageInfoCard title="Seguro médico" reverse image={APP_IMAGES.HEALTH}>
         <P>
           Destinados a personas que viajan hacia Cuba, incluyendo aquellas que
-          de forma temporal o a más largo plazo permanecen en el país
+          de forma temporal o a más largo plazo permanecen en el país.
         </P>
 
         <P>

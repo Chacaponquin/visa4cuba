@@ -3,6 +3,7 @@ import clsx from "clsx";
 import type { IconProps } from "../../../app/modules/icon/domain/props";
 import ArrowDown from "../../../app/modules/icon/components/ArrowDown";
 import IconCard from "../IconCard/IconCard";
+import P from "../../../app/modules/ui/components/Markdown/components/P/P";
 
 interface Props {
   title: string;
@@ -42,7 +43,11 @@ export default function FaqCard({ icon, title, children }: Props) {
         </i>
       </div>
 
-      <div className="pl-14">{open && children}</div>
+      {open && (
+        <div className="pl-14">
+          <P size="sm">{children}</P>
+        </div>
+      )}
     </div>
   );
 }

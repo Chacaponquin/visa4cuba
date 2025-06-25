@@ -10,7 +10,7 @@ export default function Mission() {
     <AboutContainer>
       <ImageInfoCard image={APP_IMAGES.CUBA_1} title="Nuestra misión">
         <P>
-          En Your Cuba, nos dedicamos a hacer realidad tu sueño de visitar la
+          En Visa4Cuba, nos dedicamos a hacer realidad tu sueño de visitar la
           hermosa isla de Cuba. Entendemos que los trámites pueden ser
           complicados, por eso nos especializamos en simplificar todo el proceso
           de obtención de visas y seguros de viaje.

@@ -12,8 +12,8 @@ export default function Card({ service }: Props) {
       className={clsx(
         "rounded-card w-full max-w-md flex flex-col border-2 border-card py-6 px-7 transition-all duration-200",
         {
-          "border-primary/20 hover:border-primary": service.color === "primary",
-          "border-secondary/20 hover:border-secondary":
+          "border-primary/40 hover:border-primary": service.color === "primary",
+          "border-secondary/40 hover:border-secondary":
             service.color === "secondary",
         }
       )}

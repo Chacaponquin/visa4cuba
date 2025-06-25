@@ -51,7 +51,7 @@
   --radius-input: var(--radius-md);
   --radius-card: var(--radius-md);
 
-  --shadow-input: 0 0 4px rgba(0, 15, 159, 0.75);
+  --shadow-input: 0 0 4px rgba(64, 213, 255, 0.7);
 
   --spacing-layout: 1200px;
   --spacing-layout-sm: 1000px;

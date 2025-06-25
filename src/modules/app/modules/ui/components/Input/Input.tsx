@@ -13,8 +13,8 @@ export default function Input({ value, placeholder, onChange }: Props) {
     "border-[1.5px] border-card",
     "px-3 py-1",
     "transition-all duration-200",
-    "hover:shadow-input hover:border-primary",
-    "focus:shadow-input focus:border-primary",
+    "hover:shadow-input hover:border-primary-400",
+    "focus:shadow-input focus:border-primary-400",
     "outline-none",
     "text-sm",
     "bg-white"

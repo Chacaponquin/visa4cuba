@@ -31,7 +31,7 @@ export default function Information() {
         title="Fácil de contratar"
       >
         <P>
-          En particular, YOUR CUBA es el agente oficial de la aseguradora cubana
+          En particular, Visa4Cuba es el agente oficial de la aseguradora cubana
           ESICUBA con un contrato regular para la venta de seguros de viaje en
           Cuba.
         </P>
@@ -40,7 +40,7 @@ export default function Information() {
           La gran ventaja de la póliza ESICUBA y la diferencia sustancial con el
           resto de seguros es que en caso de necesitar asistencia medica NO
           tendrá que adelantar dinero: solo llame al centro de seguros o al
-          equipo de YOUR CUBA y el gobierno cubano pagará directamente. Con las
+          equipo de Visa4Cuba y el gobierno cubano pagará directamente. Con las
           otras pólizas, en cambio, para recibir asistencia es necesario llamar
           a su país para abrir el reclamo y anticipar los costos. En resumen,
           ¡queremos que te vayas de forma segura!
@@ -49,12 +49,12 @@ export default function Information() {
 
       <ImageInfoCard image={APP_IMAGES.CUBA_4} title="Visa y seguro para Cuba">
         <P>
-          A través de YOUR CUBA puede obtener fácilmente su seguro medico para
+          A través de Visa4Cuba puede obtener fácilmente su seguro medico para
           Cuba en línea, pagando de forma segura con la mayoría de las tarjetas
           de crédito internacionales. El costo del seguro médico para Cuba es
           flexible y se puede personalizar según las necesidades de cada
           viajero: compruébalo ahora a través de nuestro portal. No solo eso:
-          YOUR CUBA también te permite agilizar tus trámites previos a la salida
+          Visa4Cuba también te permite agilizar tus trámites previos a la salida
           comprando una visa y un seguro para Cuba al mismo tiempo. Al igual que
           el seguro, la visa para Cuba (VISA o "tarjeta de turista") es
           obligatoria y debe ser mostrada abordando el vuelo a la isla. A su

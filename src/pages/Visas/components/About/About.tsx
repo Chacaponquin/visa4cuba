@@ -19,7 +19,7 @@ export default function About() {
         color="primary"
       >
         <P>
-          Esta claro: playas encantadoras, naturaleza frondosa, música caribeña
+          Está claro: playas encantadoras, naturaleza frondosa, música caribeña
           en el aire y personas abiertas y sonrientes hacen de esta isla un
           lugar particularmente anhelado por los viajeros de todo el mundo. De
           hecho, ya estás imaginando relajarte al sol y luego bucearte en el
@@ -40,13 +40,13 @@ export default function About() {
         <P>
           Comúnmente llamado "tarjeta de turista", el visado es un documento
           obligatorio para poder entrar en el país y por lo tanto será mejor
-          obtenerlo lo antes posible. La " tarjeta de turista " para Cuba debe
-          ser solicitada antes de salir y te permite permanecer en la isla
-          durante 30 días, con la posibilidad de prorrogarlo de hasta 60 días
-          pagando un suplemento en cualquier oficina de inmigración, poco antes
-          de la expiración del documento. No es posible extender el período de
-          validez del documento de antemano, ni es posible comprar un visado con
-          una validez superior a los 30 días.
+          obtenerlo lo antes posible. La "tarjeta de turista" para Cuba debe ser
+          solicitada antes de salir y te permite permanecer en la isla durante
+          30 días, con la posibilidad de prorrogarlo de hasta 60 días pagando un
+          suplemento en cualquier oficina de inmigración, poco antes de la
+          expiración del documento. No es posible extender el período de validez
+          del documento de antemano, ni es posible comprar un visado con una
+          validez superior a los 30 días.
         </P>
 
         <P>
