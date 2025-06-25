@@ -1,6 +1,6 @@
 import FaqCard from "../FaqCard/FaqCard";
 import Time from "../../../app/modules/icon/components/Time";
-import P from "../../../app/modules/ui/components/P/P";
+import P from "../../../app/modules/ui/components/Markdown/components/P/P";
 import Sad from "../../../app/modules/icon/components/Sad";
 import Calendar from "../../../app/modules/icon/components/Calendar";
 import World from "../../../app/modules/icon/components/World";

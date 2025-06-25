@@ -54,6 +54,7 @@
   --shadow-input: 0 0 4px rgba(0, 15, 159, 0.75);
 
   --spacing-layout: 1200px;
+  --spacing-layout-sm: 1000px;
 
   --font-body: "Poppins Regular";
   --font-regular: "Poppins Regular";

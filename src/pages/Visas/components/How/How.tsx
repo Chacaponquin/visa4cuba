@@ -7,7 +7,7 @@ import Button from "../../../../modules/app/modules/ui/components/Button/Button"
 import LayoutSection from "../../../../modules/shared/components/Layout/components/LayoutSection/LayoutSection";
 import InfoCard from "./components/InfoCard/InfoCard";
 import { APP_ROUTES } from "../../../../modules/app/domain/constants/app-routes";
-import P from "../../../../modules/app/modules/ui/components/P/P";
+import P from "../../../../modules/app/modules/ui/components/Markdown/components/P/P";
 
 export default function How() {
   return (

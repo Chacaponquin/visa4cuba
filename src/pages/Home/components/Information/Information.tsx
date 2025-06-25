@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import { APP_IMAGES } from "../../../../modules/app/domain/constants/app-images";
 import Button from "../../../../modules/app/modules/ui/components/Button/Button";
-import P from "../../../../modules/app/modules/ui/components/P/P";
+import P from "../../../../modules/app/modules/ui/components/Markdown/components/P/P";
 import ImageInfoCard from "../../../../modules/shared/components/ImageInfoCard/ImageInfoCard";
 import LayoutSection from "../../../../modules/shared/components/Layout/components/LayoutSection/LayoutSection";
 import { APP_ROUTES } from "../../../../modules/app/domain/constants/app-routes";

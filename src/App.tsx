@@ -8,6 +8,7 @@ import AboutUs from "./pages/AboutUs/AboutUs";
 import Visas from "./pages/Visas/Visas";
 import Insurence from "./pages/Insurence/Insurence";
 import Home from "./pages/Home/Home";
+import Privacity from "./pages/Information/components/Privacity/Privacity";
 
 export default function App() {
   return (
@@ -23,6 +24,11 @@ export default function App() {
           <Route path={APP_ROUTES.VISA} element={<Visas />} />
           <Route path={APP_ROUTES.INSURANCE} element={<Insurence />} />
           <Route path={APP_ROUTES.HOME} element={<Home />} />
+
+          <Route
+            path={APP_ROUTES.INFORMATION.PRIVACITY}
+            element={<Privacity />}
+          />
         </Routes>
       </ShopProvider>
     </BrowserRouter>

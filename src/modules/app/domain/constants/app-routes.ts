@@ -5,4 +5,7 @@ export const APP_ROUTES = {
   INSURANCE: "/insurence",
   VISA: "/visas",
   ABOUT_US: "/about-us",
+  INFORMATION: {
+    PRIVACITY: "/privacity",
+  },
 };

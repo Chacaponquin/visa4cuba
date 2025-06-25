@@ -3,6 +3,7 @@ import FooterInfo from "../../shared/components/FooterInfo/FooterInfo";
 import Share from "../../../../../../../app/modules/icon/components/Share";
 import User from "../../../../../../../app/modules/icon/components/User";
 import City from "../../../../../../../app/modules/icon/components/City";
+import { APP_ROUTES } from "../../../../../../../app/domain/constants/app-routes";
 
 export default function Sections() {
   return (
@@ -10,7 +11,10 @@ export default function Sections() {
       <FooterSection title="Corporativo" icon={City}>
         <FooterInfo text="Política de cookies" link="" />
         <FooterInfo text="Términos y condiciones" link="" />
-        <FooterInfo text="Política de privacidad" link="" />
+        <FooterInfo
+          text="Política de privacidad"
+          link={APP_ROUTES.INFORMATION.PRIVACITY}
+        />
       </FooterSection>
 
       <FooterSection title="Soporte" icon={User}>

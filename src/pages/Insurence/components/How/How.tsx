@@ -2,7 +2,7 @@ import Bowl from "../../../../modules/app/modules/icon/components/Bowl";
 import Medicine from "../../../../modules/app/modules/icon/components/Medicine";
 import Rain from "../../../../modules/app/modules/icon/components/Rain";
 import Spray from "../../../../modules/app/modules/icon/components/Spray";
-import P from "../../../../modules/app/modules/ui/components/P/P";
+import P from "../../../../modules/app/modules/ui/components/Markdown/components/P/P";
 import LayoutSection from "../../../../modules/shared/components/Layout/components/LayoutSection/LayoutSection";
 import InfoCard from "../../../Visas/components/How/components/InfoCard/InfoCard";
 

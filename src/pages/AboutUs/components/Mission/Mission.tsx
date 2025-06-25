@@ -1,5 +1,5 @@
 import { APP_IMAGES } from "../../../../modules/app/domain/constants/app-images";
-import P from "../../../../modules/app/modules/ui/components/P/P";
+import P from "../../../../modules/app/modules/ui/components/Markdown/components/P/P";
 import ImageInfoCard from "../../../../modules/shared/components/ImageInfoCard/ImageInfoCard";
 import AboutContainer from "../../shared/components/AboutContainer/AboutContainer";
 import ResultCard from "./components/ResultCard/ResultCard";

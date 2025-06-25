@@ -1,5 +1,5 @@
 import FaqCard from "../FaqCard/FaqCard";
-import P from "../../../app/modules/ui/components/P/P";
+import P from "../../../app/modules/ui/components/Markdown/components/P/P";
 import Time from "../../../app/modules/icon/components/Time";
 import Avatar from "../../../app/modules/icon/components/Avatar";
 import Medicine from "../../../app/modules/icon/components/Medicine";

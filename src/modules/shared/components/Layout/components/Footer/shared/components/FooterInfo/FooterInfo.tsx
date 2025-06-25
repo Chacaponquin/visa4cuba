@@ -8,7 +8,7 @@ interface Props {
 
 export default function FooterInfo({ link, text }: Props) {
   return (
-    <Link to={link} className="flex items-center gap-x-2 mb-1.5">
+    <Link to={link} className="flex items-center gap-x-2 mb-2">
       <i className="fill-secondary">
         <Star size={15} />
       </i>

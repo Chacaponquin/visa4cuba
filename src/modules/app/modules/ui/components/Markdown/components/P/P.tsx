@@ -3,5 +3,5 @@ interface Props {
 }
 
 export default function P({ children }: Props) {
-  return <p className="mb-2 leading-7 text-sm text-gray-600">{children}</p>;
+  return <p className="mb-2 leading-7 text-base text-gray-700">{children}</p>;
 }
