@@ -7,5 +7,6 @@ export const APP_ROUTES = {
   ABOUT_US: "/about-us",
   INFORMATION: {
     PRIVACITY: "/privacity",
+    TERMS_AND_CONDITIONS: "/terms-and-conditions",
   },
 };

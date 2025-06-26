@@ -9,6 +9,7 @@ import Visas from "./pages/Visas/Visas";
 import Insurence from "./pages/Insurence/Insurence";
 import Home from "./pages/Home/Home";
 import Privacity from "./pages/Information/components/Privacity/Privacity";
+import Terms from "./pages/Terms/Terms";
 
 export default function App() {
   return (
@@ -24,6 +25,10 @@ export default function App() {
           <Route path={APP_ROUTES.VISA} element={<Visas />} />
           <Route path={APP_ROUTES.INSURANCE} element={<Insurence />} />
           <Route path={APP_ROUTES.HOME} element={<Home />} />
+          <Route
+            path={APP_ROUTES.INFORMATION.TERMS_AND_CONDITIONS}
+            element={<Terms />}
+          />
 
           <Route
             path={APP_ROUTES.INFORMATION.PRIVACITY}
