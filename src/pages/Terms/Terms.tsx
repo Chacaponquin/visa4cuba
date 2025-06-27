@@ -293,21 +293,23 @@ export default function Terms() {
 
         <H3>1.10 Política de cancelación para el seguro</H3>
 
-        <ListItem>
-          <P>
-            Los seguros pueden ser cancelados dentro de los 14 días siguientes a
-            su emisión sin especificar el motivo, siempre dentro de al menos 48
-            desde la fecha de inicio de la cobertura del seguro.
-          </P>
-        </ListItem>
+        <List>
+          <ListItem>
+            <P>
+              Los seguros pueden ser cancelados dentro de los 14 días siguientes
+              a su emisión sin especificar el motivo, siempre dentro de al menos
+              48 desde la fecha de inicio de la cobertura del seguro.
+            </P>
+          </ListItem>
 
-        <ListItem>
-          <P>
-            Todos los reembolsos estarán sujetos a una tarifa de cancelación del
-            10%., utilizado para cubrir las tarifas bancarias para procesar la
-            cancelación o el reembolso.
-          </P>
-        </ListItem>
+          <ListItem>
+            <P>
+              Todos los reembolsos estarán sujetos a una tarifa de cancelación
+              del 10%., utilizado para cubrir las tarifas bancarias para
+              procesar la cancelación o el reembolso.
+            </P>
+          </ListItem>
+        </List>
 
         <H3>1.11 Descargo de responsabilidad</H3>
 
