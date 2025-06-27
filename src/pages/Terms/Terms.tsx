@@ -21,9 +21,9 @@ export default function Terms() {
         <List>
           <ListItem>
             <P>
-              Somos Your Cuba, la marca de una sociedad anónima registrada en
+              Somos Visa4Cuba, la marca de una sociedad anónima registrada en
               Santa Marta Magdalena (COLOMBIA) con número de registro B85212432.
-              A partir de ahora, el término "nosotros" se referirá a Your Cuba
+              A partir de ahora, el término "nosotros" se referirá a Visa4Cuba
               mientras que "usted" se referirá al cliente, entendido como todas
               las personas indicadas en la reserva, incluidas las añadidas o
               sustituidas en fechas posteriores.
@@ -43,10 +43,10 @@ export default function Terms() {
           <ListItem>
             <P>
               Estos términos y condiciones contienen en su totalidad el acuerdo
-              entre Your Cuba y el cliente y reemplazan cualquier entendimiento
+              entre Visa4Cuba y el cliente y reemplazan cualquier entendimiento
               o acuerdo previo (tanto oral como escrito) sobre el tema y no
               pueden ser corregidos o modificados a menos que se acuerde
-              expresamente por escrito con Your Cuba.
+              expresamente por escrito con Visa4Cuba.
             </P>
           </ListItem>
 
@@ -63,14 +63,14 @@ export default function Terms() {
 
           <ListItem>
             <P>
-              Your Cuba es un agencia de viajes debidamente autorizada para
+              Visa4Cuba es un agencia de viajes debidamente autorizada para
               comercializar visa de turistas por el Consulado de Cuba en Madrid.
             </P>
           </ListItem>
 
           <ListItem>
             <P>
-              Your Cuba es un agente intermediario debidamente autorizado para
+              Visa4Cuba es un agente intermediario debidamente autorizado para
               comercializar seguros de viaje para turistas emitidos por la
               empresa cubana ESICUBA SA a través de su subsidiaria ASISTUR SA.
             </P>
@@ -79,11 +79,11 @@ export default function Terms() {
           <ListItem>
             <P>
               Las Autoridades Estatales que emiten Visas son entidades
-              independientes y no agentes o empleados de Your Cuba. Your Cuba no
+              independientes y no agentes o empleados de Visa4Cuba. Visa4Cuba no
               se hace responsable de los actos, errores, omisiones, garantías,
               infracciones o negligencia de cualquiera de estos proveedores, así
               como de los daños personales o materiales, muerte u otros daños y
-              costos derivados de lo anterior. Your Cuba no se hace responsable
+              costos derivados de lo anterior. Visa4Cuba no se hace responsable
               y no devolverá dinero por el incumplimiento total o parcial de sus
               obligaciones contractuales, cuando sean imposibles de cumplir por
               causas de fuerza mayor o eventos fortuitos, entendidos como
@@ -97,11 +97,11 @@ export default function Terms() {
           <ListItem>
             <P>
               Las compañías de seguros son compañías independientes y no agentes
-              ni empleados de Your Cuba. Your Cuba no se hace responsable de los
+              ni empleados de Visa4Cuba. Visa4Cuba no se hace responsable de los
               actos, errores, omisiones, garantías, infracciones o negligencia
               de cualquiera de estos proveedores, así como de los daños
               personales o materiales, muerte u otros daños y costos derivados
-              de lo anterior. Your Cuba no se hace responsable y no devolverá
+              de lo anterior. Visa4Cuba no se hace responsable y no devolverá
               dinero por el incumplimiento total o parcial de sus obligaciones
               contractuales, cuando sean imposibles de cumplir por causas de
               fuerza mayor o eventos fortuitos, entendidos como eventos
@@ -126,7 +126,7 @@ export default function Terms() {
         <H3>1.3 Obtener una visa</H3>
 
         <P>
-          Cuando Your Cuba te envía la tarjeta de turista para Cuba, es
+          Cuando Visa4Cuba te envía la tarjeta de turista para Cuba, es
           importante que confirmes que has obtenido todas las tarjetas de
           turista para tu viaje. Debe notificarnos inmediatamente por correo
           electrónico si encuentra alguna discrepancia en la documentación.
@@ -135,13 +135,56 @@ export default function Terms() {
         <H3>1.4 Obtneción del seguro</H3>
 
         <P>
-          Cuando Your Cuba le envía un Seguro para Cuba, es importante que
+          Cuando Visa4Cuba le envía un Seguro para Cuba, es importante que
           confirme que ha obtenido todos los Seguros para su viaje. Debe
           notificarnos inmediatamente por correo electrónico si encuentra alguna
           discrepancia en la documentación.
         </P>
 
         <H3>1.5 Entrega de la visa</H3>
+
+        <List>
+          <ListItem>
+            <P>
+              Visa4Cuba enviará las tarjetas turísticas electrónicamente en
+              formato PDF al correo electrónico proporcionado durante la compra.
+            </P>
+          </ListItem>
+
+          <ListItem>
+            <P>
+              Recibirá su visa lista para imprimir, junto con instrucciones
+              claras sobre cómo utilizarla.
+            </P>
+          </ListItem>
+
+          <ListItem>
+            <P>
+              No se aplican costos de envío. El precio total se muestra
+              claramente antes de finalizar la compra.
+            </P>
+          </ListItem>
+
+          <ListItem>
+            <P>
+              Los pedidos se procesan y envían el mismo día en que se reciben,
+              siempre que se realicen antes de las 2 p.m. CEST. Los pedidos
+              realizados después de esa hora serán enviados el siguiente día
+              hábil.
+            </P>
+          </ListItem>
+
+          <ListItem>
+            <P>
+              Tenga en cuenta que, aunque la entrega es inmediata tras el
+              procesamiento, pueden existir ligeros retrasos dependiendo del
+              proveedor de correo electrónico o configuraciones de seguridad. Si
+              su viaje es inminente, le recomendamos realizar la compra con
+              antelación y revisar también su carpeta de correo no deseado o
+              spam.
+            </P>
+          </ListItem>
+        </List>
 
         <H3>1.6 Inclumpliento con la entrega de la visa</H3>
 
@@ -175,7 +218,7 @@ export default function Terms() {
         <List>
           <ListItem>
             <P>
-              Your Cuba enviará los Seguros en formato PDF a la dirección de
+              Visa4Cuba enviará los Seguros en formato PDF a la dirección de
               correo electrónico que proporcionó durante la compra.
             </P>
           </ListItem>
@@ -231,7 +274,7 @@ export default function Terms() {
           <ListItem>
             <P>
               Los productos pedidos se pueden devolver dentro de los 14 días
-              posteriores a la recepción sin especificar el motivo. Si Your Cuba
+              posteriores a la recepción sin especificar el motivo. Si Visa4Cuba
               recibe los productos en buen estado, se reembolsará el importe
               total del pedido. Los productos solo se pueden devolver en su
               estado original, es decir, si no están ni llenos ni doblados.
@@ -293,11 +336,11 @@ export default function Terms() {
 
         <P>
           En caso de pérdida, pérdida, daño, retraso o destrucción de una
-          tarjeta de turista, Your Cuba será responsable solo en caso de falla y
+          tarjeta de turista, Visa4Cuba será responsable solo en caso de falla y
           su responsabilidad se limitará al costo básico de reemplazo de ese
-          artículo. Your Cuba no se hace responsable de los artículos perdidos,
+          artículo. Visa4Cuba no se hace responsable de los artículos perdidos,
           dañados, retrasados o destruidos por un servicio de entrega o
-          autoridad emisora. En la máxima medida permitida por la ley, Your Cuba
+          autoridad emisora. En la máxima medida permitida por la ley, Visa4Cuba
           excluye o limita cualquier pérdida directa, indirecta o consecuente y
           todas las condiciones y garantías legales o implícitas, incluidas,
           entre otras, la pérdida de ganancias o los costos de viaje o
@@ -306,7 +349,7 @@ export default function Terms() {
           nuestra máxima responsabilidad por la pérdida que le cause es por
           contrato, acto ilícito u otro, el nivel de las comisiones pagadas por
           usted se limitará a los no consumidores; para Consumidores, pérdidas y
-          daños hasta un máximo de 250 Euros de los que Your Cuba sea
+          daños hasta un máximo de 250 Euros de los que Visa4Cuba sea
           directamente responsable y que puedan ser totalmente imputables a una
           incorrecta prestación del servicio.
         </P>
@@ -322,12 +365,12 @@ export default function Terms() {
           disposición de estos Términos no cumple con alguna ley, la disposición
           debe leerse de una manera que le dé el mayor efecto posible. Si no es
           posible darle algún efecto a la disposición, entonces debe
-          considerarse separable del resto de los Términos. Cuando Your Cuba no
+          considerarse separable del resto de los Términos. Cuando Visa4Cuba no
           pueda cumplir con ninguna obligación en virtud del contrato debido a
           cualquier circunstancia, asunto o cosa más allá de su control
           razonable ("fuerza mayor"), seremos liberados de tales obligaciones en
           la medida de dicha prevención, restricción o interferencia de la
-          manera causada. Your Cuba puede subcontratar todo o parte de sus
+          manera causada. Visa4Cuba puede subcontratar todo o parte de sus
           obligaciones o ceder todo o parte de sus derechos bajo este contrato.
           Este acuerdo no crea ningún derecho exigible para una persona que no
           sea parte de él, excepto cualquier sucesor o cesionario legítimo.
