@@ -2,6 +2,7 @@ export const APP_ROUTES = {
   SHOP: "/shop",
   BUY: "/shop/buy",
   HOME: "/home",
+  HOME_FAQ: "/home#faq",
   INSURANCE: "/insurence",
   VISA: "/visas",
   ABOUT_US: "/about-us",

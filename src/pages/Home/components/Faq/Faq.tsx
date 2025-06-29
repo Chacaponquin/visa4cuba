@@ -28,6 +28,7 @@ export default function Faq() {
 
   return (
     <LayoutSection
+      id="faq"
       title="Preguntas frecuentes"
       description="Resolvemos las dudas más comunes sobre el proceso de obtención de visas para Cuba"
     >

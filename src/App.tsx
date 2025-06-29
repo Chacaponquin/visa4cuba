@@ -1,4 +1,9 @@
-import { BrowserRouter, Navigate, Route, Routes } from "react-router";
+import {
+  createBrowserRouter,
+  Navigate,
+  RouterProvider,
+  type RouteObject,
+} from "react-router";
 import { APP_ROUTES } from "./modules/app/domain/constants/app-routes";
 import Shop from "./pages/Shop/Shop";
 import Buy from "./pages/Buy/Buy";
@@ -11,33 +16,74 @@ import Home from "./pages/Home/Home";
 import Privacity from "./pages/Information/components/Privacity/Privacity";
 import Terms from "./pages/Terms/Terms";
 import Cookies from "./pages/Cookies/Cookies";
+import { LanguageProvider } from "./modules/app/modules/language/context/LanguageProvider";
+import { TranslationRoute } from "./modules/app/domain/core/translation-route";
+import { LANGUAGE } from "./modules/app/modules/language/domain/language";
+
+const pages = [
+  new TranslationRoute({ component: Shop, route: APP_ROUTES.SHOP }),
+  new TranslationRoute({ component: Buy, route: APP_ROUTES.BUY }),
+  new TranslationRoute({ component: AboutUs, route: APP_ROUTES.ABOUT_US }),
+  new TranslationRoute({ component: Visas, route: APP_ROUTES.VISA }),
+  new TranslationRoute({ component: Insurence, route: APP_ROUTES.INSURANCE }),
+  new TranslationRoute({ component: Home, route: APP_ROUTES.HOME }),
+  new TranslationRoute({
+    component: Terms,
+    route: APP_ROUTES.INFORMATION.TERMS_AND_CONDITIONS,
+  }),
+  new TranslationRoute({
+    component: Cookies,
+    route: APP_ROUTES.INFORMATION.COOKIES,
+  }),
+  new TranslationRoute({
+    component: Privacity,
+    route: APP_ROUTES.INFORMATION.PRIVACITY,
+  }),
+];
+
+const routes = [] as RouteObject[];
+
+for (const p of pages) {
+  const result = [] as RouteObject[];
+
+  const Component = p.component;
+
+  result.push({
+    element: <Component language={LANGUAGE.EN} />,
+    path: p.builder.build(LANGUAGE.EN),
+  });
+
+  result.push({
+    element: <Component language={LANGUAGE.ES} />,
+    path: p.builder.build(LANGUAGE.ES),
+  });
+
+  result.push({
+    element: <Component language={LANGUAGE.IT} />,
+    path: p.builder.build(LANGUAGE.IT),
+  });
+
+  result.push({
+    element: <Component />,
+    path: p.route,
+  });
+
+  routes.push(...result);
+}
+
+const router = createBrowserRouter([
+  { path: "/", element: <Navigate replace to={APP_ROUTES.SHOP} /> },
+  ...routes,
+]);
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <LanguageProvider>
       <ShopProvider>
         <ToastContainer />
 
-        <Routes>
-          <Route path="/" element={<Navigate replace to={APP_ROUTES.SHOP} />} />
-          <Route path={APP_ROUTES.SHOP} element={<Shop />} />
-          <Route path={APP_ROUTES.BUY} element={<Buy />} />
-          <Route path={APP_ROUTES.ABOUT_US} element={<AboutUs />} />
-          <Route path={APP_ROUTES.VISA} element={<Visas />} />
-          <Route path={APP_ROUTES.INSURANCE} element={<Insurence />} />
-          <Route path={APP_ROUTES.HOME} element={<Home />} />
-          <Route
-            path={APP_ROUTES.INFORMATION.TERMS_AND_CONDITIONS}
-            element={<Terms />}
-          />
-          <Route element={<Cookies />} path={APP_ROUTES.INFORMATION.COOKIES} />
-
-          <Route
-            path={APP_ROUTES.INFORMATION.PRIVACITY}
-            element={<Privacity />}
-          />
-        </Routes>
+        <RouterProvider router={router} />
       </ShopProvider>
-    </BrowserRouter>
+    </LanguageProvider>
   );
 }

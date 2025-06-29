@@ -4,6 +4,7 @@ import Share from "../../../../../../../app/modules/icon/components/Share";
 import User from "../../../../../../../app/modules/icon/components/User";
 import City from "../../../../../../../app/modules/icon/components/City";
 import { APP_ROUTES } from "../../../../../../../app/domain/constants/app-routes";
+import { APP_INFO } from "../../../../../../../app/domain/constants/app-info";
 
 export default function Sections() {
   return (
@@ -24,14 +25,14 @@ export default function Sections() {
       </FooterSection>
 
       <FooterSection title="Soporte" icon={User}>
-        <FooterInfo text="Contáctanos" link="" />
-        <FooterInfo text="Preguntas frecuentes" link="" />
+        <FooterInfo text="Contáctanos" link={APP_ROUTES.ABOUT_US} />
+        <FooterInfo text="Preguntas frecuentes" link={APP_ROUTES.HOME_FAQ} />
       </FooterSection>
 
       <FooterSection title="Social" icon={Share}>
-        <FooterInfo text="Facebook" link="" />
-        <FooterInfo text="Instagram" link="" />
-        <FooterInfo text="Twitter" link="" />
+        <FooterInfo text="Facebook" link={APP_INFO.FACEBOOK} />
+        <FooterInfo text="Instagram" link={APP_INFO.INSTAGRAM} />
+        <FooterInfo text="Twitter" link={APP_INFO.TWITTER} />
       </FooterSection>
     </div>
   );

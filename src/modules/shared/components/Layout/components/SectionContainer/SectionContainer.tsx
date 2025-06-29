@@ -1,10 +1,11 @@
 interface Props {
   children?: React.ReactNode;
+  id?: string;
 }
 
-export default function SectionContainer({ children }: Props) {
+export default function SectionContainer({ children, id }: Props) {
   return (
-    <section className="w-full flex justify-center py-14 md:py-20 px-6">
+    <section id={id} className="w-full flex justify-center py-14 md:py-20 px-6">
       <div className="w-full flex flex-col max-w-layout items-center">
         {children}
       </div>
