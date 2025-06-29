@@ -1,3 +1,4 @@
+import type { TranslationPageProps } from "../../../../modules/app/domain/core/translation-route";
 import H2 from "../../../../modules/app/modules/ui/components/Markdown/components/H2/H2";
 import H3 from "../../../../modules/app/modules/ui/components/Markdown/components/H3/H3";
 import List from "../../../../modules/app/modules/ui/components/Markdown/components/List/List";
@@ -8,9 +9,9 @@ import Layout from "../../../../modules/shared/components/Layout/Layout";
 import InformationContent from "../../shared/components/InformationContent/InformationContent";
 import InformationHeader from "../../shared/components/InformationHeader/InformationHeader";
 
-export default function Privacity() {
+export default function Privacity({ builder }: TranslationPageProps) {
   return (
-    <Layout>
+    <Layout builder={builder}>
       <InformationHeader title="Políticas de privacidad" />
 
       <InformationContent>

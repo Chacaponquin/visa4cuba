@@ -1,11 +1,12 @@
+import type { TranslationPageProps } from "../../modules/app/domain/core/translation-route";
 import Layout from "../../modules/shared/components/Layout/Layout";
 import ShopContent from "./components/ShopContent/ShopContent";
 import ShopHeader from "./components/ShopHeader/ShopHeader";
 import ShopResult from "./components/ShopResult/ShopResult";
 
-export default function Shop() {
+export default function Shop({ builder }: TranslationPageProps) {
   return (
-    <Layout>
+    <Layout builder={builder}>
       <main className="w-full flex flex-col items-center px-5 mt-20">
         <div className="w-full flex flex-col max-w-layout items-center">
           <ShopHeader />

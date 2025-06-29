@@ -1,3 +1,4 @@
+import type { TranslationPageProps } from "../../modules/app/domain/core/translation-route";
 import H2 from "../../modules/app/modules/ui/components/Markdown/components/H2/H2";
 import H3 from "../../modules/app/modules/ui/components/Markdown/components/H3/H3";
 import List from "../../modules/app/modules/ui/components/Markdown/components/List/List";
@@ -8,9 +9,9 @@ import Layout from "../../modules/shared/components/Layout/Layout";
 import InformationContent from "../Information/shared/components/InformationContent/InformationContent";
 import InformationHeader from "../Information/shared/components/InformationHeader/InformationHeader";
 
-export default function Terms() {
+export default function Terms({ builder }: TranslationPageProps) {
   return (
-    <Layout>
+    <Layout builder={builder}>
       <InformationHeader title="Términos y condiciones"></InformationHeader>
 
       <InformationContent>

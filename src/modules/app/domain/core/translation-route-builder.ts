@@ -5,9 +5,13 @@ export class TranslationRouteBuilder {
 
   build(lan: LANGUAGE): string {
     if (lan === LANGUAGE.ES) {
-      return `/es/${this.route}`;
-    } else {
-      return `/en/${this.route}`;
+      return `/es${this.route}`;
     }
+
+    if (lan === LANGUAGE.IT) {
+      return `/it${this.route}`;
+    }
+
+    return `/en${this.route}`;
   }
 }

@@ -49,22 +49,22 @@ for (const p of pages) {
   const Component = p.component;
 
   result.push({
-    element: <Component language={LANGUAGE.EN} />,
+    element: <Component builder={p.builder} language={LANGUAGE.EN} />,
     path: p.builder.build(LANGUAGE.EN),
   });
 
   result.push({
-    element: <Component language={LANGUAGE.ES} />,
+    element: <Component builder={p.builder} language={LANGUAGE.ES} />,
     path: p.builder.build(LANGUAGE.ES),
   });
 
   result.push({
-    element: <Component language={LANGUAGE.IT} />,
+    element: <Component builder={p.builder} language={LANGUAGE.IT} />,
     path: p.builder.build(LANGUAGE.IT),
   });
 
   result.push({
-    element: <Component />,
+    element: <Component builder={p.builder} />,
     path: p.route,
   });
 

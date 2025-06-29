@@ -3,6 +3,7 @@ import { TranslationRouteBuilder } from "./translation-route-builder";
 
 export interface TranslationPageProps {
   language?: LANGUAGE;
+  builder: TranslationRouteBuilder;
 }
 
 interface Props {

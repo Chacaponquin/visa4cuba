@@ -1,3 +1,4 @@
+import type { TranslationPageProps } from "../../modules/app/domain/core/translation-route";
 import Layout from "../../modules/shared/components/Layout/Layout";
 import BuyResult from "./components/BuyResult/BuyResult";
 import PassegersForm from "./components/PassegersForm/PassegersForm";
@@ -6,7 +7,7 @@ import UserForm from "./components/UserForm/UserForm";
 import { BUY_STEP } from "./domain/buy-steps";
 import useBuy from "./hooks/useBuy";
 
-export default function Buy() {
+export default function Buy({ builder }: TranslationPageProps) {
   const {
     steps,
     selected,
@@ -35,7 +36,7 @@ export default function Buy() {
   } = useBuy();
 
   return (
-    <Layout>
+    <Layout builder={builder}>
       <main className="w-full flex flex-col items-center px-5 pb-16">
         <div className="w-full flex lg:flex-row flex-col max-w-layout lg:items-start items-center gap-x-10 gap-y-7 justify-between">
           <Steps

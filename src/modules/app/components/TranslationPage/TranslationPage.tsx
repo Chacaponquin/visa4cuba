@@ -1,8 +1,9 @@
 import { Navigate } from "react-router";
 import { LANGUAGE } from "../../modules/language/domain/language";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { LanguageContext } from "../../modules/language/context/language-context";
 import type { TranslationRouteBuilder } from "../../domain/core/translation-route-builder";
+import { GetBrowserLanguage } from "../../modules/language/use-cases/get-browser-language";
 
 interface Props {
   en: React.ReactNode;
@@ -19,7 +20,13 @@ export default function TranslationPage({
   language,
   builder,
 }: Props) {
-  const { language: contextLanguage } = useContext(LanguageContext);
+  const { handleChangeLanguage } = useContext(LanguageContext);
+
+  useEffect(() => {
+    if (language) {
+      handleChangeLanguage(language);
+    }
+  }, [language, handleChangeLanguage]);
 
   return (
     <>
@@ -30,7 +37,7 @@ export default function TranslationPage({
           {language === LANGUAGE.IT && it}
         </>
       ) : (
-        <Navigate to={builder.build(contextLanguage)} replace />
+        <Navigate to={builder.build(GetBrowserLanguage.execute())} replace />
       )}
     </>
   );
