@@ -8,5 +8,6 @@ export const APP_ROUTES = {
   INFORMATION: {
     PRIVACITY: "/privacity",
     TERMS_AND_CONDITIONS: "/terms-and-conditions",
+    COOKIES: "/cookies",
   },
 };

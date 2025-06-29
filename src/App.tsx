@@ -10,6 +10,7 @@ import Insurence from "./pages/Insurence/Insurence";
 import Home from "./pages/Home/Home";
 import Privacity from "./pages/Information/components/Privacity/Privacity";
 import Terms from "./pages/Terms/Terms";
+import Cookies from "./pages/Cookies/Cookies";
 
 export default function App() {
   return (
@@ -29,6 +30,7 @@ export default function App() {
             path={APP_ROUTES.INFORMATION.TERMS_AND_CONDITIONS}
             element={<Terms />}
           />
+          <Route element={<Cookies />} path={APP_ROUTES.INFORMATION.COOKIES} />
 
           <Route
             path={APP_ROUTES.INFORMATION.PRIVACITY}

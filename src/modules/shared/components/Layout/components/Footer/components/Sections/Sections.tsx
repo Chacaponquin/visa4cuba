@@ -9,7 +9,10 @@ export default function Sections() {
   return (
     <div className="w-full grid grid-cols-1 sm:grid-cols-3 gap-x-6 gap-y-4">
       <FooterSection title="Corporativo" icon={City}>
-        <FooterInfo text="Política de cookies" link="" />
+        <FooterInfo
+          text="Política de cookies"
+          link={APP_ROUTES.INFORMATION.COOKIES}
+        />
         <FooterInfo
           text="Términos y condiciones"
           link={APP_ROUTES.INFORMATION.TERMS_AND_CONDITIONS}
