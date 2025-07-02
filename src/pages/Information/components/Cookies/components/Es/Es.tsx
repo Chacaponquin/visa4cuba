@@ -1,19 +1,19 @@
-import { APP_EMAIL } from "../../../../modules/app/domain/constants/app-email";
-import { APP_INFO } from "../../../../modules/app/domain/constants/app-info";
-import type { TranslationRouteBuilder } from "../../../../modules/app/domain/core/translation-route-builder";
-import A from "../../../../modules/app/modules/ui/components/Markdown/components/A/A";
-import H2 from "../../../../modules/app/modules/ui/components/Markdown/components/H2/H2";
-import H3 from "../../../../modules/app/modules/ui/components/Markdown/components/H3/H3";
-import List from "../../../../modules/app/modules/ui/components/Markdown/components/List/List";
-import ListItem from "../../../../modules/app/modules/ui/components/Markdown/components/ListItem/ListItem";
-import P from "../../../../modules/app/modules/ui/components/Markdown/components/P/P";
-import Strong from "../../../../modules/app/modules/ui/components/Markdown/components/Strong/Strong";
-import Td from "../../../../modules/app/modules/ui/components/Markdown/components/Table/components/Td/Td";
-import Th from "../../../../modules/app/modules/ui/components/Markdown/components/Table/components/Th/Th";
-import Table from "../../../../modules/app/modules/ui/components/Markdown/components/Table/Table";
-import Layout from "../../../../modules/shared/components/Layout/Layout";
-import InformationContent from "../../../Information/shared/components/InformationContent/InformationContent";
-import InformationHeader from "../../../Information/shared/components/InformationHeader/InformationHeader";
+import { APP_EMAIL } from "../../../../../../modules/app/domain/constants/app-email";
+import { APP_INFO } from "../../../../../../modules/app/domain/constants/app-info";
+import type { TranslationRouteBuilder } from "../../../../../../modules/app/domain/core/translation-route-builder";
+import A from "../../../../../../modules/app/modules/ui/components/Markdown/components/A/A";
+import H2 from "../../../../../../modules/app/modules/ui/components/Markdown/components/H2/H2";
+import H3 from "../../../../../../modules/app/modules/ui/components/Markdown/components/H3/H3";
+import List from "../../../../../../modules/app/modules/ui/components/Markdown/components/List/List";
+import ListItem from "../../../../../../modules/app/modules/ui/components/Markdown/components/ListItem/ListItem";
+import P from "../../../../../../modules/app/modules/ui/components/Markdown/components/P/P";
+import Strong from "../../../../../../modules/app/modules/ui/components/Markdown/components/Strong/Strong";
+import Td from "../../../../../../modules/app/modules/ui/components/Markdown/components/Table/components/Td/Td";
+import Th from "../../../../../../modules/app/modules/ui/components/Markdown/components/Table/components/Th/Th";
+import Table from "../../../../../../modules/app/modules/ui/components/Markdown/components/Table/Table";
+import Layout from "../../../../../../modules/shared/components/Layout/Layout";
+import InformationContent from "../../../../shared/components/InformationContent/InformationContent";
+import InformationHeader from "../../../../shared/components/InformationHeader/InformationHeader";
 
 interface Props {
   builder: TranslationRouteBuilder;

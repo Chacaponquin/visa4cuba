@@ -1,15 +1,19 @@
-import type { TranslationPageProps } from "../../modules/app/domain/core/translation-route";
-import H2 from "../../modules/app/modules/ui/components/Markdown/components/H2/H2";
-import H3 from "../../modules/app/modules/ui/components/Markdown/components/H3/H3";
-import List from "../../modules/app/modules/ui/components/Markdown/components/List/List";
-import ListItem from "../../modules/app/modules/ui/components/Markdown/components/ListItem/ListItem";
-import P from "../../modules/app/modules/ui/components/Markdown/components/P/P";
-import Strong from "../../modules/app/modules/ui/components/Markdown/components/Strong/Strong";
-import Layout from "../../modules/shared/components/Layout/Layout";
-import InformationContent from "../Information/shared/components/InformationContent/InformationContent";
-import InformationHeader from "../Information/shared/components/InformationHeader/InformationHeader";
+import type { TranslationRouteBuilder } from "../../../../../../modules/app/domain/core/translation-route-builder";
+import H2 from "../../../../../../modules/app/modules/ui/components/Markdown/components/H2/H2";
+import H3 from "../../../../../../modules/app/modules/ui/components/Markdown/components/H3/H3";
+import List from "../../../../../../modules/app/modules/ui/components/Markdown/components/List/List";
+import ListItem from "../../../../../../modules/app/modules/ui/components/Markdown/components/ListItem/ListItem";
+import P from "../../../../../../modules/app/modules/ui/components/Markdown/components/P/P";
+import Strong from "../../../../../../modules/app/modules/ui/components/Markdown/components/Strong/Strong";
+import Layout from "../../../../../../modules/shared/components/Layout/Layout";
+import InformationContent from "../../../../shared/components/InformationContent/InformationContent";
+import InformationHeader from "../../../../shared/components/InformationHeader/InformationHeader";
 
-export default function Terms({ builder }: TranslationPageProps) {
+interface Props {
+  builder: TranslationRouteBuilder;
+}
+
+export default function Es({ builder }: Props) {
   return (
     <Layout builder={builder}>
       <InformationHeader title="Términos y condiciones"></InformationHeader>

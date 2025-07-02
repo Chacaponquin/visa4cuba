@@ -14,11 +14,11 @@ import Visas from "./pages/Visas/Visas";
 import Insurence from "./pages/Insurence/Insurence";
 import Home from "./pages/Home/Home";
 import Privacity from "./pages/Information/components/Privacity/Privacity";
-import Terms from "./pages/Terms/Terms";
-import Cookies from "./pages/Cookies/Cookies";
 import { LanguageProvider } from "./modules/app/modules/language/context/LanguageProvider";
 import { TranslationRoute } from "./modules/app/domain/core/translation-route";
 import { LANGUAGE } from "./modules/app/modules/language/domain/language";
+import Cookies from "./pages/Information/components/Cookies/Cookies";
+import Terms from "./pages/Information/components/Terms/Terms";
 
 const pages = [
   new TranslationRoute({ component: Shop, route: APP_ROUTES.SHOP }),
