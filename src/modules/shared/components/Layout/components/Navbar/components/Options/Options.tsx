@@ -6,11 +6,14 @@ import LanguageOptions from "../../../../shared/components/LanguageOptions/Langu
 interface Props {
   onOpenAside(): void;
   builder: TranslationRouteBuilder;
+  children?: React.ReactNode;
 }
 
-export default function Options({ onOpenAside, builder }: Props) {
+export default function Options({ onOpenAside, builder, children }: Props) {
   return (
     <div className="w-full flex gap-x-4 justify-end max-w-[200px]">
+      {children}
+
       <LanguageOptions builder={builder} />
 
       <div className="lg:hidden block">

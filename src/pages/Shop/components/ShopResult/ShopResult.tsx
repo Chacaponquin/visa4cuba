@@ -13,6 +13,7 @@ export default function ShopResult() {
 
   return (
     <ShopSection
+      id="shop-summary"
       title="Resumen de tu pedido"
       description="Revisa los servicios seleccionados antes de proceder"
     >

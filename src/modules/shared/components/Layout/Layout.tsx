@@ -7,14 +7,34 @@ import useLayout from "./hooks/useLayout";
 interface Props {
   children?: React.ReactNode;
   builder: TranslationRouteBuilder;
+  extra?: React.ReactNode;
 }
 
-export default function Layout({ children, builder }: Props) {
-  const { openAside, handleCloseAside, handleOpenAside } = useLayout();
+export default function Layout({ children, builder, extra }: Props) {
+  const {
+    openAside,
+    handleCloseAside,
+    handleOpenAside,
+    fixedNavbar,
+    navbarRef,
+  } = useLayout();
 
   return (
     <div className="w-full flex flex-col">
-      <Navbar onOpenAside={handleOpenAside} builder={builder} />
+      <Navbar
+        onOpenAside={handleOpenAside}
+        builder={builder}
+        fixed={false}
+        ref={navbarRef}
+      >
+        {extra}
+      </Navbar>
+
+      {fixedNavbar && (
+        <Navbar onOpenAside={handleOpenAside} builder={builder} fixed>
+          {extra}
+        </Navbar>
+      )}
 
       {openAside && <Aside onClose={handleCloseAside} />}
 
