@@ -3,6 +3,8 @@ import Separator from "../../../../../app/modules/ui/components/Separator/Separa
 import { NAVBAR_SECTIONS } from "../Navbar/domain/navbar-section";
 import AsideSection from "./components/AsideSection/AsideSection";
 import Header from "./components/Header/Header";
+import { useContext } from "react";
+import { LanguageContext } from "../../../../../app/modules/language/context/language-context";
 
 interface Props {
   onClose(): void;
@@ -10,6 +12,7 @@ interface Props {
 
 export default function Aside({ onClose }: Props) {
   const location = useLocation();
+  const { language } = useContext(LanguageContext);
 
   return (
     <div
@@ -30,7 +33,7 @@ export default function Aside({ onClose }: Props) {
               key={index}
               link={s.link}
               selected={location.pathname.startsWith(s.link)}
-              title={s.title}
+              title={s.title[language]}
             />
           ))}
         </div>
