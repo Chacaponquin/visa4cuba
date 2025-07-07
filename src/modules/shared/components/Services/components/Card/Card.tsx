@@ -1,12 +1,16 @@
 import clsx from "clsx";
 import type { ServiceCard } from "../../domain/service-card";
 import IconCard from "../../../../../../modules/shared/components/IconCard/IconCard";
+import { useContext } from "react";
+import { LanguageContext } from "../../../../../app/modules/language/context/language-context";
 
 interface Props {
   service: ServiceCard;
 }
 
 export default function Card({ service }: Props) {
+  const { language } = useContext(LanguageContext);
+
   return (
     <article
       className={clsx(
@@ -27,11 +31,13 @@ export default function Card({ service }: Props) {
             "text-secondary": service.color === "secondary",
           })}
         >
-          {service.title}
+          {service.title[language]}
         </h2>
       </header>
 
-      <p className="text-sm text-gray-500 leading-6">{service.description}</p>
+      <p className="text-sm text-gray-500 leading-6">
+        {service.description[language]}
+      </p>
 
       <div className="flex flex-col gap-y-1.5 mt-4">
         {service.includes.map((i, index) => (
@@ -43,7 +49,7 @@ export default function Card({ service }: Props) {
               })}
             ></i>
 
-            <span className="text-sm text-gray-500">{i}</span>
+            <span className="text-sm text-gray-500">{i[language]}</span>
           </div>
         ))}
       </div>
