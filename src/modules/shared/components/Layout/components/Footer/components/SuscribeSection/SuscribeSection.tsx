@@ -10,7 +10,7 @@ export default function SuscribeSection() {
   return (
     <FooterSection icon={Mail} title="Suscríbete al boletín">
       <p className="text-white mb-3">
-        Últimas noticias sobre Cuba y ofertas especiales
+        Recibe consejos de viaje, alertas importantes y promociones exclusivas.
       </p>
 
       <div className="flex items-center gap-x-4">
