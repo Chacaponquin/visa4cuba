@@ -1,3 +1,4 @@
+import useTranslation from "../../../../modules/app/modules/language/hooks/useTranslation";
 import { CalculateCartItemTotal } from "../../../../modules/shop/domain/helpers/calculate-cart-item-total";
 import { CalculateCartSend } from "../../../../modules/shop/domain/helpers/calculate-cart-send";
 import { CalculateCartSubTotal } from "../../../../modules/shop/domain/helpers/calculate-cart-subtotal";
@@ -11,12 +12,21 @@ export default function ShopResult() {
   const { items, handleDelete, handleDecrease, handleIncrease, cart } =
     useShopResult();
 
+  const { TITLE, DESCRIPTION } = useTranslation({
+    TITLE: {
+      es: "Resumen de tu pedido",
+      en: "Summary of your order",
+      it: "Riepilogo del tuo ordine",
+    },
+    DESCRIPTION: {
+      es: "Revisa los servicios seleccionados antes de proceder",
+      en: "Review the selected services before proceeding",
+      it: "Controlla i servizi selezionati prima di procedere",
+    },
+  });
+
   return (
-    <ShopSection
-      id="shop-summary"
-      title="Resumen de tu pedido"
-      description="Revisa los servicios seleccionados antes de proceder"
-    >
+    <ShopSection id="shop-summary" title={TITLE} description={DESCRIPTION}>
       <div className="w-full flex lg:flex-row flex-col items-start gap-x-7 gap-y-4">
         <div className="flex flex-col gap-y-2.5 w-full">
           {items.map((c) => (
