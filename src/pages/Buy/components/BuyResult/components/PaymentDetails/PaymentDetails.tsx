@@ -1,3 +1,4 @@
+import useTranslation from "../../../../../../modules/app/modules/language/hooks/useTranslation";
 import Button from "../../../../../../modules/app/modules/ui/components/Button/Button";
 import { CalculateCartItemTotal } from "../../../../../../modules/shop/domain/helpers/calculate-cart-item-total";
 import { CalculateCartSend } from "../../../../../../modules/shop/domain/helpers/calculate-cart-send";
@@ -14,10 +15,19 @@ interface Props {
 export default function PaymentDetails({ onSubmit }: Props) {
   const { cart } = usePaymentDetails();
 
+  const { BUTTON, HEADER } = useTranslation({
+    HEADER: {
+      es: "Detalles del pago",
+      en: "Payment details",
+      it: "Dettagli di pagamento",
+    },
+    BUTTON: { en: "Pay", es: "Pagar", it: "Paga" },
+  });
+
   return (
     <div className="w-full flex flex-col rounded-card border border-card">
       <header className="w-full py-1.5 px-4 border-b border-card">
-        <h2 className="font-title-medium text-base">Detalles del pago</h2>
+        <h2 className="font-title-medium text-base">{HEADER}</h2>
       </header>
 
       <div className="w-full flex flex-col px-4 pt-1 pb-4">
@@ -39,7 +49,7 @@ export default function PaymentDetails({ onSubmit }: Props) {
         />
 
         <Button onClick={onSubmit} size="base" full className="mt-6">
-          Pagar
+          {BUTTON}
         </Button>
       </div>
     </div>

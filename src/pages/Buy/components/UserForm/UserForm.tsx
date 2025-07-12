@@ -2,6 +2,7 @@ import useToast from "../../../../modules/app/hooks/useToast";
 import Form from "../../../../modules/app/modules/form/components/Form/Form";
 import FormSection from "../../../../modules/app/modules/form/components/FormSection/FormSection";
 import User from "../../../../modules/app/modules/icon/components/User";
+import useTranslation from "../../../../modules/app/modules/language/hooks/useTranslation";
 import Button from "../../../../modules/app/modules/ui/components/Button/Button";
 import DatePicker from "../../../../modules/app/modules/ui/components/DatePicker/DatePicker";
 import Input from "../../../../modules/app/modules/ui/components/Input/Input";
@@ -41,6 +42,21 @@ export default function UserForm({
     validator.execute({ success: onSubmit, error: errors });
   }
 
+  const { BIRTHDATE, BUTTON, COUNTRY, LAST_NAME, NAME, PHONE } = useTranslation(
+    {
+      NAME: { es: "Nombre", en: "Name", it: "Nome" },
+      LAST_NAME: { es: "Apellidos", en: "Lastname", it: "Cognomi" },
+      PHONE: { es: "Teléfono", en: "Phone", it: "Telefono" },
+      COUNTRY: { es: "Nacionalidad", en: "Nationality", it: "Nazionalità" },
+      BIRTHDATE: {
+        es: "Fecha de nacimiento",
+        en: "Birthdate",
+        it: "Data di nascita",
+      },
+      BUTTON: { es: "Siguiente", en: "Next", it: "Seguente" },
+    }
+  );
+
   return (
     <BuyForm icon={User} description={description} title={title}>
       <Form onSubmit={handleSubmit}>
@@ -52,19 +68,19 @@ export default function UserForm({
           />
         </FormSection>
 
-        <FormSection label="Nombre" required>
+        <FormSection label={NAME} required>
           <Input value={name.value} onChange={name.onChange} />
         </FormSection>
 
-        <FormSection label="Apellidos" required>
+        <FormSection label={LAST_NAME} required>
           <Input value={lastname.value} onChange={lastname.onChange} />
         </FormSection>
 
-        <FormSection label="Teléfono" required>
+        <FormSection label={PHONE} required>
           <Input value={phone.value} onChange={phone.onChange} />
         </FormSection>
 
-        <FormSection label="Nacionalidad" required>
+        <FormSection label={COUNTRY} required>
           <Select
             options={COUNTRIES}
             label={(o) => o.name}
@@ -74,12 +90,12 @@ export default function UserForm({
           />
         </FormSection>
 
-        <FormSection label="Fecha de nacimiento" required>
+        <FormSection label={BIRTHDATE} required>
           <DatePicker onChange={birthdate.onChange} value={birthdate.value} />
         </FormSection>
 
         <Button type="submit" className="mt-5" full size="lg">
-          Siguiente
+          {BUTTON}
         </Button>
       </Form>
     </BuyForm>

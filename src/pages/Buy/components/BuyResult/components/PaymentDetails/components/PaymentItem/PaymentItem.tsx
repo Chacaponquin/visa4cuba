@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import type { IconProps } from "../../../../../../../../modules/app/modules/icon/domain/props";
 import { PriceTextBuilder } from "../../../../../../../../modules/shared/domain/helpers/price-text-builder";
+import useTranslation from "../../../../../../../../modules/app/modules/language/hooks/useTranslation";
 
 interface Props {
   count: number;
@@ -17,6 +18,10 @@ export default function PaymentItem({
   border,
   icon,
 }: Props) {
+  const { TOTAL } = useTranslation({
+    TOTAL: { en: "Total", es: "Total", it: "Totale" },
+  });
+
   return (
     <article
       className={clsx(
@@ -35,7 +40,7 @@ export default function PaymentItem({
       </div>
 
       <span className="text-gray-700">
-        Total: {PriceTextBuilder.execute(total)}
+        {TOTAL}: {PriceTextBuilder.execute(total)}
       </span>
     </article>
   );

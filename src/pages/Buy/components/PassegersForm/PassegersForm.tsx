@@ -1,6 +1,7 @@
 import useToast from "../../../../modules/app/hooks/useToast";
 import Form from "../../../../modules/app/modules/form/components/Form/Form";
 import Airplane from "../../../../modules/app/modules/icon/components/Airplane";
+import useTranslation from "../../../../modules/app/modules/language/hooks/useTranslation";
 import Button from "../../../../modules/app/modules/ui/components/Button/Button";
 import { ShopPassegersValidator } from "../../../../modules/shop/domain/validator/passegers/shop-passegers-validator";
 import type { SectionPassegerForm } from "../../domain/passeger-form";
@@ -42,6 +43,10 @@ export default function PassegersForm({
     validator.execute({ error: errors, success: onSubmit });
   }
 
+  const { BUTTON } = useTranslation({
+    BUTTON: { es: "Siguiente", en: "Next", it: "Seguente" },
+  });
+
   return (
     <BuyForm title={title} description={description} icon={Airplane}>
       <Form onSubmit={handleSubmit}>
@@ -64,7 +69,7 @@ export default function PassegersForm({
         ))}
 
         <Button size="lg" className="" type="submit" full>
-          Siguiente
+          {BUTTON}
         </Button>
       </Form>
     </BuyForm>
