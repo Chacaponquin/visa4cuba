@@ -21,7 +21,11 @@ interface Props {
 
 export default function Es({ builder }: Props) {
   return (
-    <Layout builder={builder}>
+    <Layout
+      title="Política de Cookies - Visa4Cuba"
+      description="Consulta nuestra política de cookies para entender cómo utilizamos las cookies en Visa4Cuba y cómo puedes gestionar tus preferencias."
+      builder={builder}
+    >
       <InformationHeader title="Política de cookies"></InformationHeader>
 
       <InformationContent>

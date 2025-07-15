@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import type { TranslationRouteBuilder } from "../../../app/domain/core/translation-route-builder";
 import Aside from "./components/Aside/Aside";
 import Footer from "./components/Footer/Footer";
@@ -5,12 +6,20 @@ import Navbar from "./components/Navbar/Navbar";
 import useLayout from "./hooks/useLayout";
 
 interface Props {
-  children?: React.ReactNode;
   builder: TranslationRouteBuilder;
+  children?: React.ReactNode;
   extra?: React.ReactNode;
+  title: string;
+  description: string;
 }
 
-export default function Layout({ children, builder, extra }: Props) {
+export default function Layout({
+  children,
+  builder,
+  extra,
+  description,
+  title,
+}: Props) {
   const {
     openAside,
     handleCloseAside,
@@ -20,27 +29,34 @@ export default function Layout({ children, builder, extra }: Props) {
   } = useLayout();
 
   return (
-    <div className="w-full flex flex-col">
-      <Navbar
-        onOpenAside={handleOpenAside}
-        builder={builder}
-        fixed={false}
-        ref={navbarRef}
-      >
-        {extra}
-      </Navbar>
+    <>
+      <Helmet>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+      </Helmet>
 
-      {fixedNavbar && (
-        <Navbar onOpenAside={handleOpenAside} builder={builder} fixed>
+      <div className="w-full flex flex-col">
+        <Navbar
+          onOpenAside={handleOpenAside}
+          builder={builder}
+          fixed={false}
+          ref={navbarRef}
+        >
           {extra}
         </Navbar>
-      )}
 
-      {openAside && <Aside onClose={handleCloseAside} />}
+        {fixedNavbar && (
+          <Navbar onOpenAside={handleOpenAside} builder={builder} fixed>
+            {extra}
+          </Navbar>
+        )}
 
-      {children}
+        {openAside && <Aside onClose={handleCloseAside} />}
 
-      <Footer />
-    </div>
+        {children}
+
+        <Footer />
+      </div>
+    </>
   );
 }

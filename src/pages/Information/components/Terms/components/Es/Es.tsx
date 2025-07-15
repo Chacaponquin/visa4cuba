@@ -15,7 +15,11 @@ interface Props {
 
 export default function Es({ builder }: Props) {
   return (
-    <Layout builder={builder}>
+    <Layout
+      title="Términos y Condiciones - Visa4Cuba"
+      description="Lee los términos y condiciones de uso de los servicios ofrecidos por Visa4Cuba. Información legal importante sobre tu compra y derechos como usuario."
+      builder={builder}
+    >
       <InformationHeader title="Términos y condiciones"></InformationHeader>
 
       <InformationContent>

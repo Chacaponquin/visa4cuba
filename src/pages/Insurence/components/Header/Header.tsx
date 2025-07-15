@@ -4,8 +4,13 @@ import ArrowButton from "../../../../modules/app/modules/ui/components/ArrowButt
 import LayoutHeader from "../../../../modules/shared/components/Layout/components/LayoutHeader/LayoutHeader";
 import { APP_ROUTES } from "../../../../modules/app/domain/constants/app-routes";
 import useTranslation from "../../../../modules/app/modules/language/hooks/useTranslation";
+import { useContext } from "react";
+import { LanguageContext } from "../../../../modules/app/modules/language/context/language-context";
+import { TranslationRouteBuilder } from "../../../../modules/app/domain/core/translation-route-builder";
 
 export default function Header() {
+  const { language } = useContext(LanguageContext);
+
   const { TITLE, DESCRIPTION, BUTTON } = useTranslation({
     TITLE: {
       es: "Obten total tranquilidad con",
@@ -30,7 +35,7 @@ export default function Header() {
       description={DESCRIPTION}
       title={TITLE}
     >
-      <Link to={APP_ROUTES.SHOP}>
+      <Link to={new TranslationRouteBuilder(APP_ROUTES.SHOP).build(language)}>
         <ArrowButton>{BUTTON}</ArrowButton>
       </Link>
     </LayoutHeader>

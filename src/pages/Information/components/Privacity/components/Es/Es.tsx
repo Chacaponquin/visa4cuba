@@ -15,7 +15,11 @@ interface Props {
 
 export default function Es({ builder }: Props) {
   return (
-    <Layout builder={builder}>
+    <Layout
+      description="Conoce cómo protegemos tus datos personales en Visa4Cuba. Lee nuestra política de privacidad para más información sobre el tratamiento de tu información."
+      title="Política de Privacidad - Visa4Cuba"
+      builder={builder}
+    >
       <InformationHeader title="Políticas de privacidad" />
 
       <InformationContent>

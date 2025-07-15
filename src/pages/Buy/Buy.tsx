@@ -9,6 +9,7 @@ import { BUY_STEP } from "./domain/buy-steps";
 import useBuy from "./hooks/useBuy";
 import { LanguageContext } from "../../modules/app/modules/language/context/language-context";
 import BaseTranslationPage from "../../modules/app/components/BaseTranslationPage/BaseTranslationPage";
+import useTranslation from "../../modules/app/modules/language/hooks/useTranslation";
 
 export default function Buy({
   builder,
@@ -43,9 +44,22 @@ export default function Buy({
     handleChangeCountry,
   } = useBuy();
 
+  const { DESCRIPTION, TITLE } = useTranslation({
+    TITLE: {
+      es: "Formulario de Pago - Visa4Cuba",
+      en: "Checkout Form - Visa4Cuba",
+      it: "Modulo di Pagamento - Visa4Cuba",
+    },
+    DESCRIPTION: {
+      es: "Completa el formulario de pago para finalizar tu compra de visado y seguro para Cuba. Proceso seguro, rápido y completamente online.",
+      en: "Fill out the checkout form to complete your purchase of visa and insurance for Cuba. Secure, fast, and fully online process.",
+      it: "Compila il modulo di pagamento per completare l'acquisto del visto e dell'assicurazione per Cuba. Procedura sicura, veloce e completamente online.",
+    },
+  });
+
   return (
     <BaseTranslationPage builder={builder} language={ilanguage}>
-      <Layout builder={builder}>
+      <Layout builder={builder} title={TITLE} description={DESCRIPTION}>
         <main className="w-full flex flex-col items-center px-5 pb-16">
           <div className="w-full flex lg:flex-row flex-col max-w-layout lg:items-start items-center gap-x-10 gap-y-7 justify-between">
             <Steps

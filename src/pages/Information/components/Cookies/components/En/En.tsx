@@ -21,7 +21,11 @@ interface Props {
 
 export default function En({ builder }: Props) {
   return (
-    <Layout builder={builder}>
+    <Layout
+      title="Cookie Policy - Visa4Cuba"
+      description="Read our cookie policy to understand how we use cookies on Visa4Cuba and how you can manage your preferences."
+      builder={builder}
+    >
       <InformationHeader title="Cookie Policy"></InformationHeader>
 
       <InformationContent>

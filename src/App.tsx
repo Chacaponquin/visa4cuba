@@ -19,6 +19,7 @@ import { TranslationRoute } from "./modules/app/domain/core/translation-route";
 import { LANGUAGE } from "./modules/app/modules/language/domain/language";
 import Cookies from "./pages/Information/components/Cookies/Cookies";
 import Terms from "./pages/Information/components/Terms/Terms";
+import { HelmetProvider } from "react-helmet-async";
 
 const pages = [
   new TranslationRoute({ component: Shop, route: APP_ROUTES.SHOP }),
@@ -78,12 +79,14 @@ const router = createBrowserRouter([
 
 export default function App() {
   return (
-    <LanguageProvider>
-      <ShopProvider>
-        <ToastContainer />
+    <HelmetProvider>
+      <LanguageProvider>
+        <ShopProvider>
+          <ToastContainer />
 
-        <RouterProvider router={router} />
-      </ShopProvider>
-    </LanguageProvider>
+          <RouterProvider router={router} />
+        </ShopProvider>
+      </LanguageProvider>
+    </HelmetProvider>
   );
 }
