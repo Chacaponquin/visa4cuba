@@ -1,5 +1,5 @@
 import { createContext, useMemo, useState } from "react";
-import type { ShopOption, ShopSection } from "../domain/entities/shop-option";
+import type { ShopOption } from "../domain/entities/shop-option";
 import Bag from "../../app/modules/icon/components/Bag";
 import Safe from "../../app/modules/icon/components/Safe";
 import World from "../../app/modules/icon/components/World";
@@ -8,7 +8,7 @@ import type { ShopCartItem } from "../domain/entities/shop-cart-item";
 
 interface Props {
   cart: ShopCartItem[];
-  options: ShopSection[];
+  options: ShopOption[];
   handleDeleteItem: (id: string) => void;
   handleDecreaseItem: (id: string) => void;
   handleIncreaseItem: (id: string) => void;
@@ -69,49 +69,55 @@ export function ShopProvider({ children }: { children: React.ReactNode }) {
     );
   }
 
-  const options = useMemo<ShopSection[]>(() => {
-    const result: ShopSection[] = [
+  const options = useMemo<ShopOption[]>(() => {
+    const result: ShopOption[] = [
       {
-        title: "Solo Tarjeta Turística",
+        description: "Perfecto para viajeros que necesitan lo esencial",
         icon: World,
-        options: Array.from({ length: 2 }).map(() => {
-          return {
-            description: "Para viajes de turismo",
-            includes: ["Emergencias", "Escala técnica"],
-            price: 25,
-            title: "Visa Turística",
-            id: Id.generate(),
-            icon: World,
-          };
-        }),
+        id: Id.generate(),
+        includes: [
+          "Procesamiento de visa turística",
+          "Seguro médico básico",
+          "Documentación estándar",
+          "Soporte por email",
+          "Tiempo de procesamiento: 7-10 días",
+          "1 revisión de documentos",
+        ],
+        price: 39,
+        title: "Básico",
       },
       {
-        title: "Solo Seguro de Viaje",
+        description: "La opción más popular con beneficios adicionales",
         icon: Safe,
-        options: Array.from({ length: 3 }).map(() => {
-          return {
-            description: "Para viajes de turismo",
-            includes: ["Emergencias", "Escala técnica"],
-            price: 25,
-            title: "Seguro de viaje",
-            id: Id.generate(),
-            icon: Safe,
-          };
-        }),
+        id: Id.generate(),
+        includes: [
+          "Procesamiento de visa turística",
+          "Seguro médico completo",
+          "Documentación premium",
+          "Soporte telefónico y email",
+          "Tiempo de procesamiento: 5-7 días",
+          "Asistencia para reservas de hotel",
+          "Guía de viaje digital",
+        ],
+        price: 69,
+        title: "Completo",
       },
       {
-        title: "Tarjeta turística + Seguro de viaje (Oferta Especial)",
+        description: "Servicio VIP con atención personalizada completa",
         icon: Bag,
-        options: Array.from({ length: 3 }).map(() => {
-          return {
-            description: "Para viajes de turismo",
-            includes: ["Emergencias", "Escala técnica"],
-            price: 25,
-            title: "Visa de turista + Seguro de viaje",
-            id: Id.generate(),
-            icon: Bag,
-          };
-        }),
+        id: Id.generate(),
+        includes: [
+          "Procesamiento de visa turística",
+          "Seguro médico premium",
+          "Documentación VIP",
+          "Soporte 24/7 multicanal",
+          "Tiempo de procesamiento: 3-5 días",
+          "Revisiones ilimitadas",
+          "Asistencia completa de viaje",
+          "Gestor personal asignado",
+        ],
+        price: 89,
+        title: "Premium",
       },
     ];
 

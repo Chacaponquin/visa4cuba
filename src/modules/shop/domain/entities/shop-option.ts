@@ -8,9 +8,3 @@ export interface ShopOption {
   includes: string[];
   icon: (props: IconProps) => React.ReactNode;
 }
-
-export interface ShopSection {
-  options: ShopOption[];
-  title: string;
-  icon: (props: IconProps) => React.ReactNode;
-}

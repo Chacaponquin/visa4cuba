@@ -73,7 +73,7 @@ for (const p of pages) {
 }
 
 const router = createBrowserRouter([
-  { path: "/", element: <Navigate replace to={APP_ROUTES.SHOP} /> },
+  { path: "/", element: <Navigate replace to={APP_ROUTES.HOME} /> },
   ...routes,
 ]);
 

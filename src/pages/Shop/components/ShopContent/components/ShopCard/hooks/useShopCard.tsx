@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useMemo, useState } from "react";
 import type { ShopOption } from "../../../../../../../modules/shop/domain/entities/shop-option";
 import { ShopContext } from "../../../../../../../modules/shop/context/ShopContext";
 import useToast from "../../../../../../../modules/app/hooks/useToast";
@@ -8,8 +8,12 @@ interface Props {
 }
 
 export default function useShopCard({ option }: Props) {
-  const { handleAddItem } = useContext(ShopContext);
+  const { handleAddItem, cart } = useContext(ShopContext);
   const { success } = useToast();
+
+  const exists = useMemo(() => {
+    return cart.some((e) => e.option.id === option.id);
+  }, [cart, option]);
 
   const [count, setCount] = useState(1);
 
@@ -27,5 +31,5 @@ export default function useShopCard({ option }: Props) {
     success({ message: "Elemento añadido al carro de compra" });
   }
 
-  return { count, handleDecrease, handleIncrease, handleAdd };
+  return { count, handleDecrease, handleIncrease, handleAdd, exists };
 }
