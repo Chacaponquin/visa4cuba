@@ -24,7 +24,7 @@ export default function IconCard({
     }
 
     if (isize === "lg") {
-      return 32;
+      return 28;
     }
 
     if (isize === "sm") {
@@ -49,7 +49,7 @@ export default function IconCard({
         {
           "px-2.5 py-2": isize === "base",
           "p-1.5": isize === "sm",
-          "p-3.5": isize === "lg",
+          "px-3.5 py-2.5": isize === "lg",
         },
         className
       )}

@@ -1,13 +1,23 @@
+import clsx from "clsx";
+import CheckCorrect from "../../../../../../../../modules/app/modules/icon/components/CheckCorrect";
+
 interface Props {
   value: string;
+  selected: boolean;
 }
 
-export default function IncludeCard({ value }: Props) {
+export default function IncludeCard({ value, selected }: Props) {
   return (
     <div className="flex mb-2 items-center gap-x-2.5">
-      <div className="bg-primary rounded-full w-[6px] h-[6px]"></div>
+      <i className={clsx(selected ? "stroke-white" : "stroke-primary")}>
+        <CheckCorrect size={17} />
+      </i>
 
-      <p className="text-sm text-gray-600">{value}</p>
+      <p
+        className={clsx("text-sm", !selected ? "text-gray-600" : "text-white")}
+      >
+        {value}
+      </p>
     </div>
   );
 }

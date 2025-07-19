@@ -85,6 +85,7 @@ export function ShopProvider({ children }: { children: React.ReactNode }) {
         ],
         price: 39,
         title: "Básico",
+        selected: false,
       },
       {
         description: "La opción más popular con beneficios adicionales",
@@ -101,6 +102,7 @@ export function ShopProvider({ children }: { children: React.ReactNode }) {
         ],
         price: 69,
         title: "Completo",
+        selected: true,
       },
       {
         description: "Servicio VIP con atención personalizada completa",
@@ -118,6 +120,7 @@ export function ShopProvider({ children }: { children: React.ReactNode }) {
         ],
         price: 89,
         title: "Premium",
+        selected: false,
       },
     ];
 

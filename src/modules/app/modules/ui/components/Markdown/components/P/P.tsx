@@ -9,7 +9,7 @@ interface Props {
 export default function P({ children, size = "base" }: Props) {
   return (
     <p
-      className={clsx("mb-2 leading-7 text-gray-700", {
+      className={clsx("mb-2 leading-7 text-gray-600", {
         "text-sm": size === "sm",
         "text-base": size === "base",
       })}

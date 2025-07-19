@@ -19,7 +19,7 @@ export default function Services() {
 
   return (
     <LayoutSection title={TITLE} description={DESCRIPTION}>
-      <div className="flex md:flex-row flex-col items-start gap-x-12 gap-y-7 justify-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 flex-col items-start gap-x-12 gap-y-7 justify-center">
         {SERVICE_CARDS.map((s, index) => (
           <Card key={index} service={s} />
         ))}

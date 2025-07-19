@@ -7,4 +7,5 @@ export interface ShopOption {
   description: string;
   includes: string[];
   icon: (props: IconProps) => React.ReactNode;
+  selected: boolean;
 }

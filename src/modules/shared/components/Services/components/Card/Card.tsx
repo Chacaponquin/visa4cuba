@@ -3,6 +3,7 @@ import type { ServiceCard } from "../../domain/service-card";
 import IconCard from "../../../../../../modules/shared/components/IconCard/IconCard";
 import { useContext } from "react";
 import { LanguageContext } from "../../../../../app/modules/language/context/language-context";
+import CheckCorrect from "../../../../../app/modules/icon/components/CheckCorrect";
 
 interface Props {
   service: ServiceCard;
@@ -14,19 +15,14 @@ export default function Card({ service }: Props) {
   return (
     <article
       className={clsx(
-        "rounded-card w-full max-w-md flex flex-col border-2 border-card py-6 px-7 transition-all duration-200",
-        {
-          "border-primary/40 hover:border-primary": service.color === "primary",
-          "border-secondary/40 hover:border-secondary":
-            service.color === "secondary",
-        }
+        "rounded-card w-full flex flex-col transition-all duration-200"
       )}
     >
-      <header className="flex items-center gap-x-3.5 mb-4">
-        <IconCard icon={service.icon} size="base" color={service.color} />
+      <header className="flex items-center gap-x-4 mb-4">
+        <IconCard icon={service.icon} size="lg" color={service.color} />
 
         <h2
-          className={clsx("font-title-medium text-xl", {
+          className={clsx("font-title-medium text-2xl", {
             "text-primary": service.color === "primary",
             "text-secondary": service.color === "secondary",
           })}
@@ -39,15 +35,17 @@ export default function Card({ service }: Props) {
         {service.description[language]}
       </p>
 
-      <div className="flex flex-col gap-y-1.5 mt-4">
+      <div className="flex flex-col gap-y-2.5 mt-4">
         {service.includes.map((i, index) => (
           <div key={index} className="flex items-center gap-x-3">
             <i
-              className={clsx("w-[6px] h-[6px] rounded-full", {
-                "bg-primary": service.color === "primary",
-                "bg-secondary": service.color === "secondary",
+              className={clsx({
+                "stroke-primary": service.color === "primary",
+                "stroke-secondary": service.color === "secondary",
               })}
-            ></i>
+            >
+              <CheckCorrect size={18} />
+            </i>
 
             <span className="text-sm text-gray-500">{i[language]}</span>
           </div>
