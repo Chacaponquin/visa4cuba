@@ -31,18 +31,18 @@
 }
 
 @font-face {
-  font-family: "Grotesk Bold";
-  src: url("./assets/fonts/grotesk/SpaceGrotesk-Bold.ttf");
+  font-family: "Plus Jakarta Bold";
+  src: url("./assets/fonts/plus-jakarta/PlusJakartaSans-Bold.ttf");
 }
 
 @font-face {
-  font-family: "Grotesk Medium";
-  src: url("./assets/fonts/grotesk/SpaceGrotesk-Medium.ttf");
+  font-family: "Plus Jakarta Medium";
+  src: url("./assets/fonts/plus-jakarta/PlusJakartaSans-Medium.ttf");
 }
 
 @font-face {
-  font-family: "Grotesk Semibold";
-  src: url("./assets/fonts/grotesk/SpaceGrotesk-SemiBold.ttf");
+  font-family: "Plus Jakarta Semibold";
+  src: url("./assets/fonts/plus-jakarta/PlusJakartaSans-SemiBold.ttf");
 }
 
 @theme {
@@ -61,9 +61,9 @@
   --font-medium: "Poppins Medium";
   --font-semibold: "Poppins Semibold";
   --font-bold: "Poppins Bold";
-  --font-title-semibold: "Grotesk Semibold";
-  --font-title-medium: "Grotesk Medium";
-  --font-title-bold: "Grotesk Bold";
+  --font-title-semibold: "Plus Jakarta Semibold";
+  --font-title-medium: "Plus Jakarta Medium";
+  --font-title-bold: "Plus Jakarta Bold";
 
   --color-primary-50: #ecfbff;
   --color-primary-100: #d4f4ff;

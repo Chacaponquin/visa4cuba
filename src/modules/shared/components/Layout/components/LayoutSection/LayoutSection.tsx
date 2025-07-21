@@ -18,7 +18,7 @@ export default function LayoutSection({
   return (
     <SectionContainer id={id}>
       {header && (
-        <div className="rounded-full px-4 py-1.5 bg-primary/10 text-primary font-medium mb-3">
+        <div className="rounded-full px-4 py-1.5 bg-primary/10 text-primary font-medium mb-6">
           {header}
         </div>
       )}

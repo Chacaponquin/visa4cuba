@@ -2,9 +2,9 @@ import BaseTranslationPage from "../../modules/app/components/BaseTranslationPag
 import type { TranslationPageProps } from "../../modules/app/domain/core/translation-route";
 import useTranslation from "../../modules/app/modules/language/hooks/useTranslation";
 import Layout from "../../modules/shared/components/Layout/Layout";
+import Services from "../../modules/shared/components/Services/Services";
 import CartSummary from "./components/CartSummary/CartSummary";
 import ShopContent from "./components/ShopContent/ShopContent";
-import ShopHeader from "./components/ShopHeader/ShopHeader";
 import ShopResult from "./components/ShopResult/ShopResult";
 
 export default function Shop({ builder, language }: TranslationPageProps) {
@@ -31,7 +31,7 @@ export default function Shop({ builder, language }: TranslationPageProps) {
       >
         <main className="w-full flex flex-col items-center px-5 mt-20">
           <div className="w-full flex flex-col max-w-layout items-center">
-            <ShopHeader />
+            <Services />
             <ShopContent />
             <ShopResult />
           </div>

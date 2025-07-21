@@ -4,7 +4,7 @@ import Card from "./components/Card/Card";
 import { WHY_CARDS } from "./domain/why-card";
 
 export default function Why() {
-  const { TITLE, DESCRIPTION } = useTranslation({
+  const { TITLE, DESCRIPTION, HEADER } = useTranslation({
     TITLE: {
       es: "¿Por qué elegir Visa4Cuba?",
       en: "Why choose Visa4Cuba?",
@@ -15,10 +15,15 @@ export default function Why() {
       en: "We are more than a travel agency, we are your adventure companions.",
       it: "Siamo più di un'agenzia di viaggi, siamo i tuoi compagni di avventure.",
     },
+    HEADER: {
+      es: "Ventajas exclusivas",
+      en: "Exclusive benefits",
+      it: "Vantaggi esclusivi",
+    },
   });
 
   return (
-    <LayoutSection title={TITLE} description={DESCRIPTION}>
+    <LayoutSection title={TITLE} header={HEADER} description={DESCRIPTION}>
       <div className="grid grid-cols-1 gap-y-8 md:grid-cols-3 gap-x-8 mt-5">
         {WHY_CARDS.map((w, i) => (
           <Card key={i} card={w} />

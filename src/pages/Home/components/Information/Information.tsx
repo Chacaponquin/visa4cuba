@@ -18,6 +18,7 @@ export default function Information() {
     INFO_2_DESCRIPTION_1,
     INFO_2_DESCRIPTION_2,
     INFO_2_BUTTON,
+    HEADER,
   } = useTranslation({
     TITLE: {
       es: "¿Qué ofrecemos?",
@@ -64,10 +65,11 @@ export default function Information() {
       en: "Discover insurance for Cuba",
       it: "Scopri l'assicurazione per Cuba",
     },
+    HEADER: { en: "Services", es: "Servicios", it: "Servizi" },
   });
 
   return (
-    <LayoutSection title={TITLE} description={DESCRIPTION}>
+    <LayoutSection title={TITLE} description={DESCRIPTION} header={HEADER}>
       <ImageInfoCard title={INFO_1_TITLE} image={APP_IMAGES.CUBA_1}>
         <P>{INFO_1_DESCRIPTION}</P>
 

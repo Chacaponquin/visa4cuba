@@ -2,6 +2,7 @@ import Airplane from "../../../../../modules/app/modules/icon/components/Airplan
 import Safe from "../../../../../modules/app/modules/icon/components/Safe";
 import type { IconProps } from "../../../../../modules/app/modules/icon/domain/props";
 import type { UiColor } from "../../../../../modules/app/modules/ui/domain/color";
+import { APP_IMAGES } from "../../../../app/domain/constants/app-images";
 import type { TranslationConfig } from "../../../../app/modules/language/domain/translation";
 
 export interface ServiceCard {
@@ -10,6 +11,8 @@ export interface ServiceCard {
   description: TranslationConfig<string>;
   icon: (props: IconProps) => React.ReactNode;
   color: UiColor;
+  image: string;
+  button: TranslationConfig<string>;
 }
 
 export const SERVICE_CARDS: ServiceCard[] = [
@@ -43,8 +46,19 @@ export const SERVICE_CARDS: ServiceCard[] = [
     ],
     icon: Airplane,
     color: "primary",
+    image: APP_IMAGES.BEACH.src,
+    button: {
+      es: "Obten tu visa",
+      en: "Get your visa",
+      it: "Ottieni il tuo visto",
+    },
   },
   {
+    button: {
+      es: "Obten tu seguro",
+      en: "Get your insurance",
+      it: "Ottieni la tua assicurazione",
+    },
     icon: Safe,
     title: {
       es: "Seguros de Viaje",
@@ -74,5 +88,6 @@ export const SERVICE_CARDS: ServiceCard[] = [
       },
     ],
     color: "secondary",
+    image: APP_IMAGES.DOCTOR.src,
   },
 ];

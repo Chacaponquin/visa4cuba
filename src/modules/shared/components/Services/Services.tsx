@@ -19,7 +19,7 @@ export default function Services() {
 
   return (
     <LayoutSection title={TITLE} description={DESCRIPTION}>
-      <div className="grid grid-cols-1 md:grid-cols-2 flex-col items-start gap-x-12 gap-y-7 justify-center">
+      <div className="w-full max-w-[1000px] grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-7 justify-center">
         {SERVICE_CARDS.map((s, index) => (
           <Card key={index} service={s} />
         ))}
