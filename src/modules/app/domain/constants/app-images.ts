@@ -8,4 +8,5 @@ export const APP_IMAGES = {
   HEALTH: { src: "/images/health.webp", alt: "health" },
   BEACH: { src: "/images/beach.webp", alt: "beach" },
   DOCTOR: { src: "/images/doctor.webp", alt: "doctor" },
+  CUBA_FLAG: { src: "/images/cuba-flag.webp", alt: "cuba-flag" },
 };

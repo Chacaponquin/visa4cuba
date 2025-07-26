@@ -16,7 +16,7 @@ export default function LayoutHeader({
       style={{
         background: `linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('${image}') center/cover`,
       }}
-      className="flex w-full flex-col items-center justify-center py-44 text-center px-5"
+      className="flex w-full flex-col items-center justify-center py-44 text-center md:px-16 px-5"
     >
       <div className="flex flex-col items-center w-full ">
         <div className="text-6xl mb-8">

@@ -38,7 +38,7 @@ export default function Home({ builder, language }: TranslationPageProps) {
     <BaseTranslationPage language={language} builder={builder}>
       <Layout builder={builder} title={SEO_TITLE} description={SEO_DESCRIPTION}>
         <LayoutHeader
-          image={APP_IMAGES.BEACH.src}
+          image={APP_IMAGES.CUBA_FLAG.src}
           description={DESCRIPTION}
           title={TITLE}
         />
