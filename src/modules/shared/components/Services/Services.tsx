@@ -6,12 +6,12 @@ import { SERVICE_CARDS } from "./domain/service-card";
 export default function Services() {
   const { TITLE, DESCRIPTION } = useTranslation({
     TITLE: {
-      es: "Experiencias únicas en Cuba",
-      en: "Unique experiences in Cuba",
-      it: "Esperienze uniche a Cuba",
+      es: "Servicios esenciales para tu viaje a Cuba",
+      en: "Travel to Cuba without worries",
+      it: "Viaggia a Cuba senza pensieri",
     },
     DESCRIPTION: {
-      es: "Ofrecemos una amplia gama de servicios diseñados para hacer de tu viaje a Cuba una experiencia inolvidable y auténtica.",
+      es: "Gestionamos tu visa y seguro médico con rapidez, seguridad y respaldo 24/7.",
       en: "We offer a wide range of services designed to make your trip to Cuba an unforgettable and authentic experience.",
       it: "Offriamo un'ampia gamma di servizi pensati per rendere il tuo viaggio a Cuba un'esperienza indimenticabile e autentica.",
     },

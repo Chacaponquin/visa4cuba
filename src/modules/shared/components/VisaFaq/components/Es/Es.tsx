@@ -1,86 +1,84 @@
 import FaqCard from "../../../FaqCard/FaqCard";
-import Airplane from "../../../../../app/modules/icon/components/Airplane";
 import Passport from "../../../../../app/modules/icon/components/Passport";
 import Book from "../../../../../app/modules/icon/components/Book";
 import World from "../../../../../app/modules/icon/components/World";
 import Bed from "../../../../../app/modules/icon/components/Bed";
 import Time from "../../../../../app/modules/icon/components/Time";
 import Sad from "../../../../../app/modules/icon/components/Sad";
+import Avatar from "../../../../../app/modules/icon/components/Avatar";
 import Calendar from "../../../../../app/modules/icon/components/Calendar";
 
 export default function Es() {
   return (
     <>
       <FaqCard
-        icon={Airplane}
-        title="¿Para qué sirve el visado turístico para llegar a Cuba?"
+        icon={Passport}
+        title="¿Para qué sirve la visa turística para entrar a Cuba?"
       >
-        El visado para Cuba te permite de entrar y de permanecer en el
-        territorio cubano durante un máximo de 30 días. El visado puede
-        ampliarse hasta 60 días solicitándolo en una oficina de inmigración y
-        pagando un suplemento.
+        La visa para Cuba permite entrar y permanecer en el país hasta 30 días.
+        Puede extenderse por otros 30 días solicitándolo directamente en una
+        oficina de inmigración en Cuba y pagando una tasa adicional.
       </FaqCard>
 
-      <FaqCard icon={Passport} title="¿Qué tengo que hacer con mi visado?">
-        Antes de subir al avión, tienes que mostrar tu visado turístico al
-        personal del aeropuerto, de lo contrario no te permitirá de viajar. Al
-        llegar en Cuba las autoridades de aduaneras locales comprobarán y
-        sellarán tu tarjeta turística. Luego tendrás que guardarlo y mostrarlo
-        en los hoteles o casas especiales donde te alojarás, y finalmente
-        tendrás que devolverlo en el aeropuerto cuando te vayas.
+      <FaqCard icon={Avatar} title="¿Qué tengo que hacer con mi visa?">
+        Antes de embarcar, deberás mostrar tu visa turística al personal del
+        aeropuerto. De lo contrario, no se te permitirá volar. Al llegar a Cuba,
+        las autoridades de aduanas sellarán tu tarjeta de turista. Deberás
+        conservarla durante toda tu estancia, presentarla en hoteles o casas
+        particulares, y finalmente devolverla al salir del país.
       </FaqCard>
 
       <FaqCard
         icon={Book}
-        title="¿Qué documentos necesito para obtener un visado para Cuba?"
+        title="¿Qué documentos necesito para obtener una visa para Cuba?"
       >
-        Necesitarás un pasaporte con una validez mínima de 6 meses y un seguro
-        médico
+        Solo necesitas un pasaporte con una validez mínima de 6 meses y un
+        seguro médico válido.
       </FaqCard>
 
       <FaqCard
         icon={Bed}
-        title="¿Es necesario tener ya reservado el alojamiento para solicitar un visado a Cuba?"
+        title="¿Es necesario tener ya reservado el alojamiento para solicitar una visa para Cuba?"
       >
-        Antes era obligatorio especificar el alojamiento durante la solicitud
-        del visado, pero ya no es necesario.
+        No. Actualmente no es obligatorio especificar el alojamiento en el
+        momento de solicitar tu visa para Cuba. Antes sí lo era, pero esta
+        normativa ha cambiado.
       </FaqCard>
 
       <FaqCard
         icon={World}
-        title="¿Puedo gestionar mi solicitud para el visado para llegar a Cuba únicamente por Internet?"
+        title="¿Puedo gestionar mi solicitud de visa para Cuba completamente online?"
       >
-        El procedimiento se realiza totalmente online, pero tienes que
-        proporcionar una dirección postal en la que recibirás tu visado por
-        correo.
+        Sí. Todo el proceso se realiza 100% online. Solo necesitas facilitar una
+        dirección postal donde recibirás tu visa para Cuba por correo
+        certificado.
       </FaqCard>
 
       <FaqCard
         icon={Time}
-        title="¿Cuánto tiempo tengo para conservar mi tarjeta de turista?"
+        title="¿Cuánto tiempo debo conservar mi tarjeta de turista?"
       >
-        Tienes que conservar tu documento hasta que salgas de Cuba y mostrarlo
-        en aeropuerto a tu regreso. Antes de salir del país, tienes que
-        devolverlo a las autoridades aduaneras.
+        Debes conservar la tarjeta hasta el final de tu estancia. Tendrás que
+        mostrarla en el aeropuerto al salir de Cuba y devolverla a las
+        autoridades aduaneras.
       </FaqCard>
 
       <FaqCard
         icon={Sad}
-        title="He perdido mi visado turístico para Cuba. ¿Qué tengo que hacer?"
+        title="He perdido mi visa turística para Cuba. ¿Qué tengo que hacer?"
       >
-        Si pierdes tu visado, no hay ningún problema en particular: tendrás que
-        rellenar una declaración escrita en aeropuerto y entregarla a la oficina
-        de inmigración.
+        No te preocupes. Tendrás que rellenar una declaración escrita en el
+        aeropuerto y entregarla a la oficina de inmigración. Te permitirán salir
+        del país sin problemas.
       </FaqCard>
 
       <FaqCard
         icon={Calendar}
-        title="¿El visado turístico para Cuba tiene una fecha de caducidad?"
+        title="¿La visa para Cuba tiene fecha de caducidad?"
       >
-        El visado para Cuba no caduca. Una vez que lo hayas comprado, podrás
-        utilizarlo siempre todas la veces que lo deseas. Pero recomendamos de
-        comprarlo con antelación a tu viaje para evitar posibles retrasos en la
-        entrega por parte del correo.
+        No. La visa para Cuba no caduca. Una vez emitida, puedes usarla cuando
+        quieras. Aun así, recomendamos comprarla con antelación al viaje para
+        evitar retrasos en la entrega postal.
       </FaqCard>
     </>
   );

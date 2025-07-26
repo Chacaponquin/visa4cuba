@@ -10,14 +10,14 @@ export default function Steps() {
     STEPS: TSTEP,
   } = useTranslation({
     TITLE: {
-      es: "Obtén tu Visa en 4 Pasos",
-      en: "Get your Visa in 4 Steps",
-      it: "Ottieni il tuo visto in 4 passaggi",
+      es: "Solicita tu Visa para Cuba en 4 pasos simples",
+      en: "Get your visa in 4 easy steps",
+      it: "Ottieni il tuo visto in 4 semplici passaggi",
     },
     DESCRIPTION: {
-      es: "Nuestro proceso optimizado hace que obtener tu visa sea rápido y sin complicaciones",
-      en: "Our streamlined process makes obtaining your visa quick and hassle-free.",
-      it: "La nostra procedura semplificata rende l'ottenimento del visto rapido e senza problemi.",
+      es: "Nuestro proceso 100% online es rápido, seguro y sin complicaciones.",
+      en: "100% online procedure with instant approval.",
+      it: "Procedura 100% online con approvazione immediata.",
     },
     STEPS: { en: "Steps", es: "Pasos", it: "Passi" },
   });

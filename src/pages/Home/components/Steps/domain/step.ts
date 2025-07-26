@@ -19,9 +19,9 @@ export const STEPS: Step[] = [
       it: "Completa il modulo",
     },
     description: {
-      es: "Llena nuestro formulario online con tus datos personales y de viaje. Solo toma 5 minutos.",
-      it: "Compila il nostro modulo online con i tuoi dati personali e di viaggio. Ci vogliono solo 5 minuti.",
-      en: "Fill out our online form with your personal and travel information. It only takes 5 minutes.",
+      es: "Llena nuestro formulario en línea con tus datos personales y de viaje.",
+      it: "Inserisci i tuoi dati personali e di viaggio nel nostro modulo online. Ci vogliono solo 5 minuti.",
+      en: "Insert your personal data and travel information into our online module. Ci vogliono only 5 minutes.",
     },
     icon: Form,
   },
@@ -32,23 +32,23 @@ export const STEPS: Step[] = [
       it: "Effettua il pagamento",
     },
     description: {
-      es: "Pago seguro online con tarjeta de crédito, débito o transferencia bancaria.",
-      en: "Secure online payment by credit card, debit card, or bank transfer.",
-      it: "Pagamento online sicuro tramite carta di credito, carta di debito o bonifico bancario.",
+      es: "Paga de forma segura con tarjeta de crédito, débito o transferencia bancaria.",
+      en: "Pay securely with credit card, debit card, or bank transfer.",
+      it: "Paga in modo sicuro con carta di credito, debito o bonifico bancario.",
     },
     icon: Card,
   },
   {
     icon: CheckCorrect,
     description: {
-      es: "Nuestro equipo experto procesa tu solicitud y gestiona todos los trámites oficiales.",
-      en: "Our expert team processes your application and handles all official procedures.",
-      it: "Il nostro team di esperti elabora la tua domanda e si occupa di tutte le procedure ufficiali.",
+      es: "Nuestro equipo experto revisa tu solicitud y se encarga de todos los trámites oficiales.",
+      en: "Our team takes care of everything: we process your request and handle the official paperwork.",
+      it: "Il nostro team si occupa di tutto: elaboriamo la tua richiesta e gestiamo le pratiche ufficiali.",
     },
     title: {
       es: "Procesamos tu Visa",
       en: "We process your Visa",
-      it: "Elaboriamo il tuo visto",
+      it: "Elaboriamo del visto",
     },
   },
   {
@@ -59,9 +59,9 @@ export const STEPS: Step[] = [
     },
     icon: Download,
     description: {
-      es: "Descarga tu visa aprobada en formato PDF en 24-48 horas directo a tu email.",
-      en: "Download your approved visa in PDF format within 24-48 hours, directly to your email.",
-      it: "Scarica il visto approvato in formato PDF entro 24-48 ore, direttamente sulla tua email.",
+      es: "Descarga tu visa aprobada en formato PDF en 24–48 horas directamente en tu correo.",
+      en: "Receive your approved visa in PDF format within 24–48 hours, ready to print.",
+      it: "Ricevi il tuo visto approvato in formato PDF entro 24–48 ore, pronto da stampare.",
     },
   },
 ];

@@ -13,14 +13,14 @@ import Why from "./components/Why/Why";
 export default function Home({ builder, language }: TranslationPageProps) {
   const { TITLE, DESCRIPTION, SEO_DESCRIPTION, SEO_TITLE } = useTranslation({
     TITLE: {
-      es: "Visas y Seguros para Cuba de forma rápida con",
-      en: "Visas and Insurance for Cuba quickly with",
-      it: "Visti e assicurazione per Cuba rapidamente con",
+      es: "Visado turístico y seguro de viaje para Cuba 100% online",
+      en: "Your visa for Cuba, 100% online",
+      it: "Il tuo visto per Cuba, 100% online",
     },
     DESCRIPTION: {
-      es: "Obtén tu visa turística y seguro de viaje para Cuba en minutos. Proceso 100% digital, soporte 24/7 y garantía de aprobación",
-      en: "Get your tourist visa and travel insurance for Cuba in minutes. 100% digital process, 24/7 support, and approval guaranteed.",
-      it: "Ottieni il visto turistico e l'assicurazione di viaggio per Cuba in pochi minuti. Processo digitale al 100%, assistenza 24 ore su 24, 7 giorni su 7 e approvazione garantita.",
+      es: "Solicita tu visa para Cuba y contrata tu seguro médico en pocos minutos. Plataforma digital, atención 24/7 y entrega garantizada.",
+      en: "Apply now for your tourist visa and mandatory insurance in just a few minutes. Our service is digital, fast, multilingual, and offers 24/7 support.",
+      it: "Richiedi ora il tuo visto turistico e l’assicurazione obbligatoria in pochi minuti. Servizio digitale, rapido, multilingua e con supporto 24/7.",
     },
     SEO_TITLE: {
       es: "Visa y Seguro de Viaje para Cuba - Visa4Cuba",

@@ -23,7 +23,7 @@ export const SERVICE_CARDS: ServiceCard[] = [
       it: "Visti per Cuba",
     },
     description: {
-      es: "Tramitamos tu visa de turista para Cuba de manera rápida y segura. Nos encargamos de toda la documentación necesaria.",
+      es: "Tramitamos tu visa turística para Cuba de forma rápida y segura. Nos encargamos de toda la documentación, sin estrés ni trámites complicados.",
       en: "We process your Cuban tourist visa quickly and securely. We take care of all the necessary paperwork.",
       it: "Elaboriamo le tue richieste di visto turistico per Cuba in modo rapido e sicuro. Ci occupiamo di tutta la documentazione necessaria.",
     },
@@ -48,25 +48,25 @@ export const SERVICE_CARDS: ServiceCard[] = [
     color: "primary",
     image: APP_IMAGES.BEACH.src,
     button: {
-      es: "Obten tu visa",
+      es: "Solicita tu visa ahora",
       en: "Get your visa",
       it: "Ottieni il tuo visto",
     },
   },
   {
     button: {
-      es: "Obten tu seguro",
+      es: "Contrata tu seguro ahora",
       en: "Get your insurance",
       it: "Ottieni la tua assicurazione",
     },
     icon: Safe,
     title: {
-      es: "Seguros de Viaje",
+      es: "Seguro médico para Cuba",
       en: "Travel Insurance",
       it: "Assicurazione di viaggio",
     },
     description: {
-      es: "Protege tu viaje con nuestros seguros especializados para Cuba. Cobertura médica y de equipaje incluida en el servicio.",
+      es: "Viaja con tranquilidad con nuestro seguro aprobado para ingresar a Cuba. Cobertura médica completa, equipaje y atención directa en caso de emergencia.",
       en: "Protect your trip with our specialized insurance for Cuba. Medical and luggage coverage included in the service.",
       it: "Proteggi il tuo viaggio con la nostra assicurazione specializzata per Cuba. Copertura medica e bagaglio inclusa nel servizio.",
     },
