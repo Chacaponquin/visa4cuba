@@ -14,6 +14,7 @@ export const NAVBAR_SECTIONS: NavbarSection[] = [
     title: { es: "Seguros", en: "Insurance", it: "Assicurazione" },
   },
   { link: APP_ROUTES.SHOP, title: { es: "Tienda", en: "Shop", it: "Shop" } },
+  { link: APP_ROUTES.BLOG, title: { es: "Blog", en: "Blog", it: "Blog" } },
   {
     link: APP_ROUTES.ABOUT_US,
     title: { es: "Sobre nosotros", en: "About us", it: "Chi siamo" },

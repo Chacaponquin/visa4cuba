@@ -20,6 +20,7 @@ import { LANGUAGE } from "./modules/app/modules/language/domain/language";
 import Cookies from "./pages/Information/components/Cookies/Cookies";
 import Terms from "./pages/Information/components/Terms/Terms";
 import { HelmetProvider } from "react-helmet-async";
+import Blog from "./pages/Blog/Blog";
 
 const pages = [
   new TranslationRoute({ component: Shop, route: APP_ROUTES.SHOP }),
@@ -40,6 +41,7 @@ const pages = [
     component: Privacity,
     route: APP_ROUTES.INFORMATION.PRIVACITY,
   }),
+  new TranslationRoute({ component: Blog, route: APP_ROUTES.BLOG }),
 ];
 
 const routes = [] as RouteObject[];

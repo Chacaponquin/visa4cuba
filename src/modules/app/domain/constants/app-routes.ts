@@ -6,6 +6,7 @@ export const APP_ROUTES = {
   INSURANCE: "/insurence",
   VISA: "/visas",
   ABOUT_US: "/about-us",
+  BLOG: "/blog",
   INFORMATION: {
     PRIVACITY: "/privacity",
     TERMS_AND_CONDITIONS: "/terms-and-conditions",
