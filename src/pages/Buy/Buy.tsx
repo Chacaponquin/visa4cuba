@@ -60,7 +60,7 @@ export default function Buy({
   return (
     <BaseTranslationPage builder={builder} language={ilanguage}>
       <Layout builder={builder} title={TITLE} description={DESCRIPTION}>
-        <main className="w-full flex flex-col items-center px-5 pb-16">
+        <main className="w-full flex flex-col items-center px-5 py-16">
           <div className="w-full flex lg:flex-row flex-col max-w-layout lg:items-start items-center gap-x-10 gap-y-7 justify-between">
             <Steps
               steps={steps}

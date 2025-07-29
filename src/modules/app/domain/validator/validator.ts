@@ -12,6 +12,20 @@ interface Props {
 export abstract class Validator {
   constructor(private readonly array: Array<IValidator | undefined>) {}
 
+  errors(): FormException[] {
+    const errors = [] as FormException[];
+
+    for (const v of this.array) {
+      if (v) {
+        const valid = v.validate();
+
+        errors.push(...valid);
+      }
+    }
+
+    return errors;
+  }
+
   execute({ error, success }: Props) {
     const errors = [] as FormException[];
 

@@ -7,6 +7,9 @@ import AdventageValue from "./components/AdventageValue/AdventageValue";
 import SummaryValue from "./components/SummaryValue/SummaryValue";
 import { APP_ROUTES } from "../../../../../../modules/app/domain/constants/app-routes";
 import useTranslation from "../../../../../../modules/app/modules/language/hooks/useTranslation";
+import { TranslationRouteBuilder } from "../../../../../../modules/app/domain/core/translation-route-builder";
+import { useContext } from "react";
+import { LanguageContext } from "../../../../../../modules/app/modules/language/context/language-context";
 
 interface Props {
   subtotal: number;
@@ -15,6 +18,8 @@ interface Props {
 }
 
 export default function ResultSummary({ prosecution, subtotal, total }: Props) {
+  const { language } = useContext(LanguageContext);
+
   const {
     HEADER,
     SUBTOTAL,
@@ -71,7 +76,9 @@ export default function ResultSummary({ prosecution, subtotal, total }: Props) {
         </div>
 
         <div className="w-full flex flex-col mt-8 gap-y-2 mb-4">
-          <Link to={APP_ROUTES.BUY}>
+          <Link
+            to={new TranslationRouteBuilder(APP_ROUTES.BUY).build(language)}
+          >
             <Button full>{BUTTON_1}</Button>
           </Link>
 

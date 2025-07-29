@@ -1,3 +1,4 @@
+import type { FormException } from "../../../../modules/app/domain/exceptions/form";
 import useToast from "../../../../modules/app/hooks/useToast";
 import Form from "../../../../modules/app/modules/form/components/Form/Form";
 import Airplane from "../../../../modules/app/modules/icon/components/Airplane";
@@ -7,6 +8,7 @@ import { ShopPassegersValidator } from "../../../../modules/shop/domain/validato
 import type { SectionPassegerForm } from "../../domain/passeger-form";
 import BuyForm from "../../shared/components/BuyForm/BuyForm";
 import SectionForm from "./components/SectionForm/SectionForm";
+import { RowException } from "./exceptions/row-exception";
 
 interface Props {
   title: string;
@@ -38,9 +40,31 @@ export default function PassegersForm({
   const { errors } = useToast();
 
   function handleSubmit() {
-    const validator = new ShopPassegersValidator();
+    const all = [] as FormException[];
 
-    validator.execute({ error: errors, success: onSubmit });
+    for (const s of passegers) {
+      for (let j = 0; j < s.passegers.length; j++) {
+        const p = s.passegers[j];
+
+        const validator = new ShopPassegersValidator({
+          birthdate: p.birthdate,
+          country: p.country,
+          end: p.end,
+          lastname: p.lastname,
+          name: p.name,
+          passport: p.passport,
+          start: p.start,
+        });
+
+        all.push(...validator.errors().map((e) => new RowException(j + 1, e)));
+      }
+    }
+
+    if (all.length > 0) {
+      errors(all);
+    } else {
+      onSubmit();
+    }
   }
 
   const { BUTTON } = useTranslation({

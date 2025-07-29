@@ -8,6 +8,7 @@ import FormSection from "../../../../../../../../modules/app/modules/form/compon
 import DatePicker from "../../../../../../../../modules/app/modules/ui/components/DatePicker/DatePicker";
 import { COUNTRIES } from "../../../../../../../../modules/shared/domain/entities/country";
 import Select from "../../../../../../../../modules/app/modules/ui/components/Select/Select";
+import useTranslation from "../../../../../../../../modules/app/modules/language/hooks/useTranslation";
 
 interface Props {
   name: { value: string; onChange(v: string): void };
@@ -28,6 +29,42 @@ export default function PassagerForm({
   leaveDate,
   country,
 }: Props) {
+  const {
+    ARRIVE_DATE,
+    BIRTHDATE,
+    COUNTRY,
+    LAST_NAME,
+    LEAVE_DATE,
+    NAME,
+    PASSPORT,
+    NO_NAME,
+  } = useTranslation({
+    NAME: { es: "Nombre", en: "Name", it: "Nome" },
+    LAST_NAME: { es: "Apellidos", en: "Lastname", it: "Cognomi" },
+    PASSPORT: { es: "Pasaporte", en: "Passport", it: "Passaporto" },
+    ARRIVE_DATE: {
+      es: "Fecha de llegada",
+      en: "Arrive date",
+      it: "Data di arrivo",
+    },
+    LEAVE_DATE: {
+      es: "Fecha de salida",
+      en: "Leave date",
+      it: "Data di partenza",
+    },
+    BIRTHDATE: {
+      es: "Fecha de nacimiento",
+      en: "Birthdate",
+      it: "Data di nascita",
+    },
+    COUNTRY: { es: "Nacionalidad", en: "Country", it: "Nazionalità" },
+    NO_NAME: {
+      es: "Sin nombre",
+      en: "No name",
+      it: "Senza nome",
+    },
+  });
+
   const [open, setOpen] = useState(false);
 
   return (
@@ -47,7 +84,7 @@ export default function PassagerForm({
           </i>
 
           <h2 className="text-left text-base font-title-medium">
-            {name.value ? name.value : "Sin nombre"}
+            {name.value ? name.value : NO_NAME}
           </h2>
         </div>
 
@@ -64,33 +101,33 @@ export default function PassagerForm({
       {open && (
         <div className="w-full flex flex-col">
           <FormSectionColumn>
-            <FormSection label="Nombre" required>
+            <FormSection label={NAME} required>
               <Input onChange={name.onChange} value={name.value} />
             </FormSection>
 
-            <FormSection label="Apellidos" required>
+            <FormSection label={LAST_NAME} required>
               <Input onChange={lastname.onChange} value={lastname.value} />
             </FormSection>
 
-            <FormSection label="Fecha de llegada" required>
+            <FormSection label={ARRIVE_DATE} required>
               <DatePicker
                 onChange={arriveDate.onChange}
                 value={arriveDate.value}
               />
             </FormSection>
 
-            <FormSection label="Fecha de salida" required>
+            <FormSection label={LEAVE_DATE} required>
               <DatePicker
                 value={leaveDate.value}
                 onChange={leaveDate.onChange}
               />
             </FormSection>
 
-            <FormSection label="Pasaporte" required>
+            <FormSection label={PASSPORT} required>
               <Input onChange={passport.onChange} value={passport.value} />
             </FormSection>
 
-            <FormSection label="Nacionalidad" required>
+            <FormSection label={COUNTRY} required>
               <Select
                 options={COUNTRIES}
                 label={(o) => o.name}
@@ -100,7 +137,7 @@ export default function PassagerForm({
               />
             </FormSection>
 
-            <FormSection label="Fecha de nacimiento" required>
+            <FormSection label={BIRTHDATE} required>
               <DatePicker
                 onChange={birthdate.onChange}
                 value={birthdate.value}

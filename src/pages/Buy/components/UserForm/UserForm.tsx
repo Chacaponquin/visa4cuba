@@ -37,7 +37,14 @@ export default function UserForm({
   const { errors } = useToast();
 
   function handleSubmit() {
-    const validator = new ShopUserValidator();
+    const validator = new ShopUserValidator({
+      birthdate: birthdate.value,
+      country: country.value,
+      lastname: lastname.value,
+      name: name.value,
+      phone: phone.value,
+      email: email.value,
+    });
 
     validator.execute({ success: onSubmit, error: errors });
   }
