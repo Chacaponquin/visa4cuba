@@ -10,7 +10,11 @@ export class CountryValidator implements IValidator {
 
     return validator.execute({
       empty: () => [
-        new FormException(`La nacionalidad del receptor no puede estar vacía`),
+        new FormException({
+          es: `La nacionalidad del receptor no puede estar vacía`,
+          en: `The recipient's nationality cannot be empty`,
+          it: `La nazionalità del destinatario non può essere vuota`,
+        }),
       ],
     });
   }

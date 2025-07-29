@@ -7,7 +7,11 @@ export class BirthdateValidator implements IValidator {
   validate(): FormException[] {
     if (this.value === null) {
       return [
-        new FormException(`El pasajero debe tener una fecha de nacimiento`),
+        new FormException({
+          es: `El pasajero debe tener una fecha de nacimiento`,
+          en: `The passenger must have a birthdate`,
+          it: `Il passeggero deve avere una data di nascita`,
+        }),
       ];
     }
 

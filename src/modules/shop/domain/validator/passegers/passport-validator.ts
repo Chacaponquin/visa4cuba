@@ -10,9 +10,11 @@ export class PassportValidator implements IValidator {
 
     return validator.execute({
       empty: () => [
-        new FormException(
-          `El número de pasaporte del pasajero no puede estar vacío`
-        ),
+        new FormException({
+          es: `El número de pasaporte del pasajero no puede estar vacío`,
+          en: `The passenger's passport number cannot be empty`,
+          it: `Il numero di passaporto del passeggero non può essere vuoto`,
+        }),
       ],
     });
   }

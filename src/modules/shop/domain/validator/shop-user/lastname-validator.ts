@@ -10,7 +10,11 @@ export class LastnameValidator implements IValidator {
 
     return validator.execute({
       empty: () => [
-        new FormException(`Los apellidos del receptor no pueden estar vacíos`),
+        new FormException({
+          es: `Los apellidos del receptor no pueden estar vacíos`,
+          en: `The recipient's last names cannot be empty`,
+          it: `I cognomi del destinatario non possono essere vuoti`,
+        }),
       ],
     });
   }

@@ -11,9 +11,11 @@ export class UserContactPhoneValidator implements IValidator {
     return validator.execute({
       empty() {
         return [
-          new FormException(
-            `Se debe definir un teléfono para el autor del mensaje`
-          ),
+          new FormException({
+            es: `Se debe definir un teléfono para el autor del mensaje`,
+            en: `A phone number must be defined for the message author`,
+            it: `Deve essere definito un numero di telefono per l'autore del messaggio`,
+          }),
         ];
       },
     });

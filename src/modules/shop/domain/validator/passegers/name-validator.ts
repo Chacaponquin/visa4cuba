@@ -10,7 +10,11 @@ export class NameValidator implements IValidator {
 
     return validator.execute({
       empty: () => [
-        new FormException(`El nombre del pasajero no puede estar vacío`),
+        new FormException({
+          es: `El nombre del pasajero no puede estar vacío`,
+          en: `The passenger's name cannot be empty`,
+          it: `Il nome del passeggero non può essere vuoto`,
+        }),
       ],
     });
   }

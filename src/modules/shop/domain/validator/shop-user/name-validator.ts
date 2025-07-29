@@ -10,7 +10,11 @@ export class NameValidator implements IValidator {
 
     return validator.execute({
       empty: () => [
-        new FormException(`El nombre del receptor no puede estar vacío`),
+        new FormException({
+          es: `El nombre del receptor no puede estar vacío`,
+          en: `The recipient's name cannot be empty`,
+          it: `Il nome del destinatario non può essere vuoto`,
+        }),
       ],
     });
   }

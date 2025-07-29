@@ -10,7 +10,11 @@ export class CountryValidator implements IValidator {
 
     return validator.execute({
       empty: () => [
-        new FormException(`La nacionalidad del pasajero no puede estar vacía`),
+        new FormException({
+          es: `La nacionalidad del pasajero no puede estar vacía`,
+          en: `The passenger's nationality cannot be empty`,
+          it: `La nazionalità del passeggero non può essere vuota`,
+        }),
       ],
     });
   }

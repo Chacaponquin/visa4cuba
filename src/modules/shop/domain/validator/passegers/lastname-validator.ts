@@ -10,7 +10,11 @@ export class LastnameValidator implements IValidator {
 
     return validator.execute({
       empty: () => [
-        new FormException(`Los apellidos del pasajero no pueden estar vacíos`),
+        new FormException({
+          es: `Los apellidos del pasajero no pueden estar vacíos`,
+          en: `The passenger's last names cannot be empty`,
+          it: `I cognomi del passeggero non possono essere vuoti`,
+        }),
       ],
     });
   }

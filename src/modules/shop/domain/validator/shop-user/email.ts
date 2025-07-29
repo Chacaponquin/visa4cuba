@@ -10,9 +10,19 @@ export class EmailValidator implements IValidator {
 
     return validator.execute({
       empty: () => [
-        new FormException(`El email del receptor no puede estar vacío`),
+        new FormException({
+          es: `El email del receptor no puede estar vacío`,
+          en: `The recipient's email cannot be empty`,
+          it: `L'email del destinatario non può essere vuota`,
+        }),
       ],
-      notEmail: () => [new FormException(`El email del receptor no es válido`)],
+      notEmail: () => [
+        new FormException({
+          es: `El email del receptor no es válido`,
+          en: `The recipient's email is not valid`,
+          it: `L'email del destinatario non è valida`,
+        }),
+      ],
     });
   }
 }

@@ -7,9 +7,11 @@ export class EndValidator implements IValidator {
   validate(): FormException[] {
     if (this.value === null) {
       return [
-        new FormException(
-          `La fecha de salida del pasajero no puede estar vacía`
-        ),
+        new FormException({
+          es: `La fecha de salida del pasajero no puede estar vacía`,
+          en: `The passenger's departure date cannot be empty`,
+          it: `La data di partenza del passeggero non può essere vuota`,
+        }),
       ];
     }
 

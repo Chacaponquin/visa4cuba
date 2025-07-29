@@ -7,9 +7,11 @@ export class StartValidator implements IValidator {
   validate(): FormException[] {
     if (this.value === null) {
       return [
-        new FormException(
-          `La fecha de entrada del pasajero no puede estar vacía`
-        ),
+        new FormException({
+          es: `La fecha de entrada del pasajero no puede estar vacía`,
+          en: `The passenger's entry date cannot be empty`,
+          it: `La data di ingresso del passeggero non può essere vuota`,
+        }),
       ];
     }
 

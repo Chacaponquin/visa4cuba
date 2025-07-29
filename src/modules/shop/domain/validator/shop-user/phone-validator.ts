@@ -10,7 +10,11 @@ export class PhoneValidator implements IValidator {
 
     return validator.execute({
       empty: () => [
-        new FormException(`El teléfono del receptor no puede estar vacío`),
+        new FormException({
+          es: `El teléfono del receptor no puede estar vacío`,
+          en: `The recipient's phone cannot be empty`,
+          it: `Il telefono del destinatario non può essere vuoto`,
+        }),
       ],
     });
   }

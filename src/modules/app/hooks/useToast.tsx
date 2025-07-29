@@ -1,5 +1,7 @@
 import { toast } from "react-toastify";
 import type { FormException } from "../domain/exceptions/form";
+import { useContext } from "react";
+import { LanguageContext } from "../modules/language/context/language-context";
 
 interface ToastProps {
   message: string;
@@ -7,11 +9,13 @@ interface ToastProps {
 }
 
 export default function useToast() {
+  const { language } = useContext(LanguageContext);
+
   function errors(err: FormException[]) {
     for (let i = 0; i < err.length; i++) {
       const e = err[i];
 
-      error({ message: e.message });
+      error({ message: e.getMessage(language) });
     }
   }
 

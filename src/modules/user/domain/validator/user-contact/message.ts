@@ -10,7 +10,13 @@ export class UserContactMessageValidator implements IValidator {
 
     return validator.execute({
       empty() {
-        return [new FormException(`El mensaje no puede estar vacío`)];
+        return [
+          new FormException({
+            es: `El mensaje no puede estar vacío`,
+            en: `The message cannot be empty`,
+            it: `Il messaggio non può essere vuoto`,
+          }),
+        ];
       },
     });
   }

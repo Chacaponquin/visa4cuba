@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import type { FormException } from "../../../../modules/app/domain/exceptions/form";
 import useToast from "../../../../modules/app/hooks/useToast";
 import Form from "../../../../modules/app/modules/form/components/Form/Form";
@@ -9,6 +10,7 @@ import type { SectionPassegerForm } from "../../domain/passeger-form";
 import BuyForm from "../../shared/components/BuyForm/BuyForm";
 import SectionForm from "./components/SectionForm/SectionForm";
 import { RowException } from "./exceptions/row-exception";
+import { LanguageContext } from "../../../../modules/app/modules/language/context/language-context";
 
 interface Props {
   title: string;
@@ -38,6 +40,7 @@ export default function PassegersForm({
   onChangeCountry,
 }: Props) {
   const { errors } = useToast();
+  const { language } = useContext(LanguageContext);
 
   function handleSubmit() {
     const all = [] as FormException[];
@@ -56,7 +59,11 @@ export default function PassegersForm({
           start: p.start,
         });
 
-        all.push(...validator.errors().map((e) => new RowException(j + 1, e)));
+        all.push(
+          ...validator
+            .errors()
+            .map((e) => new RowException(j + 1, e.getMessage(language)))
+        );
       }
     }
 
