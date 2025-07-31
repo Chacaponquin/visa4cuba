@@ -21,6 +21,7 @@ import Cookies from "./pages/Information/components/Cookies/Cookies";
 import Terms from "./pages/Information/components/Terms/Terms";
 import { HelmetProvider } from "react-helmet-async";
 import Blog from "./pages/Blog/Blog";
+import VisaElectronic from "./pages/Blog/components/Articles/components/VisaElectronic/VisaElectronic";
 
 const pages = [
   new TranslationRoute({ component: Shop, route: APP_ROUTES.SHOP }),
@@ -41,7 +42,11 @@ const pages = [
     component: Privacity,
     route: APP_ROUTES.INFORMATION.PRIVACITY,
   }),
-  new TranslationRoute({ component: Blog, route: APP_ROUTES.BLOG }),
+  new TranslationRoute({ component: Blog, route: APP_ROUTES.BLOG.ROOT }),
+  new TranslationRoute({
+    component: VisaElectronic,
+    route: APP_ROUTES.BLOG.ARTICLES.VISA_ELECTRONIC,
+  }),
 ];
 
 const routes = [] as RouteObject[];
