@@ -22,6 +22,10 @@ import Terms from "./pages/Information/components/Terms/Terms";
 import { HelmetProvider } from "react-helmet-async";
 import Blog from "./pages/Blog/Blog";
 import VisaElectronic from "./pages/Blog/components/Articles/components/VisaElectronic/VisaElectronic";
+import ReactGA from "react-ga4";
+
+ReactGA.initialize("G-YYF5VQWPEL");
+ReactGA.send("pageview");
 
 const pages = [
   new TranslationRoute({ component: Shop, route: APP_ROUTES.SHOP }),
