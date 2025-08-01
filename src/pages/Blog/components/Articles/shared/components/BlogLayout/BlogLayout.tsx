@@ -1,4 +1,6 @@
+import { APP_IMAGES } from "../../../../../../../modules/app/domain/constants/app-images";
 import type { TranslationRouteBuilder } from "../../../../../../../modules/app/domain/core/translation-route-builder";
+import LayoutHeader from "../../../../../../../modules/shared/components/Layout/components/LayoutHeader/LayoutHeader";
 import Layout from "../../../../../../../modules/shared/components/Layout/Layout";
 
 interface Props {
@@ -9,8 +11,10 @@ interface Props {
 export default function BlogLayout({ children, builder }: Props) {
   return (
     <Layout builder={builder}>
-      <div className="w-full flex flex-col items-center px-5">
-        <div className="w-full max-w-layout-sm">{children}</div>
+      <LayoutHeader image={APP_IMAGES.BLOG.ARTICLES.VISA_ELECTRONIC.src} />
+
+      <div className="w-full flex flex-col items-center px-5 py-14">
+        <div className="w-full max-w-layout-sm flex flex-col">{children}</div>
       </div>
     </Layout>
   );

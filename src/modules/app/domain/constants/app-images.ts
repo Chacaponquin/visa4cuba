@@ -9,4 +9,8 @@ export const APP_IMAGES = {
   BEACH: { src: "/images/beach.webp", alt: "beach" },
   DOCTOR: { src: "/images/doctor.webp", alt: "doctor" },
   CUBA_FLAG: { src: "/images/cuba-flag.webp", alt: "cuba-flag" },
+  BLOG: {
+    ROOT: { src: "/images/blog/blog.webp" },
+    ARTICLES: { VISA_ELECTRONIC: { src: "/images/blog/visa-electronic.webp" } },
+  },
 };

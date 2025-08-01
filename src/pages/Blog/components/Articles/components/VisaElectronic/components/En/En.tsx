@@ -1,4 +1,5 @@
 import type { TranslationRouteBuilder } from "../../../../../../../../modules/app/domain/core/translation-route-builder";
+import H1 from "../../../../../../../../modules/app/modules/ui/components/Markdown/components/H1/H1";
 import H2 from "../../../../../../../../modules/app/modules/ui/components/Markdown/components/H2/H2";
 import List from "../../../../../../../../modules/app/modules/ui/components/Markdown/components/List/List";
 import ListItem from "../../../../../../../../modules/app/modules/ui/components/Markdown/components/ListItem/ListItem";
@@ -13,6 +14,11 @@ interface Props {
 export default function En({ builder }: Props) {
   return (
     <BlogLayout builder={builder}>
+      <H1>
+        From 1 July 2025, the visa for Cuba is electronic: here’s what changes
+        for European travellers
+      </H1>
+
       <P>
         Starting <Strong>1 July 2025</Strong>, entry to Cuba will require{" "}
         <Strong>only an electronic visa</Strong>.
@@ -166,7 +172,7 @@ export default function En({ builder }: Props) {
         </ListItem>
 
         <ListItem>
-          <P>Guided assistance with the D’Viajeros form</P>
+          <P>Guided assistance with the D’Viajeros form</P>
         </ListItem>
       </List>
 

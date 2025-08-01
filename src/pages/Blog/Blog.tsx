@@ -1,6 +1,10 @@
+import { APP_IMAGES } from "../../modules/app/domain/constants/app-images";
 import type { TranslationPageProps } from "../../modules/app/domain/core/translation-route";
 import useTranslation from "../../modules/app/modules/language/hooks/useTranslation";
+import LayoutHeader from "../../modules/shared/components/Layout/components/LayoutHeader/LayoutHeader";
 import Layout from "../../modules/shared/components/Layout/Layout";
+import PostCard from "./components/PostCard/PostCard";
+import { BLOG_POSTS } from "./domain/blog-post";
 
 export default function Blog({ builder }: TranslationPageProps) {
   const { DESCRIPTION } = useTranslation({
@@ -16,6 +20,18 @@ export default function Blog({ builder }: TranslationPageProps) {
       builder={builder}
       description={DESCRIPTION}
       title="Blog - Visa4Cuba"
-    ></Layout>
+    >
+      <LayoutHeader title="Blog" image={APP_IMAGES.BLOG.ROOT.src} />
+
+      <main className="w-full flex flex-col items-center py-14 px-5">
+        <div className="w-full max-w-layout flex flex-col">
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 w-full">
+            {BLOG_POSTS.map((b, index) => (
+              <PostCard card={b} key={index} />
+            ))}
+          </div>
+        </div>
+      </main>
+    </Layout>
   );
 }

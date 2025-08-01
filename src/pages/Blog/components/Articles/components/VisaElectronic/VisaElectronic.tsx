@@ -13,8 +13,8 @@ export default function VisaElectronic({
       builder={builder}
       language={language}
       en={<En builder={builder} />}
-      es={<Es />}
-      it={<It />}
+      es={<Es builder={builder} />}
+      it={<It builder={builder} />}
     />
   );
 }
