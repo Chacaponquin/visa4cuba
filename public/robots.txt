@@ -1,0 +1,15 @@
+# robots.txt para una aplicación React
+
+User-agent: *
+Allow: /
+
+# Evita que se indexen los archivos estáticos generados (opcional)
+Disallow: /static/
+Disallow: /assets/
+
+# Evita el acceso a ciertos archivos si se desea
+Disallow: /favicon.ico
+Disallow: /manifest.json
+
+# Mapa del sitio (ajusta la URL a la tuya real)
+Sitemap: https://www.visa4cuba.com/sitemap.xml
