@@ -2,6 +2,7 @@
   "name": "yourcubavisacover_v2",
   "private": true,
   "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "dev": "tsc -b && vite",
     "build": "tsc -b && vite build",
