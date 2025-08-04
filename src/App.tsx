@@ -24,7 +24,7 @@ import Blog from "./pages/Blog/Blog";
 import VisaElectronic from "./pages/Blog/components/Articles/components/VisaElectronic/VisaElectronic";
 import ReactGA from "react-ga4";
 
-ReactGA.initialize("G-YYF5VQWPEL");
+ReactGA.initialize("G-1Y2ZYK2JWW");
 ReactGA.send("pageview");
 
 const pages = [

@@ -1,5 +1,3 @@
-# robots.txt para una aplicación React
-
 User-agent: *
 Allow: /
 
