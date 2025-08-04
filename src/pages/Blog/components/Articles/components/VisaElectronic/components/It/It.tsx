@@ -13,7 +13,11 @@ interface Props {
 
 export default function It({ builder }: Props) {
   return (
-    <BlogLayout builder={builder}>
+    <BlogLayout
+      builder={builder}
+      title="Dal 1° luglio 2025 il visto per Cuba è elettronico: cosa cambia per i viaggiatori europei"
+      description="A partire dal 1° luglio 2025, Cuba sostituisce la tradizionale carta turistica cartacea con un visto elettronico. Scopri cosa cambia per i viaggiatori europei e come richiedere l’e-Visa."
+    >
       <H1>
         Dal 1° luglio 2025 il visto per Cuba è elettronico: ecco cosa cambia per
         i viaggiatori europei

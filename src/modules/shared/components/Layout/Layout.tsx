@@ -9,8 +9,8 @@ interface Props {
   builder: TranslationRouteBuilder;
   children?: React.ReactNode;
   extra?: React.ReactNode;
-  title?: string;
-  description?: string;
+  title: string;
+  description: string;
 }
 
 export default function Layout({

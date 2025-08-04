@@ -6,11 +6,18 @@ import Layout from "../../../../../../../modules/shared/components/Layout/Layout
 interface Props {
   children?: React.ReactNode;
   builder: TranslationRouteBuilder;
+  title: string;
+  description: string;
 }
 
-export default function BlogLayout({ children, builder }: Props) {
+export default function BlogLayout({
+  children,
+  builder,
+  description,
+  title,
+}: Props) {
   return (
-    <Layout builder={builder}>
+    <Layout builder={builder} title={title} description={description}>
       <LayoutHeader image={APP_IMAGES.BLOG.ARTICLES.VISA_ELECTRONIC.src} />
 
       <div className="w-full flex flex-col items-center px-5 py-14">

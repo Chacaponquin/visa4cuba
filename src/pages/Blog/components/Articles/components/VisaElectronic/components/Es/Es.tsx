@@ -13,7 +13,11 @@ interface Props {
 
 export default function Es({ builder }: Props) {
   return (
-    <BlogLayout builder={builder}>
+    <BlogLayout
+      builder={builder}
+      title="Desde el 1 de julio de 2025, el visado para Cuba será electrónico: lo que cambia para los viajeros europeos"
+      description="A partir del 1 de julio de 2025, Cuba reemplaza la tradicional tarjeta turística en papel por un visado electrónico. Descubre qué cambia para los viajeros europeos y cómo solicitar el nuevo e-Visa."
+    >
       <H1>
         Desde el 1 de julio de 2025 el visado para Cuba será electrónico: esto
         es lo que cambia para los viajeros europeos

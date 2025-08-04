@@ -13,7 +13,11 @@ interface Props {
 
 export default function En({ builder }: Props) {
   return (
-    <BlogLayout builder={builder}>
+    <BlogLayout
+      title="Cuba Visa Goes Digital from July 2025: Key Changes for European Travellers"
+      description="Starting 1 July 2025, Cuba replaces the paper tourist card with an electronic visa. Find out what changes for European travellers and how to apply for the new e-Visa."
+      builder={builder}
+    >
       <H1>
         From 1 July 2025, the visa for Cuba is electronic: here’s what changes
         for European travellers
