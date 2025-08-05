@@ -18,7 +18,7 @@ export default function Card({ service }: Props) {
 
   return (
     <article
-      className="rounded-card w-full flex flex-col transition-all duration-200 px-3 pb-3 pt-60 shadow-lg"
+      className="rounded-card w-full flex flex-col transition-all duration-200 px-6 pb-3 pt-60 shadow-lg"
       style={{ background: `url('${service.image}') center/cover no-repeat` }}
     >
       <div className="rounded-card bg-white w-full px-5 py-4">

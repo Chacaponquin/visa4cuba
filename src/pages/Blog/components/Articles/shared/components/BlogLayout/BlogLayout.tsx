@@ -18,7 +18,10 @@ export default function BlogLayout({
 }: Props) {
   return (
     <Layout builder={builder} title={title} description={description}>
-      <LayoutHeader image={APP_IMAGES.BLOG.ARTICLES.VISA_ELECTRONIC.src} />
+      <LayoutHeader
+        image={APP_IMAGES.BLOG.ARTICLES.VISA_ELECTRONIC.src}
+        sideImage={APP_IMAGES.PASSPORTS}
+      />
 
       <div className="w-full flex flex-col items-center px-5 py-14">
         <div className="w-full max-w-layout-sm flex flex-col">{children}</div>

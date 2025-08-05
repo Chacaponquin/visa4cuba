@@ -34,6 +34,7 @@ export default function Header() {
       image={APP_IMAGES.HEALTH.src}
       description={DESCRIPTION}
       title={TITLE}
+      sideImage={APP_IMAGES.PASSPORTS}
     >
       <Link to={new TranslationRouteBuilder(APP_ROUTES.SHOP).build(language)}>
         <ArrowButton>{BUTTON}</ArrowButton>

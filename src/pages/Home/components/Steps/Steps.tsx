@@ -24,7 +24,7 @@ export default function Steps() {
 
   return (
     <LayoutSection title={TITLE} description={DESCRIPTION} header={TSTEP}>
-      <div className="w-full grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-x-3 gap-y-3">
+      <div className="w-full grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-x-7 gap-y-5">
         {STEPS.map((s, index) => (
           <StepCard key={index} props={s} step={index + 1} />
         ))}

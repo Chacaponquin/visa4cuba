@@ -12,20 +12,27 @@ export default function StepCard({ props, step }: Props) {
   const { language } = useContext(LanguageContext);
 
   return (
-    <article className="relative rounded-card border-2 border-primary/30 px-6 py-4 flex flex-col text-center items-center transition-all duration-200 hover:border-primary hover:shadow-xl">
-      <div className="absolute -right-3 -top-3 rounded-full w-[30px] h-[30px] flex items-center justify-center bg-primary text-white text-sm">
+    <article className="bg-white h-max shadow relative rounded-card flex flex-col items-center transition-all duration-200 hover:-translate-y-2">
+      <header className="py-3 px-4 flex justify-center bg-primary text-white font-title-bold w-full text-xl">
         {step}
+      </header>
+
+      <div className="flex flex-col px-6 py-5 items-center text-center">
+        <h2 className="text-xl font-title-semibold mb-2 w-full">
+          {props.title[language]}
+        </h2>
+
+        <span className="text-sm text-gray-500 mb-8">
+          {props.description[language]}
+        </span>
+
+        <IconCard
+          size="xl"
+          color="primary"
+          icon={props.icon}
+          className="mb-2"
+        />
       </div>
-
-      <IconCard size="lg" color="primary" icon={props.icon} className="mb-4" />
-
-      <h2 className="text-xl font-title-semibold mb-0.5">
-        {props.title[language]}
-      </h2>
-
-      <span className="text-sm text-gray-500">
-        {props.description[language]}
-      </span>
     </article>
   );
 }

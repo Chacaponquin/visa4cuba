@@ -8,6 +8,7 @@ export const APP_IMAGES = {
   HEALTH: { src: "/images/health.webp", alt: "health" },
   BEACH: { src: "/images/beach.webp", alt: "beach" },
   DOCTOR: { src: "/images/doctor.webp", alt: "doctor" },
+  PASSPORTS: { src: "/images/passports.webp", alt: "passports" },
   CUBA_FLAG: { src: "/images/cuba-flag.webp", alt: "cuba-flag" },
   BLOG: {
     ROOT: { src: "/images/blog/blog.webp" },

@@ -34,6 +34,7 @@ export default function Header() {
       image={APP_IMAGES.CUBA_1.src}
       title={TITLE}
       description={DESCRIPTION}
+      sideImage={APP_IMAGES.PASSPORTS}
     >
       <Link to={new TranslationRouteBuilder(APP_ROUTES.SHOP).build(language)}>
         <ArrowButton>{BUTTON}</ArrowButton>

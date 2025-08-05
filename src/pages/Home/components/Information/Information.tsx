@@ -8,8 +8,12 @@ import { APP_ROUTES } from "../../../../modules/app/domain/constants/app-routes"
 import useTranslation from "../../../../modules/app/modules/language/hooks/useTranslation";
 import useTranslationComponent from "../../../../modules/app/modules/language/hooks/useTranslationComponent";
 import Strong from "../../../../modules/app/modules/ui/components/Markdown/components/Strong/Strong";
+import { useContext } from "react";
+import { LanguageContext } from "../../../../modules/app/modules/language/context/language-context";
+import { TranslationRouteBuilder } from "../../../../modules/app/domain/core/translation-route-builder";
 
 export default function Information() {
+  const { language } = useContext(LanguageContext);
   const {
     TITLE,
     DESCRIPTION,
@@ -49,7 +53,11 @@ export default function Information() {
       en: "Discover insurance for Cuba",
       it: "Scopri l'assicurazione per Cuba",
     },
-    HEADER: { en: "Services", es: "Servicios", it: "Servizi" },
+    HEADER: {
+      en: "Our Services",
+      es: "Nuestros Servicios",
+      it: "I nostri servizi",
+    },
   });
 
   const { INFO_1_DESCRIPTION, INFO_2_DESCRIPTION } = useTranslationComponent({
@@ -152,26 +160,45 @@ export default function Information() {
   });
 
   return (
-    <LayoutSection title={TITLE} description={DESCRIPTION} header={HEADER}>
-      <ImageInfoCard title={INFO_1_TITLE} image={APP_IMAGES.CUBA_1}>
-        {INFO_1_DESCRIPTION}
+    <LayoutSection bg title={TITLE} description={DESCRIPTION} header={HEADER}>
+      <div className="grid md:grid-cols-2 grid-cols-1 gap-x-4 gap-y-5">
+        <ImageInfoCard
+          title={INFO_1_TITLE}
+          image={APP_IMAGES.CUBA_1}
+          footer={
+            <Link
+              className="w-full"
+              to={new TranslationRouteBuilder(APP_ROUTES.VISA).build(language)}
+            >
+              <Button color="secondary" size="lg" full className="mt-2">
+                {INFO_1_BUTTON}
+              </Button>
+            </Link>
+          }
+        >
+          {INFO_1_DESCRIPTION}
+        </ImageInfoCard>
 
-        <Link to={APP_ROUTES.VISA}>
-          <Button color="secondary" size="lg" className="mt-5">
-            {INFO_1_BUTTON}
-          </Button>
-        </Link>
-      </ImageInfoCard>
-
-      <ImageInfoCard title={INFO_2_TITLE} reverse image={APP_IMAGES.HEALTH}>
-        {INFO_2_DESCRIPTION}
-
-        <Link to={APP_ROUTES.INSURANCE}>
-          <Button color="secondary" className="mt-5" size="lg">
-            {INFO_2_BUTTON}
-          </Button>
-        </Link>
-      </ImageInfoCard>
+        <ImageInfoCard
+          title={INFO_2_TITLE}
+          reverse
+          image={APP_IMAGES.HEALTH}
+          footer={
+            <Link
+              className="w-full"
+              to={new TranslationRouteBuilder(APP_ROUTES.INSURANCE).build(
+                language
+              )}
+            >
+              <Button color="secondary" className="mt-2" full size="lg">
+                {INFO_2_BUTTON}
+              </Button>
+            </Link>
+          }
+        >
+          {INFO_2_DESCRIPTION}
+        </ImageInfoCard>
+      </div>
     </LayoutSection>
   );
 }

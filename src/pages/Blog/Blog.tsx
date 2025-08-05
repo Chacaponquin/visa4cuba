@@ -21,7 +21,11 @@ export default function Blog({ builder }: TranslationPageProps) {
       description={DESCRIPTION}
       title="Blog - Visa4Cuba"
     >
-      <LayoutHeader title="Blog" image={APP_IMAGES.BLOG.ROOT.src} />
+      <LayoutHeader
+        title="Blog"
+        image={APP_IMAGES.BLOG.ROOT.src}
+        sideImage={APP_IMAGES.PASSPORTS}
+      />
 
       <main className="w-full flex flex-col items-center py-14 px-5">
         <div className="w-full max-w-layout flex flex-col">

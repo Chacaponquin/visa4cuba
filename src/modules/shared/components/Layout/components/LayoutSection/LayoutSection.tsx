@@ -6,6 +6,7 @@ interface Props {
   title: string;
   description: string;
   header?: string;
+  bg?: boolean;
 }
 
 export default function LayoutSection({
@@ -14,9 +15,10 @@ export default function LayoutSection({
   title,
   children,
   header,
+  bg = false,
 }: Props) {
   return (
-    <SectionContainer id={id}>
+    <SectionContainer bg={bg} id={id}>
       {header && (
         <div className="rounded-full px-4 py-1.5 bg-primary/10 text-primary font-medium mb-6">
           {header}

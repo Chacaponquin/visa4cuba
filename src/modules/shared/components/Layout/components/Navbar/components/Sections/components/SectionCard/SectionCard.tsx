@@ -21,8 +21,9 @@ export default function SectionCard({ link: ilink, title, selected }: Props) {
   return (
     <Link to={link}>
       <div
-        className={clsx("uppercase text-base px-3 rounded-md py-1", {
-          "bg-primary/10 text-primary": selected,
+        className={clsx("uppercase text-base whitespace-nowrap", {
+          "text-secondary !font-medium": selected,
+          "text-gray-600": !selected,
         })}
       >
         {title}

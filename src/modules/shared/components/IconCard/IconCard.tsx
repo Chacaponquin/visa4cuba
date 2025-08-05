@@ -27,6 +27,10 @@ export default function IconCard({
       return 28;
     }
 
+    if (isize === "xl") {
+      return 32;
+    }
+
     if (isize === "sm") {
       return 18;
     }
@@ -50,6 +54,7 @@ export default function IconCard({
           "px-2.5 py-2": isize === "base",
           "p-1.5": isize === "sm",
           "px-3.5 py-2.5": isize === "lg",
+          "px-4 py-3": isize === "xl",
         },
         className
       )}

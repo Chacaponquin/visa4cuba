@@ -87,7 +87,7 @@ export const SERVICE_CARDS: ServiceCard[] = [
         it: "Assistenza 24 ore su 24, 7 giorni su 7",
       },
     ],
-    color: "secondary",
+    color: "primary",
     image: APP_IMAGES.DOCTOR.src,
   },
 ];

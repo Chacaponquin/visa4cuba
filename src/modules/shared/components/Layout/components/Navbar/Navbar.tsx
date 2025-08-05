@@ -25,14 +25,16 @@ function Navbar(
         { "fixed top-0": fixed }
       )}
     >
-      <div className="flex w-full items-center justify-between max-w-layout">
+      <div className="flex w-full items-center justify-between max-w-layout gap-x-5">
         <Logo />
 
-        <Sections sections={NAVBAR_SECTIONS} />
+        <div className="justify-end flex items-center gap-x-6">
+          <Sections sections={NAVBAR_SECTIONS} />
 
-        <Options onOpenAside={onOpenAside} builder={builder}>
-          {children}
-        </Options>
+          <Options onOpenAside={onOpenAside} builder={builder}>
+            {children}
+          </Options>
+        </div>
       </div>
     </nav>
   );
