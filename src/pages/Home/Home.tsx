@@ -15,6 +15,11 @@ import { useContext } from "react";
 import { LanguageContext } from "../../modules/app/modules/language/context/language-context";
 import { TranslationRouteBuilder } from "../../modules/app/domain/core/translation-route-builder";
 import { APP_ROUTES } from "../../modules/app/domain/constants/app-routes";
+import Countries from "./components/Countries/Countries";
+import FirstBanner from "./components/FirstBanner/FirstBanner";
+import SecondBanner from "./components/SecondBanner/SecondBanner";
+import Stats from "./components/Stats/Stats";
+import Opinions from "./components/Opinions/Opinions";
 
 export default function Home({ builder, language }: TranslationPageProps) {
   const { language: clanguage } = useContext(LanguageContext);
@@ -64,8 +69,13 @@ export default function Home({ builder, language }: TranslationPageProps) {
         <Services />
         <Steps />
         <Information />
-        <Faq />
+        <FirstBanner />
+        <Countries />
         <Why />
+        <Stats />
+        <Opinions />
+        <SecondBanner />
+        <Faq />
       </Layout>
     </BaseTranslationPage>
   );

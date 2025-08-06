@@ -1,10 +1,10 @@
 import SectionContainer from "../SectionContainer/SectionContainer";
 
 interface Props {
+  title: string;
   id?: string;
   children?: React.ReactNode;
-  title: string;
-  description: string;
+  description?: string;
   header?: string;
   bg?: boolean;
 }
@@ -26,9 +26,13 @@ export default function LayoutSection({
       )}
 
       <header className="text-center max-w-4xl flex flex-col items-center mb-10">
-        <h2 className="text-4xl lg:text-5xl font-title-bold mb-3">{title}</h2>
+        <h2 className="text-3xl lg:text-4xl font-title-bold">{title}</h2>
 
-        <p className="text-gray-500 text-base md:text-lg">{description}</p>
+        {description && (
+          <p className="text-gray-500 text-base md:text-lg mt-3">
+            {description}
+          </p>
+        )}
       </header>
 
       {children}

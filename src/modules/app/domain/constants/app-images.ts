@@ -14,4 +14,12 @@ export const APP_IMAGES = {
     ROOT: { src: "/images/blog/blog.webp" },
     ARTICLES: { VISA_ELECTRONIC: { src: "/images/blog/visa-electronic.webp" } },
   },
+  BANNER1: { src: "/images/banner1.png", alt: "happy-woman" },
+  BANNER2: { src: "/images/banner2.png", alt: "front-woman" },
+  OPINION: {
+    FIRST: { src: "/images/opinions/1.png", alt: "first-opinion" },
+    SECOND: { src: "/images/opinions/2.png", alt: "second-opinion" },
+    THIRD: { src: "/images/opinions/3.png", alt: "third-opinion" },
+  },
+  FLAGS: { CUBA: { src: "/images/flags/cuba.svg", alt: "cuba" } },
 };

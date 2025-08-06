@@ -17,7 +17,7 @@ export default function ImageInfoCard({
   return (
     <div
       className={clsx(
-        "flex flex-col items-center w-full justify-between gap-x-10 gap-y-5 bg-white rounded-card shadow px-12 py-7"
+        "flex flex-col items-center w-full justify-between gap-x-10 gap-y-5 bg-white rounded-card shadow md:px-12 px-7 py-7"
       )}
     >
       <section className="flex flex-col w-full lg:pt-5">
