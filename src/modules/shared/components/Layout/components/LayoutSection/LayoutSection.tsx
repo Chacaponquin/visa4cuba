@@ -6,7 +6,7 @@ interface Props {
   children?: React.ReactNode;
   description?: string;
   header?: string;
-  bg?: boolean;
+  bg?: "white" | "blue" | "custom";
 }
 
 export default function LayoutSection({
@@ -15,7 +15,7 @@ export default function LayoutSection({
   title,
   children,
   header,
-  bg = false,
+  bg,
 }: Props) {
   return (
     <SectionContainer bg={bg} id={id}>

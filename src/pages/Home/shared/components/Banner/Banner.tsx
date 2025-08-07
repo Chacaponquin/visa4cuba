@@ -18,27 +18,29 @@ export default function Banner({ title, description, button, image }: Props) {
   const { language } = useContext(LanguageContext);
 
   return (
-    <SectionContainer bg>
-      <div className="bg-white rounded-card flex shadow md:px-14 lg:px-20 px-8 lg:gap-x-20 md:gap-x-12 gap-x-6">
+    <SectionContainer bg="custom">
+      <div className="bg-white rounded-card flex shadow md:px-14 lg:px-20 pl-8 xs:pr-0 pr-8 lg:gap-x-20 md:gap-x-12 gap-x-6">
         <div className="flex flex-col lg:py-20 md:py-14 py-8 max-w-[500px] w-full">
-          <h2 className="font-title-semibold text-4xl mb-4">{title}</h2>
+          <h2 className="font-title-semibold text-3xl md:text-4xl mb-4">
+            {title}
+          </h2>
 
           {description && <P>{description}</P>}
 
           <Link
             to={new TranslationRouteBuilder(APP_ROUTES.SHOP).build(language)}
           >
-            <Button color="secondary" size="lg" className="mt-8">
+            <Button color="secondary" size="base" className="mt-8">
               {button}
             </Button>
           </Link>
         </div>
 
-        <figure className="w-full">
+        <figure className="w-full hidden xs:block md:translate-x-0 translate-x-4">
           <img
             src={image.src}
             alt={image.alt}
-            className="w-full object-cover"
+            className="w-full h-full object-cover"
           />
         </figure>
       </div>

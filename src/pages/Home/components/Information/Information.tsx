@@ -160,11 +160,11 @@ export default function Information() {
   });
 
   return (
-    <LayoutSection bg title={TITLE} description={DESCRIPTION} header={HEADER}>
+    <LayoutSection bg='blue' title={TITLE} description={DESCRIPTION} header={HEADER}>
       <div className="grid md:grid-cols-2 grid-cols-1 gap-x-4 gap-y-5">
         <ImageInfoCard
           title={INFO_1_TITLE}
-          image={APP_IMAGES.CUBA_1}
+          image={APP_IMAGES.VACATION}
           footer={
             <Link
               className="w-full"

@@ -18,7 +18,7 @@ export default function Countries() {
   });
 
   return (
-    <LayoutSection bg header={HEADER} title={TITLE}>
+    <LayoutSection bg="blue" header={HEADER} title={TITLE}>
       <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-x-3 gap-y-3 w-full">
         {COUNTRY_CARDS.map((c, index) => (
           <Card props={c} key={index} />

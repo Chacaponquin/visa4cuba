@@ -16,7 +16,7 @@ export default function LayoutHeader({
   return (
     <header
       style={{
-        background: `linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('${image}') center/cover`,
+        background: `linear-gradient(to right, rgba(0, 102, 204, 1), rgba(0, 102, 204, 0.3)), url('${image}') center/cover`,
       }}
       className="flex w-full flex-col items-center px-5"
     >

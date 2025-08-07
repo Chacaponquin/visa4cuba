@@ -46,7 +46,7 @@ export const SERVICE_CARDS: ServiceCard[] = [
     ],
     icon: Airplane,
     color: "primary",
-    image: APP_IMAGES.BEACH.src,
+    image: APP_IMAGES.CUBA_1.src,
     button: {
       es: "Solicita tu visa ahora",
       en: "Get your visa",
@@ -88,6 +88,6 @@ export const SERVICE_CARDS: ServiceCard[] = [
       },
     ],
     color: "primary",
-    image: APP_IMAGES.DOCTOR.src,
+    image: APP_IMAGES.FAMILY.src,
   },
 ];

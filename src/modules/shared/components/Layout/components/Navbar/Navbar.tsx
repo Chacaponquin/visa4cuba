@@ -21,7 +21,7 @@ function Navbar(
     <nav
       ref={ref}
       className={clsx(
-        "w-full flex py-4 justify-center px-5 border-b border-b-card bg-white z-10",
+        "w-full flex py-4 justify-center px-5 border-b border-b-card bg-white z-20",
         { "fixed top-0": fixed }
       )}
     >

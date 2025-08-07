@@ -32,7 +32,7 @@ export default function Button({
 
     {
       "bg-primary hover:bg-primary-900 text-white": color === "primary",
-      "bg-secondary-500 hover:bg-secondary-600 text-white":
+      "bg-secondary-600 hover:bg-secondary-700 text-white":
         color === "secondary",
       "bg-white hover:bg-gray-100 text-black border border-card stroke-black":
         color === "light",
