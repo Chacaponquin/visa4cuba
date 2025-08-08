@@ -11,7 +11,6 @@ export const APP_IMAGES = {
   PASSPORTS: { src: "/images/passports.webp", alt: "passports" },
   CUBA_FLAG: { src: "/images/cuba-flag.webp", alt: "cuba-flag" },
   BLOG: {
-    ROOT: { src: "/images/blog/blog.webp" },
     ARTICLES: { VISA_ELECTRONIC: { src: "/images/blog/visa-electronic.webp" } },
   },
   BANNER1: { src: "/images/banner1.png", alt: "happy-woman" },
@@ -51,4 +50,5 @@ export const APP_IMAGES = {
     src: "/images/visa-application.png",
     alt: "visa-application",
   },
+  MORRO: { src: "/images/morro.png", alt: "morro" },
 };

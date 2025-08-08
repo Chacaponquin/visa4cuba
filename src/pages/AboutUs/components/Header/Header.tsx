@@ -13,9 +13,9 @@ export default function Header() {
 
   const { TITLE, DESCRIPTION, BUTTON } = useTranslation({
     TITLE: {
-      es: "Descubre Cuba con",
-      en: "Discover Cuba with",
-      it: "Scopri Cuba con",
+      es: "Descubre Cuba con nosotros",
+      en: "Discover Cuba with us",
+      it: "Scopri Cuba con noi",
     },
     DESCRIPTION: {
       it: "Siamo un'agenzia di viaggi specializzata nella creazione di esperienze uniche e indimenticabili nella splendida isola di Cuba. Con oltre 10 anni di esperienza, ti aiutiamo a scoprire l'autentica cultura, storia e bellezza cubana.",
@@ -34,7 +34,6 @@ export default function Header() {
       image={APP_IMAGES.CUBA_1.src}
       title={TITLE}
       description={DESCRIPTION}
-      sideImage={APP_IMAGES.PASSPORTS}
     >
       <Link to={new TranslationRouteBuilder(APP_ROUTES.SHOP).build(language)}>
         <ArrowButton>{BUTTON}</ArrowButton>

@@ -29,7 +29,7 @@ export default function LayoutHeader({
         })}
       >
         <section
-          className={clsx("flex flex-col w-full pt-32 pb-20", {
+          className={clsx("flex flex-col w-full pt-32 pb-32", {
             "lg:items-start items-center lg:text-left text-center max-w-[450px]":
               sideImage !== undefined,
             "text-center items-center max-w-[700px]": sideImage === undefined,

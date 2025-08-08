@@ -2,6 +2,7 @@ import { APP_IMAGES } from "../../modules/app/domain/constants/app-images";
 import type { TranslationPageProps } from "../../modules/app/domain/core/translation-route";
 import useTranslation from "../../modules/app/modules/language/hooks/useTranslation";
 import LayoutHeader from "../../modules/shared/components/Layout/components/LayoutHeader/LayoutHeader";
+import LayoutSection from "../../modules/shared/components/Layout/components/LayoutSection/LayoutSection";
 import Layout from "../../modules/shared/components/Layout/Layout";
 import PostCard from "./components/PostCard/PostCard";
 import { BLOG_POSTS } from "./domain/blog-post";
@@ -21,21 +22,15 @@ export default function Blog({ builder }: TranslationPageProps) {
       description={DESCRIPTION}
       title="Blog - Visa4Cuba"
     >
-      <LayoutHeader
-        title="Blog"
-        image={APP_IMAGES.BLOG.ROOT.src}
-        sideImage={APP_IMAGES.PASSPORTS}
-      />
+      <LayoutHeader title="Blog" image={APP_IMAGES.MORRO.src} />
 
-      <main className="w-full flex flex-col items-center py-14 px-5">
-        <div className="w-full max-w-layout flex flex-col">
-          <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 w-full">
-            {BLOG_POSTS.map((b, index) => (
-              <PostCard card={b} key={index} />
-            ))}
-          </div>
+      <LayoutSection bg="blue">
+        <div className="flex flex-col gap-y-4 w-full">
+          {BLOG_POSTS.map((b, index) => (
+            <PostCard card={b} key={index} />
+          ))}
         </div>
-      </main>
+      </LayoutSection>
     </Layout>
   );
 }
