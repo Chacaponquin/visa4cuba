@@ -32,4 +32,9 @@ export const APP_IMAGES = {
   },
   VACATION: { src: "/images/vacation.png", alt: "cuba-vacation" },
   FAMILY: { src: "/images/family.png", alt: "happy-family" },
+  PEOPLE_PASSPORT: {
+    src: "/images/people-passport.png",
+    alt: "people-passport",
+  },
+  PASSPORT: { src: "/images/passport.png", alt: "passport" },
 };

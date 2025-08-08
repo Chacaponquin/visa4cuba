@@ -31,10 +31,10 @@ export default function SuscribeSection() {
     <FooterSection icon={Mail} title={TITLE}>
       <p className="text-white mb-3">{TEXT}</p>
 
-      <div className="flex items-center gap-x-4">
+      <div className="flex items-center gap-x-3 w-full">
         <Input onChange={setEmail} value={email} placeholder={PLACEHOLDER} />
 
-        <Button icon={Mail} color="light" size="base" onClick={handleSubmit}>
+        <Button icon={Mail} color="light" size="sm" onClick={handleSubmit}>
           {SUSCRIBE}
         </Button>
       </div>

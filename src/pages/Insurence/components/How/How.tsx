@@ -1,7 +1,4 @@
-import Bowl from "../../../../modules/app/modules/icon/components/Bowl";
-import Medicine from "../../../../modules/app/modules/icon/components/Medicine";
-import Rain from "../../../../modules/app/modules/icon/components/Rain";
-import Spray from "../../../../modules/app/modules/icon/components/Spray";
+import { APP_IMAGES } from "../../../../modules/app/domain/constants/app-images";
 import useTranslation from "../../../../modules/app/modules/language/hooks/useTranslation";
 import P from "../../../../modules/app/modules/ui/components/Markdown/components/P/P";
 import LayoutSection from "../../../../modules/shared/components/Layout/components/LayoutSection/LayoutSection";
@@ -74,19 +71,19 @@ export default function How() {
 
   return (
     <LayoutSection title={TITLE} description={DESCRIPTION}>
-      <InfoCard color="primary" icon={Medicine} title={INFO_1_TITLE}>
+      <InfoCard image={APP_IMAGES.PASSPORT} title={INFO_1_TITLE}>
         <P>{INFO_1_DESCRIPTION}</P>
       </InfoCard>
 
-      <InfoCard icon={Bowl} color="secondary" title={INFO_2_TITLE}>
+      <InfoCard image={APP_IMAGES.PASSPORT} title={INFO_2_TITLE}>
         <P>{INFO_2_DESCRIPTION}</P>
       </InfoCard>
 
-      <InfoCard color="primary" icon={Spray} title={INFO_3_TITLE}>
+      <InfoCard image={APP_IMAGES.PASSPORT} title={INFO_3_TITLE}>
         <P>{INFO_3_DESCRIPTION}</P>
       </InfoCard>
 
-      <InfoCard color="secondary" icon={Rain} title={INFO_4_TITLE}>
+      <InfoCard image={APP_IMAGES.PASSPORT} title={INFO_4_TITLE}>
         <P>{INFO_4_DESCRIPTION}</P>
       </InfoCard>
     </LayoutSection>

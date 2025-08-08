@@ -6,6 +6,7 @@ import About from "./components/About/About";
 import Faq from "./components/Faq/Faq";
 import Header from "./components/Header/Header";
 import How from "./components/How/How";
+import Stats from "./components/Stats/Stats";
 
 export default function Visas({ builder, language }: TranslationPageProps) {
   const { DESCRIPTION, TITLE } = useTranslation({
@@ -26,8 +27,9 @@ export default function Visas({ builder, language }: TranslationPageProps) {
       <Layout description={DESCRIPTION} title={TITLE} builder={builder}>
         <Header />
         <About />
-        <Faq />
+        <Stats />
         <How />
+        <Faq />
       </Layout>
     </BaseTranslationPage>
   );

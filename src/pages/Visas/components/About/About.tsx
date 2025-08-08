@@ -1,12 +1,8 @@
-import { Link } from "react-router";
-import Airplane from "../../../../modules/app/modules/icon/components/Airplane";
-import Card from "../../../../modules/app/modules/icon/components/Card";
-import Button from "../../../../modules/app/modules/ui/components/Button/Button";
 import P from "../../../../modules/app/modules/ui/components/Markdown/components/P/P";
 import LayoutSection from "../../../../modules/shared/components/Layout/components/LayoutSection/LayoutSection";
 import InfoCard from "../How/components/InfoCard/InfoCard";
-import { APP_ROUTES } from "../../../../modules/app/domain/constants/app-routes";
 import useTranslation from "../../../../modules/app/modules/language/hooks/useTranslation";
+import { APP_IMAGES } from "../../../../modules/app/domain/constants/app-images";
 
 export default function About() {
   const {
@@ -17,7 +13,7 @@ export default function About() {
     INFO_2_TITLE,
     INFO_2_DESCRIPTION_1,
     INFO_2_DESCRIPTION_2,
-    BUTTON,
+    HEADER,
   } = useTranslation({
     TITLE: {
       es: "Visado turístico o visado normal para llegar a Cuba?",
@@ -54,30 +50,24 @@ export default function About() {
       en: "But it is essential to make a clarification: the document called tourist visa for Cuba coincides with the VISA, that is, the tourist card for Cuba. The real 'visa for Cuba' is the document that is ONLY required for citizens of some countries with a special regime, who must go to the embassy or consulate of Cuba in their country of residence to request and obtain it.",
       it: "Ma è fondamentale fare una precisazione: il documento chiamato visto turistico per Cuba coincide con il VISA, ovvero la carta turistica per Cuba. Il vero 'visto per Cuba' è il documento che è RICHIESTO SOLO ai cittadini di alcuni paesi con regime speciale, che devono recarsi presso l'ambasciata o il consolato di Cuba nel proprio paese di residenza per richiederlo e ottenerlo.",
     },
-    BUTTON: {
-      es: "Compra ahora tu visa para Cuba",
-      en: "Buy your visa for Cuba now",
-      it: "Acquista ora il tuo visto per Cuba",
+    HEADER: {
+      en: "Visa Information",
+      es: "Información sobre visas",
+      it: "Informazioni sul visto",
     },
   });
 
   return (
-    <LayoutSection title={TITLE} description={DESCRIPTION}>
-      <InfoCard title={INFO_1_TITLE} icon={Airplane} color="primary">
+    <LayoutSection title={TITLE} header={HEADER} description={DESCRIPTION}>
+      <InfoCard title={INFO_1_TITLE} image={APP_IMAGES.PEOPLE_PASSPORT}>
         <P>{INFO_1_DESCRIPTION}</P>
       </InfoCard>
 
-      <InfoCard title={INFO_2_TITLE} icon={Card} color="secondary">
+      <InfoCard title={INFO_2_TITLE} reverse image={APP_IMAGES.PASSPORT}>
         <P>{INFO_2_DESCRIPTION_1}</P>
 
         <P>{INFO_2_DESCRIPTION_2}</P>
       </InfoCard>
-
-      <Link to={APP_ROUTES.SHOP}>
-        <Button size="lg" className="mt-4">
-          {BUTTON}
-        </Button>
-      </Link>
     </LayoutSection>
   );
 }

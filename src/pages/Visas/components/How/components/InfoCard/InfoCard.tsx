@@ -1,30 +1,35 @@
 import clsx from "clsx";
-import type { IconProps } from "../../../../../../modules/app/modules/icon/domain/props";
-import type { UiColor } from "../../../../../../modules/app/modules/ui/domain/color";
+import Image from "./components/Image/Image";
 
 interface Props {
-  icon: (props: IconProps) => React.ReactNode;
   title: string;
-  color: UiColor;
   children?: React.ReactNode;
+  image: { src: string; alt: string };
+  reverse?: boolean;
 }
 
-export default function InfoCard({ icon, title, children, color }: Props) {
+export default function InfoCard({ title, children, image, reverse }: Props) {
   return (
-    <div className="flex w-full items-start gap-x-5 mb-6 max-w-[730px]">
-      <i
-        className={clsx({
-          "stroke-primary": color === "primary",
-          "stroke-secondary": color === "secondary",
+    <div className="flex flex-col w-full items-center mb-20">
+      <h2 className="font-title-bold text-xl mb-6 uppercase">{title}</h2>
+
+      <div
+        className={clsx("md:grid md:grid-cols-2 gap-y-6 gap-x-10 w-full flex", {
+          "flex-col-reverse": reverse,
+          "flex-col": !reverse,
         })}
       >
-        {icon({ size: 30 })}
-      </i>
-
-      <div className="flex flex-col w-full">
-        <h2 className="font-semibold text-lg mb-0.5 uppercase">{title}</h2>
-
-        {children}
+        {reverse ? (
+          <>
+            <div className="flex flex-col w-full">{children}</div>
+            <Image image={image} />
+          </>
+        ) : (
+          <>
+            <Image image={image} />
+            <div className="flex flex-col w-full">{children}</div>
+          </>
+        )}
       </div>
     </div>
   );

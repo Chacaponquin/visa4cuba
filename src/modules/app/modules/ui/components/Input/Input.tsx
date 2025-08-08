@@ -17,7 +17,8 @@ export default function Input({ value, placeholder, onChange }: Props) {
     "focus:shadow-input focus:border-primary-400",
     "outline-none",
     "text-sm",
-    "bg-white"
+    "bg-white",
+    "w-full"
   );
 
   return (
