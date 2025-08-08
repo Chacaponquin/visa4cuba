@@ -1,7 +1,7 @@
 import P from "../../../../../../modules/app/modules/ui/components/Markdown/components/P/P";
 import LayoutSection from "../../../../../../modules/shared/components/Layout/components/LayoutSection/LayoutSection";
-import HowCard from "../../shared/components/HowCard/HowCard";
-import HowContainer from "../../shared/components/HowContainer/HowContainer";
+import HowCard from "../../../../../../modules/shared/components/HowCard/HowCard";
+import HowContainer from "../../../../../../modules/shared/components/HowContainer/HowContainer";
 
 export default function Es() {
   return (

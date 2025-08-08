@@ -31,10 +31,9 @@ export default function Header() {
 
   return (
     <LayoutHeader
-      image={APP_IMAGES.HEALTH.src}
+      image={APP_IMAGES.VISA_PRESENTATION.src}
       description={DESCRIPTION}
       title={TITLE}
-      sideImage={APP_IMAGES.PASSPORTS}
     >
       <Link to={new TranslationRouteBuilder(APP_ROUTES.SHOP).build(language)}>
         <ArrowButton>{BUTTON}</ArrowButton>

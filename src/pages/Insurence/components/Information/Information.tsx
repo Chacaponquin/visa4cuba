@@ -1,8 +1,8 @@
 import { APP_IMAGES } from "../../../../modules/app/domain/constants/app-images";
 import useTranslation from "../../../../modules/app/modules/language/hooks/useTranslation";
 import P from "../../../../modules/app/modules/ui/components/Markdown/components/P/P";
-import ImageInfoCard from "../../../../modules/shared/components/ImageInfoCard/ImageInfoCard";
 import LayoutSection from "../../../../modules/shared/components/Layout/components/LayoutSection/LayoutSection";
+import InformationCard from "./components/InformationCard/InformationCard";
 
 export default function Information() {
   const {
@@ -65,19 +65,21 @@ export default function Information() {
 
   return (
     <LayoutSection title={TITLE} description={DESCRIPTION}>
-      <ImageInfoCard image={APP_IMAGES.BEACH} title={INFO_1_TITLE}>
-        <P>{INFO_1_DESCRIPTION}</P>
-      </ImageInfoCard>
+      <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-x-5 gap-y-7">
+        <InformationCard image={APP_IMAGES.BEACH} title={INFO_1_TITLE}>
+          <P>{INFO_1_DESCRIPTION}</P>
+        </InformationCard>
 
-      <ImageInfoCard reverse image={APP_IMAGES.DOCTOR} title={INFO_2_TITLE}>
-        <P>{INFO_2_DESCRIPTION_1}</P>
+        <InformationCard image={APP_IMAGES.DOCTOR} title={INFO_2_TITLE}>
+          <P>{INFO_2_DESCRIPTION_1}</P>
 
-        <P>{INFO_2_DESCRIPTION_2}</P>
-      </ImageInfoCard>
+          <P>{INFO_2_DESCRIPTION_2}</P>
+        </InformationCard>
 
-      <ImageInfoCard image={APP_IMAGES.CUBA_4} title={INFO_3_TITLE}>
-        <P>{INFO_3_DESCRIPTION}</P>
-      </ImageInfoCard>
+        <InformationCard image={APP_IMAGES.CUBA_4} title={INFO_3_TITLE}>
+          <P>{INFO_3_DESCRIPTION}</P>
+        </InformationCard>
+      </div>
     </LayoutSection>
   );
 }

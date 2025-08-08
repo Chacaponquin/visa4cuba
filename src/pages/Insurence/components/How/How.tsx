@@ -1,8 +1,8 @@
-import { APP_IMAGES } from "../../../../modules/app/domain/constants/app-images";
 import useTranslation from "../../../../modules/app/modules/language/hooks/useTranslation";
 import P from "../../../../modules/app/modules/ui/components/Markdown/components/P/P";
 import LayoutSection from "../../../../modules/shared/components/Layout/components/LayoutSection/LayoutSection";
-import InfoCard from "../../../Visas/components/How/components/InfoCard/InfoCard";
+import HowCard from "../../../../modules/shared/components/HowCard/HowCard";
+import HowContainer from "../../../../modules/shared/components/HowContainer/HowContainer";
 
 export default function How() {
   const {
@@ -70,22 +70,24 @@ export default function How() {
   });
 
   return (
-    <LayoutSection title={TITLE} description={DESCRIPTION}>
-      <InfoCard image={APP_IMAGES.PASSPORT} title={INFO_1_TITLE}>
-        <P>{INFO_1_DESCRIPTION}</P>
-      </InfoCard>
+    <LayoutSection bg="blue" title={TITLE} description={DESCRIPTION}>
+      <HowContainer>
+        <HowCard title={INFO_1_TITLE}>
+          <P>{INFO_1_DESCRIPTION}</P>
+        </HowCard>
 
-      <InfoCard image={APP_IMAGES.PASSPORT} title={INFO_2_TITLE}>
-        <P>{INFO_2_DESCRIPTION}</P>
-      </InfoCard>
+        <HowCard title={INFO_2_TITLE}>
+          <P>{INFO_2_DESCRIPTION}</P>
+        </HowCard>
 
-      <InfoCard image={APP_IMAGES.PASSPORT} title={INFO_3_TITLE}>
-        <P>{INFO_3_DESCRIPTION}</P>
-      </InfoCard>
+        <HowCard title={INFO_3_TITLE}>
+          <P>{INFO_3_DESCRIPTION}</P>
+        </HowCard>
 
-      <InfoCard image={APP_IMAGES.PASSPORT} title={INFO_4_TITLE}>
-        <P>{INFO_4_DESCRIPTION}</P>
-      </InfoCard>
+        <HowCard title={INFO_4_TITLE}>
+          <P>{INFO_4_DESCRIPTION}</P>
+        </HowCard>
+      </HowContainer>
     </LayoutSection>
   );
 }

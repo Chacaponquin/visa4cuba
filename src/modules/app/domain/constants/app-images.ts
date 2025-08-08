@@ -37,4 +37,9 @@ export const APP_IMAGES = {
     alt: "people-passport",
   },
   PASSPORT: { src: "/images/passport.png", alt: "passport" },
+  SELF_CARE: { src: "/images/self-care.png", alt: "self-care" },
+  VISA_PRESENTATION: {
+    src: "/images/visa-presentation.png",
+    alt: "visa-presentation",
+  },
 };

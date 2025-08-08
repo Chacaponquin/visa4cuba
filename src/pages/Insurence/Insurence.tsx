@@ -6,6 +6,7 @@ import Faq from "./components/Faq/Faq";
 import Header from "./components/Header/Header";
 import How from "./components/How/How";
 import Information from "./components/Information/Information";
+import Stats from "./components/Stats";
 
 export default function Insurence({ builder, language }: TranslationPageProps) {
   const { DESCRIPTION, TITLE } = useTranslation({
@@ -25,11 +26,9 @@ export default function Insurence({ builder, language }: TranslationPageProps) {
     <BaseTranslationPage language={language} builder={builder}>
       <Layout description={DESCRIPTION} title={TITLE} builder={builder}>
         <Header />
-
         <Information />
-
+        <Stats />
         <How />
-
         <Faq />
       </Layout>
     </BaseTranslationPage>
