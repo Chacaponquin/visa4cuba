@@ -7,7 +7,6 @@ import LayoutSection from "../../../../modules/shared/components/Layout/componen
 import { APP_ROUTES } from "../../../../modules/app/domain/constants/app-routes";
 import useTranslation from "../../../../modules/app/modules/language/hooks/useTranslation";
 import useTranslationComponent from "../../../../modules/app/modules/language/hooks/useTranslationComponent";
-import Strong from "../../../../modules/app/modules/ui/components/Markdown/components/Strong/Strong";
 import { useContext } from "react";
 import { LanguageContext } from "../../../../modules/app/modules/language/context/language-context";
 import { TranslationRouteBuilder } from "../../../../modules/app/domain/core/translation-route-builder";
@@ -65,43 +64,50 @@ export default function Information() {
       it: (
         <>
           <P>
-            Richiedere il visto turistico per Cuba è semplice e veloce: ti basta
+            Richiedere il visto elettronico per Cuba è semplice e veloce: basta
             inserire nome, cognome, numero di passaporto, data di nascita e
             nazionalità.
           </P>
 
           <P>
-            <Strong>La carta turistica verde</Strong> è valida per tutti i
-            viaggiatori provenienti da Europa e Italia. Alcuni Paesi con regimi
-            speciali richiedono un visto differente, mentre altri possono
-            entrare senza visto.
+            Dal 1º luglio 2025, per entrare a Cuba è obbligatorio il visto
+            elettronico (eVisa), che ha sostituito definitivamente il visto
+            cartaceo. Alcuni Paesi con regimi speciali richiedono un visto
+            differente, mentre altri possono entrare senza visto. Verifica i
+            requisiti prima di viaggiare.
           </P>
         </>
       ),
       en: (
         <>
           <P>
-            Applying for a tourist visa for Cuba is quick and easy: just enter
-            your first name, last name, passport number, date of birth, and
-            nationality.
+            Applying for an electronic visa for Cuba is quick and easy: just
+            enter your first name, last name, passport number, date of birth,
+            and nationality.
           </P>
 
           <P>
-            <Strong>The green tourist card</Strong> is valid for all travelers
-            coming from Europe and Italy. Some countries with special regimes
-            require a different visa, while others can enter without a visa.
+            Since 1 July 2025, entry into Cuba requires an electronic visa
+            (eVisa), which has permanently replaced the paper visa. Some
+            countries with special regimes require a different visa, while
+            others are exempt. Check the requirements before you travel.
           </P>
         </>
       ),
       es: (
         <>
           <P>
-            Solicitar una visa turística para Cuba es fácil y rápido. Solo
-            necesitas ingresar tus datos personales y de pasaporte. La Tarjeta
-            Verde es válida para ciudadanos europeos e italianos que viajan con
-            fines turísticos. Algunos países requieren un visado especial,
-            mientras que otros están exentos. Consulta los requisitos antes de
-            viajar.
+            Solicitar la visa electrónica para Cuba es fácil y rápido: solo
+            necesitas introducir tu nombre, apellidos, número de pasaporte,
+            fecha de nacimiento y nacionalidad.
+          </P>
+
+          <P>
+            Desde el 1 de julio de 2025, para entrar en Cuba es obligatorio
+            contar con una visa electrónica (eVisa), que ha sustituido de forma
+            definitiva a la visa en papel. Algunos países con regímenes
+            especiales requieren un visado distinto, mientras que otros están
+            exentos. Comprueba los requisitos antes de viajar.
           </P>
         </>
       ),
@@ -160,7 +166,12 @@ export default function Information() {
   });
 
   return (
-    <LayoutSection bg='blue' title={TITLE} description={DESCRIPTION} header={HEADER}>
+    <LayoutSection
+      bg="blue"
+      title={TITLE}
+      description={DESCRIPTION}
+      header={HEADER}
+    >
       <div className="grid md:grid-cols-2 grid-cols-1 gap-x-4 gap-y-5">
         <ImageInfoCard
           title={INFO_1_TITLE}

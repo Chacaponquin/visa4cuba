@@ -6,6 +6,7 @@ interface Props {
   description: string;
   header?: string;
   id?: string;
+  bg?: "white" | "blue" | "custom";
 }
 
 export default function ShopSection({
@@ -14,6 +15,7 @@ export default function ShopSection({
   title,
   id,
   header,
+  bg,
 }: Props) {
   return (
     <LayoutSection
@@ -21,6 +23,7 @@ export default function ShopSection({
       id={id}
       description={description}
       header={header}
+      bg={bg}
     >
       {children}
     </LayoutSection>

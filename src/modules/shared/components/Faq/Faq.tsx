@@ -1,10 +1,10 @@
 import { useState } from "react";
-import LayoutSection from "../../../../modules/shared/components/Layout/components/LayoutSection/LayoutSection";
-import type { TabOption } from "../../../../modules/app/modules/ui/components/Tabs/Tabs";
-import Tabs from "../../../../modules/app/modules/ui/components/Tabs/Tabs";
-import VisaFaq from "../../../../modules/shared/components/VisaFaq/VisaFaq";
-import InsurenceFaq from "../../../../modules/shared/components/InsurenceFaq/InsurenceFaq";
-import useTranslation from "../../../../modules/app/modules/language/hooks/useTranslation";
+import LayoutSection from "../Layout/components/LayoutSection/LayoutSection";
+import type { TabOption } from "../../../app/modules/ui/components/Tabs/Tabs";
+import Tabs from "../../../app/modules/ui/components/Tabs/Tabs";
+import VisaFaq from "../VisaFaq/VisaFaq";
+import InsurenceFaq from "../InsurenceFaq/InsurenceFaq";
+import useTranslation from "../../../app/modules/language/hooks/useTranslation";
 
 enum FAQ_SECTION {
   VISA,

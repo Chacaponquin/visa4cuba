@@ -20,7 +20,7 @@ export default function ShopCard({ card, icon }: Props) {
   return (
     <article
       className={clsx(
-        "rounded-lg flex flex-col border border-card shadow-md px-6 py-4 h-full justify-between",
+        "rounded-lg flex flex-col shadow-md px-6 py-4 h-full justify-between",
         {
           "bg-primary": card.selected,
           "bg-white": !card.selected,

@@ -21,7 +21,12 @@ export default function ShopContent() {
   });
 
   return (
-    <ShopSection header={HEADER} title={TITLE} description={DESCRIPTION}>
+    <ShopSection
+      bg="blue"
+      header={HEADER}
+      title={TITLE}
+      description={DESCRIPTION}
+    >
       <div className="w-full mt-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-3">
         {options.map((card, i) => (
           <ShopCard icon={card.icon} key={i} card={card} />

@@ -1,11 +1,14 @@
 import BaseTranslationPage from "../../modules/app/components/BaseTranslationPage/BaseTranslationPage";
 import type { TranslationPageProps } from "../../modules/app/domain/core/translation-route";
 import useTranslation from "../../modules/app/modules/language/hooks/useTranslation";
+import Faq from "../../modules/shared/components/Faq/Faq";
 import Layout from "../../modules/shared/components/Layout/Layout";
 import Services from "../../modules/shared/components/Services/Services";
 import CartSummary from "./components/CartSummary/CartSummary";
+import Header from "./components/Header/Header";
 import ShopContent from "./components/ShopContent/ShopContent";
 import ShopResult from "./components/ShopResult/ShopResult";
+import Stats from "./components/Stats/Stats";
 
 export default function Shop({ builder, language }: TranslationPageProps) {
   const { DESCRIPTION, TITLE } = useTranslation({
@@ -29,13 +32,12 @@ export default function Shop({ builder, language }: TranslationPageProps) {
         builder={builder}
         extra={<CartSummary />}
       >
-        <main className="w-full flex flex-col items-center px-5 mt-20">
-          <div className="w-full flex flex-col max-w-layout items-center">
-            <Services />
-            <ShopContent />
-            <ShopResult />
-          </div>
-        </main>
+        <Header />
+        <Services />
+        <Stats />
+        <ShopContent />
+        <ShopResult />
+        <Faq />
       </Layout>
     </BaseTranslationPage>
   );

@@ -7,7 +7,7 @@ import Button from "../../modules/app/modules/ui/components/Button/Button";
 import LayoutHeader from "../../modules/shared/components/Layout/components/LayoutHeader/LayoutHeader";
 import Layout from "../../modules/shared/components/Layout/Layout";
 import Services from "../../modules/shared/components/Services/Services";
-import Faq from "./components/Faq/Faq";
+import Faq from "../../modules/shared/components/Faq/Faq";
 import Information from "./components/Information/Information";
 import Steps from "./components/Steps/Steps";
 import Why from "./components/Why/Why";

@@ -42,4 +42,13 @@ export const APP_IMAGES = {
     src: "/images/visa-presentation.png",
     alt: "visa-presentation",
   },
+  HOW_INSURENCE: {
+    FIRST: { src: "/images/how-insurence-1.png", alt: "how-insurence" },
+    SECOND: { src: "/images/how-insurence-2.png", alt: "how-insurence" },
+    THIRD: { src: "/images/how-insurence-3.png", alt: "how-insurence" },
+  },
+  VISA_APPLICATION: {
+    src: "/images/visa-application.png",
+    alt: "visa-application",
+  },
 };
