@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import useTranslation from "../../../../modules/app/modules/language/hooks/useTranslation";
 import { CalculateCartItemTotal } from "../../../../modules/shop/domain/helpers/calculate-cart-item-total";
 import { CalculateCartSend } from "../../../../modules/shop/domain/helpers/calculate-cart-send";
@@ -7,10 +8,12 @@ import ShopSection from "../../shared/components/ShopSection/ShopSection";
 import ResultSummary from "./components/ResultSummary/ResultSummary";
 import ShopCartItemCard from "./components/ShopCartItemCard/ShopCartItemCard";
 import useShopResult from "./hooks/useShopResult";
+import { LanguageContext } from "../../../../modules/app/modules/language/context/language-context";
 
 export default function ShopResult() {
   const { items, handleDelete, handleDecrease, handleIncrease, cart } =
     useShopResult();
+  const { language } = useContext(LanguageContext);
 
   const { TITLE, DESCRIPTION } = useTranslation({
     TITLE: {
@@ -26,7 +29,12 @@ export default function ShopResult() {
   });
 
   return (
-    <ShopSection id="shop-summary" title={TITLE} description={DESCRIPTION}>
+    <ShopSection
+      condition={cart.length > 0}
+      id="shop-summary"
+      title={TITLE}
+      description={DESCRIPTION}
+    >
       <div className="w-full flex lg:flex-row flex-col items-start gap-x-7 gap-y-4">
         <div className="flex flex-col gap-y-2.5 w-full">
           {items.map((c) => (
@@ -37,9 +45,9 @@ export default function ShopResult() {
               onIncrease={() => handleIncrease(c.option.id)}
               key={c.option.id}
               icon={c.option.icon}
-              description={c.option.description}
+              description={c.option.description[language]}
               onDelete={() => handleDelete(c.option.id)}
-              title={c.option.title}
+              title={c.option.title[language]}
             />
           ))}
         </div>

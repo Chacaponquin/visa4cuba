@@ -91,7 +91,7 @@ export default function PassegersForm({
             key={s.section.id}
             icon={s.section.icon}
             onChangeLastname={(i, v) => onChangeLastname(s.section.id, i, v)}
-            title={s.section.title}
+            title={s.section.title[language]}
             onChangeArriveDate={(i, v) =>
               onChangeArriveDate(s.section.id, i, v)
             }

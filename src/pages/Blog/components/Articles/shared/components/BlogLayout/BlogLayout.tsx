@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { APP_IMAGES } from "../../../../../../../modules/app/domain/constants/app-images";
 import type { TranslationRouteBuilder } from "../../../../../../../modules/app/domain/core/translation-route-builder";
 import LayoutHeader from "../../../../../../../modules/shared/components/Layout/components/LayoutHeader/LayoutHeader";
@@ -16,6 +17,10 @@ export default function BlogLayout({
   description,
   title,
 }: Props) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Layout builder={builder} title={title} description={description}>
       <LayoutHeader

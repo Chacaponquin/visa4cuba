@@ -8,6 +8,10 @@ import { ShopContext } from "../../../modules/shop/context/ShopContext";
 export default function useBuy() {
   const { cart } = useContext(ShopContext);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const [steps, setSteps] = useState<BuyStep[]>([
     {
       title: {

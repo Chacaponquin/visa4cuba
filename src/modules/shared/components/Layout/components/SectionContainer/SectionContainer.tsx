@@ -4,12 +4,14 @@ interface Props {
   children?: React.ReactNode;
   id?: string;
   bg?: "custom" | "blue" | "white";
+  className?: string;
 }
 
 export default function SectionContainer({
   children,
   id,
   bg = "white",
+  className,
 }: Props) {
   return (
     <section
@@ -22,7 +24,8 @@ export default function SectionContainer({
       }}
       className={clsx(
         "w-full flex justify-center py-14 md:py-20 px-6 relative",
-        { "bg-white": bg === "white", "bg-primary-50/50": bg === "blue" }
+        { "bg-white": bg === "white", "bg-primary-50/50": bg === "blue" },
+        className
       )}
     >
       <div className="w-full flex flex-col max-w-layout items-center">

@@ -6,6 +6,9 @@ import type { ShopOption } from "../../../../../../modules/shop/domain/entities/
 
 import IncludeCard from "./components/IncludeCard/IncludeCard";
 import useShopCard from "./hooks/useShopCard";
+import { useContext } from "react";
+import { LanguageContext } from "../../../../../../modules/app/modules/language/context/language-context";
+import useTranslation from "../../../../../../modules/app/modules/language/hooks/useTranslation";
 
 interface Props {
   card: ShopOption;
@@ -13,6 +16,12 @@ interface Props {
 }
 
 export default function ShopCard({ card, icon }: Props) {
+  const { language } = useContext(LanguageContext);
+
+  const { BUTTON } = useTranslation({
+    BUTTON: { en: "Add", es: "Añadir", it: "Aggiungere" },
+  });
+
   const { handleAdd } = useShopCard({
     option: card,
   });
@@ -46,7 +55,7 @@ export default function ShopCard({ card, icon }: Props) {
                 card.selected ? "text-white" : "text-black"
               )}
             >
-              {card.title}
+              {card.title[language]}
             </h2>
           </div>
         </header>
@@ -66,13 +75,17 @@ export default function ShopCard({ card, icon }: Props) {
             card.selected ? "text-white" : "text-gray-500"
           )}
         >
-          {card.description}
+          {card.description[language]}
         </span>
 
         {card.includes.length > 0 && (
           <div className="flex flex-col w-full mt-4">
             {card.includes.map((i, index) => (
-              <IncludeCard key={index} selected={card.selected} value={i} />
+              <IncludeCard
+                key={index}
+                selected={card.selected}
+                value={i[language]}
+              />
             ))}
           </div>
         )}
@@ -85,7 +98,7 @@ export default function ShopCard({ card, icon }: Props) {
           full
           onClick={handleAdd}
         >
-          Añadir
+          {BUTTON}
         </Button>
       </div>
     </article>

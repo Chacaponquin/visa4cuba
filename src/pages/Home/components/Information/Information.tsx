@@ -20,7 +20,6 @@ export default function Information() {
     INFO_1_BUTTON,
     INFO_2_TITLE,
     INFO_2_BUTTON,
-    HEADER,
   } = useTranslation({
     TITLE: {
       es: "Servicios para viajar a Cuba sin preocupaciones",
@@ -166,12 +165,7 @@ export default function Information() {
   });
 
   return (
-    <LayoutSection
-      bg="blue"
-      title={TITLE}
-      description={DESCRIPTION}
-      header={HEADER}
-    >
+    <LayoutSection bg="blue" title={TITLE} description={DESCRIPTION}>
       <div className="grid md:grid-cols-2 grid-cols-1 gap-x-4 gap-y-5">
         <ImageInfoCard
           title={INFO_1_TITLE}

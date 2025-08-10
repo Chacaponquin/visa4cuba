@@ -1,14 +1,12 @@
+import { useEffect } from "react";
 import BaseTranslationPage from "../../modules/app/components/BaseTranslationPage/BaseTranslationPage";
 import type { TranslationPageProps } from "../../modules/app/domain/core/translation-route";
 import useTranslation from "../../modules/app/modules/language/hooks/useTranslation";
-import Faq from "../../modules/shared/components/Faq/Faq";
 import Layout from "../../modules/shared/components/Layout/Layout";
-import Services from "../../modules/shared/components/Services/Services";
 import CartSummary from "./components/CartSummary/CartSummary";
 import Header from "./components/Header/Header";
 import ShopContent from "./components/ShopContent/ShopContent";
 import ShopResult from "./components/ShopResult/ShopResult";
-import Stats from "./components/Stats/Stats";
 
 export default function Shop({ builder, language }: TranslationPageProps) {
   const { DESCRIPTION, TITLE } = useTranslation({
@@ -24,6 +22,10 @@ export default function Shop({ builder, language }: TranslationPageProps) {
     },
   });
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <BaseTranslationPage language={language} builder={builder}>
       <Layout
@@ -33,11 +35,8 @@ export default function Shop({ builder, language }: TranslationPageProps) {
         extra={<CartSummary />}
       >
         <Header />
-        <Services />
-        <Stats />
         <ShopContent />
         <ShopResult />
-        <Faq />
       </Layout>
     </BaseTranslationPage>
   );

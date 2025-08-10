@@ -47,12 +47,7 @@ export default function Faq() {
   ];
 
   return (
-    <LayoutSection
-      id="faq"
-      title={TITLE}
-      header="FAQ"
-      description={DESCRIPTION}
-    >
+    <LayoutSection id="faq" title={TITLE} description={DESCRIPTION}>
       <Tabs options={tabs} full className="mb-5" />
 
       {section === FAQ_SECTION.VISA && <VisaFaq />}

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import BaseTranslationPage from "../../modules/app/components/BaseTranslationPage/BaseTranslationPage";
 import type { TranslationPageProps } from "../../modules/app/domain/core/translation-route";
 import useTranslation from "../../modules/app/modules/language/hooks/useTranslation";
@@ -21,6 +22,10 @@ export default function Visas({ builder, language }: TranslationPageProps) {
       it: "Richiedi il tuo visto turistico per viaggiare a Cuba in modo rapido e sicuro con Visa4Cuba. Ci occupiamo della tua richiesta senza complicazioni e con spedizione garantita.",
     },
   });
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <BaseTranslationPage builder={builder} language={language}>

@@ -18,19 +18,19 @@ export default function PostCard({ card }: Props) {
   });
 
   return (
-    <article className="flex items-start gap-x-6 w-full bg-white shadow px-8 py-5 rounded-card">
+    <article className="flex sm:flex-row flex-col items-start gap-x-6 gap-y-5 w-full bg-white shadow px-8 py-5 rounded-card">
       <img
         src={card.image}
         alt={card.title[language]}
-        className="rounded-card w-full max-w-[400px] max-h-[240px] object-cover"
+        className="rounded-card w-full sm:max-w-[400px] max-h-[240px] object-cover"
       />
 
       <div className="w-full flex flex-col">
-        <h3 className="font-title-semibold text-gray-800 text-2xl mb-3.5">
+        <h3 className="font-title-semibold text-gray-800 text-2xl sm:mb-3.5 mb-2">
           {card.title[language]}
         </h3>
 
-        <span className="text-gray-500 text-base mb-7">
+        <span className="text-gray-500 text-base sm:mb-7 mb-4">
           {card.description[language]}
         </span>
 

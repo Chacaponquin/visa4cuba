@@ -2,6 +2,7 @@ import { useContext, useMemo, useState } from "react";
 import type { ShopOption } from "../../../../../../../modules/shop/domain/entities/shop-option";
 import { ShopContext } from "../../../../../../../modules/shop/context/ShopContext";
 import useToast from "../../../../../../../modules/app/hooks/useToast";
+import useTranslation from "../../../../../../../modules/app/modules/language/hooks/useTranslation";
 
 interface Props {
   option: ShopOption;
@@ -10,6 +11,14 @@ interface Props {
 export default function useShopCard({ option }: Props) {
   const { handleAddItem, cart } = useContext(ShopContext);
   const { success } = useToast();
+
+  const { MESSAGE } = useTranslation({
+    MESSAGE: {
+      es: "Elemento añadido al carro de compra",
+      it: "Articolo aggiunto al carrello",
+      en: "Item added to shopping cart",
+    },
+  });
 
   const exists = useMemo(() => {
     return cart.some((e) => e.option.id === option.id);
@@ -28,7 +37,13 @@ export default function useShopCard({ option }: Props) {
   function handleAdd() {
     handleAddItem(option, count);
 
-    success({ message: "Elemento añadido al carro de compra" });
+    success({ message: MESSAGE });
+
+    const element = document.getElementById("shop-summary");
+
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
   }
 
   return { count, handleDecrease, handleIncrease, handleAdd, exists };

@@ -16,8 +16,8 @@ interface Props {
 }
 
 export const ShopContext = createContext<Props>({
-  options: [],
-  cart: [],
+  options: [] as ShopCartItem[],
+  cart: [] as ShopOption[],
 } as unknown as Props);
 
 export function ShopProvider({ children }: { children: React.ReactNode }) {
@@ -72,54 +72,162 @@ export function ShopProvider({ children }: { children: React.ReactNode }) {
   const options = useMemo<ShopOption[]>(() => {
     const result: ShopOption[] = [
       {
-        description: "Perfecto para viajeros que necesitan lo esencial",
-        icon: World,
-        id: Id.generate(),
         includes: [
-          "Procesamiento de visa turística",
-          "Seguro médico básico",
-          "Documentación estándar",
-          "Soporte por email",
-          "Tiempo de procesamiento: 7-10 días",
-          "1 revisión de documentos",
+          {
+            en: "Tourist visa processing",
+            es: "Procesamiento de visa turística",
+            it: "Elaborazione del visto turistico",
+          },
+          {
+            en: "Basic medical insurance",
+            es: "Seguro médico básico",
+            it: "Assicurazione medica di base",
+          },
+          {
+            en: "Standard documentation",
+            es: "Documentación estándar",
+            it: "Documentazione standard",
+          },
+          {
+            en: "Email support",
+            es: "Soporte por email",
+            it: "Supporto via email",
+          },
+          {
+            en: "Processing time: 7-10 days",
+            es: "Tiempo de procesamiento: 7-10 días",
+            it: "Tempo di elaborazione: 7-10 giorni",
+          },
+          {
+            en: "1 document review",
+            es: "1 revisión de documentos",
+            it: "1 revisione dei documenti",
+          },
         ],
         price: 39,
-        title: "Básico",
+        title: {
+          en: "Basic",
+          es: "Básico",
+          it: "Base",
+        },
+        description: {
+          en: "Perfect for travelers who need the essentials",
+          es: "Perfecto para viajeros que necesitan lo esencial",
+          it: "Perfetto per i viaggiatori che necessitano dell'essenziale",
+        },
+        icon: World,
+        id: Id.generate(),
         selected: false,
       },
       {
-        description: "La opción más popular con beneficios adicionales",
-        icon: Safe,
-        id: Id.generate(),
         includes: [
-          "Procesamiento de visa turística",
-          "Seguro médico completo",
-          "Documentación premium",
-          "Soporte telefónico y email",
-          "Tiempo de procesamiento: 5-7 días",
-          "Asistencia para reservas de hotel",
-          "Guía de viaje digital",
+          {
+            en: "Tourist visa processing",
+            es: "Procesamiento de visa turística",
+            it: "Elaborazione del visto turistico",
+          },
+          {
+            en: "Comprehensive medical insurance",
+            es: "Seguro médico completo",
+            it: "Assicurazione medica completa",
+          },
+          {
+            en: "Premium documentation",
+            es: "Documentación premium",
+            it: "Documentazione premium",
+          },
+          {
+            en: "Phone and email support",
+            es: "Soporte telefónico y email",
+            it: "Supporto telefonico ed email",
+          },
+          {
+            en: "Processing time: 5-7 days",
+            es: "Tiempo de procesamiento: 5-7 días",
+            it: "Tempo di elaborazione: 5-7 giorni",
+          },
+          {
+            en: "Assistance with hotel bookings",
+            es: "Asistencia para reservas de hotel",
+            it: "Assistenza per prenotazioni alberghiere",
+          },
+          {
+            en: "Digital travel guide",
+            es: "Guía de viaje digital",
+            it: "Guida di viaggio digitale",
+          },
         ],
         price: 69,
-        title: "Completo",
+        title: {
+          en: "Complete",
+          es: "Completo",
+          it: "Completo",
+        },
+        description: {
+          en: "The most popular option with additional benefits",
+          es: "La opción más popular con beneficios adicionales",
+          it: "L'opzione più popolare con vantaggi aggiuntivi",
+        },
+        icon: Safe,
+        id: Id.generate(),
         selected: true,
       },
       {
-        description: "Servicio VIP con atención personalizada completa",
-        icon: Bag,
-        id: Id.generate(),
         includes: [
-          "Procesamiento de visa turística",
-          "Seguro médico premium",
-          "Documentación VIP",
-          "Soporte 24/7 multicanal",
-          "Tiempo de procesamiento: 3-5 días",
-          "Revisiones ilimitadas",
-          "Asistencia completa de viaje",
-          "Gestor personal asignado",
+          {
+            en: "Tourist visa processing",
+            es: "Procesamiento de visa turística",
+            it: "Elaborazione del visto turistico",
+          },
+          {
+            en: "Premium medical insurance",
+            es: "Seguro médico premium",
+            it: "Assicurazione medica premium",
+          },
+          {
+            en: "VIP documentation",
+            es: "Documentación VIP",
+            it: "Documentazione VIP",
+          },
+          {
+            en: "24/7 multichannel support",
+            es: "Soporte 24/7 multicanal",
+            it: "Supporto multicanale 24/7",
+          },
+          {
+            en: "Processing time: 3-5 days",
+            es: "Tiempo de procesamiento: 3-5 días",
+            it: "Tempo di elaborazione: 3-5 giorni",
+          },
+          {
+            en: "Unlimited reviews",
+            es: "Revisiones ilimitadas",
+            it: "Revisioni illimitate",
+          },
+          {
+            en: "Full travel assistance",
+            es: "Asistencia completa de viaje",
+            it: "Assistenza completa per il viaggio",
+          },
+          {
+            en: "Dedicated personal manager",
+            es: "Gestor personal asignado",
+            it: "Manager personale dedicato",
+          },
         ],
         price: 89,
-        title: "Premium",
+        title: {
+          en: "Premium",
+          es: "Premium",
+          it: "Premium",
+        },
+        description: {
+          en: "VIP service with full personalized attention",
+          es: "Servicio VIP con atención personalizada completa",
+          it: "Servizio VIP con attenzione personalizzata completa",
+        },
+        icon: Bag,
+        id: Id.generate(),
         selected: false,
       },
     ];

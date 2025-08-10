@@ -4,11 +4,7 @@ import StepCard from "./components/StepCard/StepCard";
 import { STEPS } from "./domain/step";
 
 export default function Steps() {
-  const {
-    TITLE,
-    DESCRIPTION,
-    STEPS: TSTEP,
-  } = useTranslation({
+  const { TITLE, DESCRIPTION } = useTranslation({
     TITLE: {
       es: "Solicita tu Visa para Cuba en 4 pasos simples",
       en: "Get your visa in 4 easy steps",
@@ -23,7 +19,7 @@ export default function Steps() {
   });
 
   return (
-    <LayoutSection title={TITLE} description={DESCRIPTION} header={TSTEP}>
+    <LayoutSection title={TITLE} description={DESCRIPTION}>
       <div className="w-full grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-x-7 gap-y-5">
         {STEPS.map((s, index) => (
           <StepCard key={index} props={s} step={index + 1} />

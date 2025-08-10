@@ -4,7 +4,7 @@ import Card from "./components/Card/Card";
 import { SERVICE_CARDS } from "./domain/service-card";
 
 export default function Services() {
-  const { TITLE, DESCRIPTION, HEADER } = useTranslation({
+  const { TITLE, DESCRIPTION } = useTranslation({
     TITLE: {
       es: "Servicios esenciales para tu viaje a Cuba",
       en: "Travel to Cuba without worries",
@@ -23,7 +23,7 @@ export default function Services() {
   });
 
   return (
-    <LayoutSection title={TITLE} description={DESCRIPTION} header={HEADER}>
+    <LayoutSection title={TITLE} description={DESCRIPTION}>
       <div className="w-full max-w-[1000px] grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-7 justify-center">
         {SERVICE_CARDS.map((s, index) => (
           <Card key={index} service={s} />

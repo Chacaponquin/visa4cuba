@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import LayoutSection from "../../../../../modules/shared/components/Layout/components/LayoutSection/LayoutSection";
 
 interface Props {
@@ -7,6 +8,7 @@ interface Props {
   header?: string;
   id?: string;
   bg?: "white" | "blue" | "custom";
+  condition?: boolean;
 }
 
 export default function ShopSection({
@@ -16,6 +18,7 @@ export default function ShopSection({
   id,
   header,
   bg,
+  condition = true,
 }: Props) {
   return (
     <LayoutSection
@@ -24,6 +27,7 @@ export default function ShopSection({
       description={description}
       header={header}
       bg={bg}
+      className={clsx(condition ? "" : "hidden")}
     >
       {children}
     </LayoutSection>

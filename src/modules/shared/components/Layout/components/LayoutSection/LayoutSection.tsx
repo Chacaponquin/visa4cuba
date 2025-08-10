@@ -7,6 +7,7 @@ interface Props {
   description?: string;
   header?: string;
   bg?: "white" | "blue" | "custom";
+  className?: string;
 }
 
 export default function LayoutSection({
@@ -16,9 +17,10 @@ export default function LayoutSection({
   children,
   header,
   bg,
+  className,
 }: Props) {
   return (
-    <SectionContainer bg={bg} id={id}>
+    <SectionContainer className={className} bg={bg} id={id}>
       {header && (
         <div className="rounded-full px-4 py-1.5 bg-primary/10 text-primary font-medium mb-6">
           {header}

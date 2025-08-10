@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import BaseTranslationPage from "../../modules/app/components/BaseTranslationPage/BaseTranslationPage";
 import type { TranslationPageProps } from "../../modules/app/domain/core/translation-route";
 import useTranslation from "../../modules/app/modules/language/hooks/useTranslation";
@@ -21,6 +22,10 @@ export default function Insurence({ builder, language }: TranslationPageProps) {
       it: "Ottieni la tua assicurazione di viaggio obbligatoria per entrare a Cuba. Acquisto facile e veloce con Visa4Cuba, con copertura medica completa e accettazione garantita.",
     },
   });
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <BaseTranslationPage language={language} builder={builder}>
