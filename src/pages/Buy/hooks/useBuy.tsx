@@ -15,9 +15,9 @@ export default function useBuy() {
   const [steps, setSteps] = useState<BuyStep[]>([
     {
       title: {
-        es: "Datos de envío",
-        en: "Shipping data",
-        it: "Dati di spedizione",
+        es: "Datos de contacto",
+        en: "Contact data",
+        it: "Informazioni sui contatti",
       },
       description: {
         es: "Proporcione la información de contacto y la dirección de correo donde desea recibir el visado o documentación correspondiente.",
