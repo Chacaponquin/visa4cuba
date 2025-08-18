@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import Cart from "../../../../modules/app/modules/icon/components/Cart";
-import { ShopContext } from "../../../../modules/shop/context/ShopContext";
+import { ShopContext } from "../../../../modules/shop/context/shop-context";
 
 export default function CartSummary() {
   const { cart } = useContext(ShopContext);

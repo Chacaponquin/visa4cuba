@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ShopContext } from "../../../../../modules/shop/context/ShopContext";
+import { ShopContext } from "../../../../../modules/shop/context/shop-context";
 
 export default function useShopContent() {
   const { options } = useContext(ShopContext);

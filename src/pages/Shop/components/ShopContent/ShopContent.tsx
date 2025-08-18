@@ -22,6 +22,7 @@ export default function ShopContent() {
 
   return (
     <ShopSection
+      id="shop-content"
       bg="blue"
       header={HEADER}
       title={TITLE}

@@ -4,7 +4,6 @@ import type { TranslationPageProps } from "../../modules/app/domain/core/transla
 import useTranslation from "../../modules/app/modules/language/hooks/useTranslation";
 import Layout from "../../modules/shared/components/Layout/Layout";
 import CartSummary from "./components/CartSummary/CartSummary";
-import Header from "./components/Header/Header";
 import ShopContent from "./components/ShopContent/ShopContent";
 import ShopResult from "./components/ShopResult/ShopResult";
 
@@ -34,7 +33,6 @@ export default function Shop({ builder, language }: TranslationPageProps) {
         builder={builder}
         extra={<CartSummary />}
       >
-        <Header />
         <ShopContent />
         <ShopResult />
       </Layout>

@@ -58,6 +58,14 @@ export default function ResultSummary({ prosecution, subtotal, total }: Props) {
     },
   });
 
+  function handleKeepShop() {
+    const element = document.getElementById("shop-content");
+
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
   return (
     <div className="w-full lg:max-w-[370px] rounded-lg flex flex-col bg-white shadow-md">
       <header className="px-5 py-3 rounded-t-lg !font-semibold text-lg bg-primary text-white">
@@ -82,7 +90,7 @@ export default function ResultSummary({ prosecution, subtotal, total }: Props) {
             <Button full>{BUTTON_1}</Button>
           </Link>
 
-          <Button color="light" full>
+          <Button color="light" full onClick={handleKeepShop}>
             {BUTTON_2}
           </Button>
         </div>

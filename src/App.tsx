@@ -7,7 +7,7 @@ import {
 import { APP_ROUTES } from "./modules/app/domain/constants/app-routes";
 import Shop from "./pages/Shop/Shop";
 import Buy from "./pages/Buy/Buy";
-import { ShopProvider } from "./modules/shop/context/ShopContext";
+import { ShopProvider } from "./modules/shop/context/ShopProvider";
 import { ToastContainer } from "react-toastify";
 import AboutUs from "./pages/AboutUs/AboutUs";
 import Visas from "./pages/Visas/Visas";

@@ -3,7 +3,7 @@ import { BUY_STEP, type BuyStep } from "../domain/buy-steps";
 import User from "../../../modules/app/modules/icon/components/User";
 import type { SectionPassegerForm } from "../domain/passeger-form";
 import { createDefaultPassegerForm } from "../domain/create-default-passeger-form";
-import { ShopContext } from "../../../modules/shop/context/ShopContext";
+import { ShopContext } from "../../../modules/shop/context/shop-context";
 
 export default function useBuy() {
   const { cart } = useContext(ShopContext);

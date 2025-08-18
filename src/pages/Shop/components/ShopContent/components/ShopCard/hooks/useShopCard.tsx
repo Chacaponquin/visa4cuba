@@ -1,8 +1,8 @@
 import { useContext, useMemo, useState } from "react";
 import type { ShopOption } from "../../../../../../../modules/shop/domain/entities/shop-option";
-import { ShopContext } from "../../../../../../../modules/shop/context/ShopContext";
 import useToast from "../../../../../../../modules/app/hooks/useToast";
 import useTranslation from "../../../../../../../modules/app/modules/language/hooks/useTranslation";
+import { ShopContext } from "../../../../../../../modules/shop/context/shop-context";
 
 interface Props {
   option: ShopOption;
