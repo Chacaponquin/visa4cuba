@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
 export default function useLayout() {
-  const [openAside, setOpenAside] = useState(true);
+  const [openAside, setOpenAside] = useState(false);
   const [fixedNavbar, setFixedNavbar] = useState(false);
 
   const navbarRef = useRef<HTMLElement>(null);

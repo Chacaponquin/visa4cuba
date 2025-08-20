@@ -29,7 +29,9 @@ export default function FaqCard({ icon, title, children }: Props) {
         onClick={() => setOpen((prev) => !prev)}
       >
         <div className="flex items-center gap-x-4">
-          <IconCard color="primary" icon={icon} size="base" />
+          <span className="sm:flex hidden w-max">
+            <IconCard color="primary" icon={icon} size="base" />
+          </span>
 
           <h2 className="font-title-semibold text-base">{title}</h2>
         </div>
@@ -44,7 +46,7 @@ export default function FaqCard({ icon, title, children }: Props) {
       </div>
 
       {open && (
-        <div className="pl-14">
+        <div className="sm:pl-14">
           <P size="sm">{children}</P>
         </div>
       )}
