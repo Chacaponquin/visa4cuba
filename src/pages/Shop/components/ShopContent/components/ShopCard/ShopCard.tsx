@@ -29,7 +29,7 @@ export default function ShopCard({ card, icon }: Props) {
   return (
     <article
       className={clsx(
-        "rounded-lg flex flex-col shadow-md px-6 py-4 h-full min-h-[430px] justify-between",
+        "rounded-lg flex flex-col shadow-md px-6 py-4 h-full sm:min-h-[400px] justify-between",
         {
           "bg-primary": card.selected,
           "bg-white": !card.selected,
@@ -91,7 +91,7 @@ export default function ShopCard({ card, icon }: Props) {
         )}
       </div>
 
-      <div className="flex w-full items-center justify-between gap-x-3 mt-5">
+      <div className="flex w-full items-center justify-between gap-x-3 mt-8">
         <Button
           color={card.selected ? "light" : "primary"}
           size="base"
