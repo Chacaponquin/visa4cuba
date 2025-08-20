@@ -16,7 +16,7 @@ export default function Options({ onOpenAside, builder, children }: Props) {
 
       <LanguageOptions builder={builder} />
 
-      <div className="lg:hidden block">
+      <div className="lg:hidden flex items-center">
         <IconButton onClick={onOpenAside} icon={Menu} />
       </div>
     </div>

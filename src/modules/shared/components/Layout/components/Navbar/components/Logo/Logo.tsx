@@ -16,7 +16,7 @@ export default function Logo() {
       <img
         src={APP_IMAGES.LOGO.src}
         alt={APP_IMAGES.LOGO.alt}
-        className="md:w-[160px] w-[130px] object-contain"
+        className="md:w-[160px] sm:w-[130px] w-[110px] object-contain"
       />
     </Link>
   );
