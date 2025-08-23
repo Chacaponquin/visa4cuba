@@ -21,9 +21,9 @@ export default function ImageInfoCard({
       )}
     >
       <section className="flex flex-col w-full lg:pt-5">
-        <h1 className="font-title-bold text-3xl text-primary mb-7 text-center">
+        <h3 className="font-title-bold text-3xl text-primary mb-7 text-center">
           {title}
-        </h1>
+        </h3>
 
         {children}
       </section>

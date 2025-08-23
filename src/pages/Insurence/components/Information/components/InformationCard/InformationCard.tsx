@@ -7,9 +7,9 @@ interface Props {
 export default function InformationCard({ image, title, children }: Props) {
   return (
     <article className="flex flex-col w-full">
-      <h1 className="w-full text-center text-2xl mb-5 font-title-semibold">
+      <h2 className="w-full text-center text-2xl mb-5 font-title-semibold">
         {title}
-      </h1>
+      </h2>
 
       <img
         src={image.src}

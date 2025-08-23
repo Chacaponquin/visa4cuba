@@ -22,9 +22,9 @@ export default function Home({ builder, language }: TranslationPageProps) {
   const { TITLE, DESCRIPTION, SEO_DESCRIPTION, SEO_TITLE, BUTTON } =
     useTranslation({
       TITLE: {
-        es: "Tu visa para Cuba, 100% online",
-        en: "Your visa for Cuba, 100% online",
-        it: "Il tuo visto per Cuba, 100% online",
+        es: "Tu visa para Cuba 100% online con trámite rápido y seguro - Visa4Cuba",
+        en: "Your Cuba visa 100% online with fast and secure processing - Visa4Cuba",
+        it: "Il tuo visto per Cuba 100% online con procedura rapida e sicura - Visa4Cuba",
       },
       DESCRIPTION: {
         es: "Solicita tu visa para Cuba y contrata tu seguro médico en pocos minutos. Plataforma digital, atención 24/7 y entrega garantizada.",

@@ -7,10 +7,10 @@ interface Props {
 
 export default function H3({ children, margin = true }: Props) {
   return (
-    <h1
+    <h4
       className={clsx("font-title-semibold text-2xl mb-3", { "mt-5": margin })}
     >
       {children}
-    </h1>
+    </h4>
   );
 }

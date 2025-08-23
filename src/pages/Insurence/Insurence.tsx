@@ -12,9 +12,9 @@ import Stats from "./components/Stats";
 export default function Insurence({ builder, language }: TranslationPageProps) {
   const { DESCRIPTION, TITLE } = useTranslation({
     TITLE: {
-      es: "Seguro de viaje para Cuba - Visa4Cuba",
-      en: "Travel Insurance for Cuba - Visa4Cuba",
-      it: "Assicurazione di viaggio per Cuba - Visa4Cuba",
+      es: "Seguro de viaje para Cuba con cobertura completa y asistencia 24/7 - Visa4Cuba",
+      en: "Travel insurance for Cuba with full coverage and 24/7 assistance - Visa4Cuba",
+      it: "Assicurazione di viaggio per Cuba con copertura completa e assistenza 24/7 - Visa4Cuba",
     },
     DESCRIPTION: {
       es: "Contrata tu seguro de viaje obligatorio para entrar a Cuba. Compra rápida y fácil con Visa4Cuba, con cobertura médica completa y aceptación garantizada.",

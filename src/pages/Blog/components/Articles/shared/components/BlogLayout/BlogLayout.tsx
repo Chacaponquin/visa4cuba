@@ -22,7 +22,11 @@ export default function BlogLayout({
   }, []);
 
   return (
-    <Layout builder={builder} title={title} description={description}>
+    <Layout
+      builder={builder}
+      title={`${title} | Visa4Cuba`}
+      description={description}
+    >
       <LayoutHeader
         image={APP_IMAGES.BLOG.ARTICLES.VISA_ELECTRONIC.src}
         sideImage={APP_IMAGES.PASSPORTS}
