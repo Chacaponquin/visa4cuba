@@ -19,7 +19,6 @@ import { TranslationRoute } from "./modules/app/domain/core/translation-route";
 import { LANGUAGE } from "./modules/app/modules/language/domain/language";
 import Cookies from "./pages/Information/components/Cookies/Cookies";
 import Terms from "./pages/Information/components/Terms/Terms";
-import { HelmetProvider } from "react-helmet-async";
 import Blog from "./pages/Blog/Blog";
 import VisaElectronic from "./pages/Blog/components/Articles/components/VisaElectronic/VisaElectronic";
 import ReactGA from "react-ga4";
@@ -90,14 +89,12 @@ const router = createBrowserRouter([
 
 export default function App() {
   return (
-    <HelmetProvider>
-      <LanguageProvider>
-        <ShopProvider>
-          <ToastContainer />
+    <LanguageProvider>
+      <ShopProvider>
+        <ToastContainer />
 
-          <RouterProvider router={router} />
-        </ShopProvider>
-      </LanguageProvider>
-    </HelmetProvider>
+        <RouterProvider router={router} />
+      </ShopProvider>
+    </LanguageProvider>
   );
 }
