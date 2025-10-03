@@ -10,9 +10,9 @@ import Mission from "./components/Mission/Mission";
 export default function AboutUs({ builder, language }: TranslationPageProps) {
   const { DESCRIPTION, TITLE } = useTranslation({
     TITLE: {
-      es: "Contáctanos - Visa4Cuba",
-      en: "Contact Us - Visa4Cuba",
-      it: "Contattaci - Visa4Cuba",
+      es: "Contáctanos para seguros y visas en Cuba - Visa4Cuba",
+      en: "Contact Us for Cuba travel insurance and visas - Visa4Cuba",
+      it: "Contattaci per assicurazioni di viaggio e visti per Cuba - Visa4Cuba",
     },
     DESCRIPTION: {
       es: "¿Tienes dudas sobre tu visa o seguro para Cuba? Ponte en contacto con el equipo de Visa4Cuba. Estamos aquí para ayudarte.",

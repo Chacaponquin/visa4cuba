@@ -46,9 +46,9 @@ export default function Buy({
 
   const { DESCRIPTION, TITLE } = useTranslation({
     TITLE: {
-      es: "Formulario de Pago - Visa4Cuba",
-      en: "Checkout Form - Visa4Cuba",
-      it: "Modulo di Pagamento - Visa4Cuba",
+      es: "Formulario de pago seguro para visas y seguros de viaje - Visa4Cuba",
+      en: "Secure checkout form for Cuba travel visas and insurance - Visa4Cuba",
+      it: "Modulo di pagamento sicuro per visti e assicurazioni di viaggio a Cuba - Visa4Cuba",
     },
     DESCRIPTION: {
       es: "Completa el formulario de pago para finalizar tu compra de visado y seguro para Cuba. Proceso seguro, rápido y completamente online.",

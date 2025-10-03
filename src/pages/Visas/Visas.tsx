@@ -12,9 +12,9 @@ import Stats from "./components/Stats/Stats";
 export default function Visas({ builder, language }: TranslationPageProps) {
   const { DESCRIPTION, TITLE } = useTranslation({
     TITLE: {
-      es: "Visado turístico para Cuba - Visa4Cuba",
-      en: "Tourist Visa for Cuba - Visa4Cuba",
-      it: "Visto turistico per Cuba - Visa4Cuba",
+      es: "Visado turístico para Cuba con solicitud online fácil y rápida - Visa4Cuba",
+      en: "Tourist visa for Cuba with fast and easy online application process - Visa4Cuba",
+      it: "Visto turistico per Cuba con richiesta online semplice e veloce - Visa4Cuba",
     },
     DESCRIPTION: {
       es: "Solicita tu visado turístico para viajar a Cuba de forma rápida y segura con Visa4Cuba. Tramitamos tu visa sin complicaciones y con envío garantizado.",

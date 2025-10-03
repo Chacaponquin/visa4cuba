@@ -10,9 +10,9 @@ import ShopResult from "./components/ShopResult/ShopResult";
 export default function Shop({ builder, language }: TranslationPageProps) {
   const { DESCRIPTION, TITLE } = useTranslation({
     TITLE: {
-      es: "Ofertas de Visa y Seguro para Cuba - Visa4Cuba",
-      en: "Visa and Insurance Offers for Cuba - Visa4Cuba",
-      it: "Offerte per Visto e Assicurazione per Cuba - Visa4Cuba",
+      es: "Ofertas especiales de visa y seguro de viaje para Cuba con precios competitivos - Visa4Cuba",
+      en: "Special offers on Cuba travel visas and insurance with competitive prices - Visa4Cuba",
+      it: "Offerte speciali per visto e assicurazione di viaggio a Cuba con prezzi vantaggiosi - Visa4Cuba",
     },
     DESCRIPTION: {
       es: "Elige entre nuestras ofertas de visado y seguro de viaje para Cuba. Añade tus productos al carrito y completa tu compra de forma rápida y segura.",
