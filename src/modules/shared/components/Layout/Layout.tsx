@@ -4,6 +4,9 @@ import Aside from "./components/Aside/Aside";
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 import useLayout from "./hooks/useLayout";
+import { KEYWORDS } from "./domain/keywords";
+import { useContext } from "react";
+import { LanguageContext } from "../../../app/modules/language/context/language-context";
 
 interface Props {
   builder: TranslationRouteBuilder;
@@ -27,12 +30,14 @@ export default function Layout({
     fixedNavbar,
     navbarRef,
   } = useLayout();
+  const { language } = useContext(LanguageContext);
 
   return (
     <>
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
+        <meta name="keywords" content={KEYWORDS[language].join(", ")} />
       </Helmet>
 
       <div className="w-full flex flex-col">
